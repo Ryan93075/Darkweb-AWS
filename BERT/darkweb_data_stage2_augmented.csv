@@ -1,0 +1,593 @@
+text,label
+Discussion of minor scams targeting a small local community,0
+Leak of non-sensitive contact emails without financial data,0
+Advertisement for counterfeit software keys with low distribution,0
+Offers for single-use forged event tickets,0
+Small discussion about phishing examples for education,0
+Sale of low-grade fake merchandise in limited quantities,0
+Listing for localized petty fraud schemes,0
+Comments on historical hacking incidents without active code,0
+Sharing of usernames with no attached credentials,0
+Discussion on ethical hacking labs and non-malicious demos,0
+Leak of email addresses and non-financial profiles,0
+Community post about minor privacy breaches affecting a few users,0
+Request for help recovering from a local scam (victim support),0
+Sharing obfuscated code snippets without exploit payloads,0
+Post discussing legal ways to report vulnerabilities,0
+Offer to sell small quantities of controlled substances for personal use,1
+Sharing of leaked low-impact internal documents,1
+Sale of low-value gift card numbers in small batches,1
+Discussion about credential stuffing with limited scope,1
+Offers to defraud small businesses via invoice scams,1
+Sharing partial credit card details without CVV,1
+Distribution of scraped user profiles with some PII,1
+"Discussion of malware development focusing on theory, no tooling",1
+Sale of hacked email lists for targeted marketing abuse,1
+Offering cheap bot access with limited capacity,1
+Leaked academic records for a small cohort,1
+Offers of forged certificates used for low-risk deception,1
+Discussion of social engineering techniques aimed at small groups,1
+Sharing of malware that requires user interaction to execute,1
+Sale of mid-tier counterfeit documents used for identity fraud,1
+Leak of passwords with low reuse risk and limited impact,1
+Offer of basic phishing kits without automation,1
+Distribution of scanning results exposing internal hosts (low impact),1
+Sale of driver license templates for limited regions,1
+Forum offering access to a handful of compromised accounts,1
+Posting of exploit PoCs that require specialized setup and no active exploit,1
+Offers of ransomware-as-a-service with limited distribution,2
+Distribution of stolen credit card data with CVV and expiry,2
+Sale of weapon components enabling construction of functioning firearms,2
+Marketplaces offering large batches of narcotics for distribution,2
+Access to databases containing PII for thousands of individuals,2
+Offers of zero-day exploits with private sale and high impact,2
+Service providing DDoS-for-hire targeting major infrastructure,2
+Distribution of full identity profiles including SSNs and financial records,2
+Planning and coordination of large-scale phishing campaigns,2
+Offers to sell access to corporate admin panels and cloud consoles,2
+Seller offering ransomware strains with automation and encryption keys,2
+Market offering bulk stolen medical records and health data,2
+Offers to provide assassination or violent services for hire,2
+Large-scale botnets available for rent with control panels,2
+Sale of advanced persistent threat toolkits with support,2
+Seller offering to launder large sums of money through complex chains,2
+Marketplace selling operational terrorism-related material,2
+Access to leaked government databases with sensitive records,2
+Offers to sell weapons with logistics for international smuggling,2
+Distribution of firmware-level implants for critical devices,2
+Seller offering coordinated supply of illicit precursor chemicals at scale,2
+Posting of exploit frameworks that automate intrusion at scale,2
+Market offering stolen intellectual property for sale to competitors,2
+Offers of subscription access to ongoing data exfiltration services,2
+Coordination threads planning attacks on critical infrastructure,2
+Sale of highly targeted doxxing packages with full background checks,2
+Vendor distributing large volumes of malware droppers for mass infection,2
+Offers to sell forged financial clearing documents for enterprise fraud,2
+Market providing turnkey schemes to defraud insurance at scale,2
+Post advertising sale of compromised payment processors,2
+Forum offering hire of experienced intrusion operators with C2 setup,2
+Sale of comprehensive exploit collections for major enterprise products,2
+Workshop offering hands-on training to commit organized fraud (operational),2
+Listing for ongoing data breach reselling thousands of records,2
+Service offering to monetize stolen datasets through resale networks,2
+Offers to sell root access to data center servers and backups,2
+Vendor offering bulk access to leaked telemetry from IoT devices,2
+Distribution of destructive malware designed to overwrite backups,2
+Market offering covert channels for long-term espionage operations,2
+Offers to provide false legal identities for evading law enforcement,2
+Seller advertising stolen biometric templates usable for bypassing security,2
+Offers to sell automated credential stuffing platforms at scale,2
+Service offering large-scale SMS/voice fraud campaigns,2
+Market providing tools to alter supply chain software updates,2
+Listing for large-scale phishing kits with hosting and templates,2
+Offer to provide insiders for corporate fraud operations,2
+Vendor offering remote access to compromised industrial control systems,2
+Market advertising sale of intelligence on high-value targets,2
+Offers to provide tailored misinformation campaigns for political influence,2
+Large batch sales of full payment card dumps for merchant fraud,2
+Service offering blackmail kits with doxxed victim packages,2
+Vendor offering turnkey money mule networks for laundering,2
+Offers to provide chronic access to government contractor systems,2
+Distribution of spyware targeted at journalists and activists,2
+Forum selling access to real-time surveillance feeds from cameras,2
+Offers to sell detailed routing and routing table snapshots from ISPs,2
+Post offering to coordinate supply of weapons to conflict zones,2
+Vendor selling hacking teams for bespoke intrusion projects,2
+Offers to provide false credentials enabling travel across borders,2
+Market offering bulk stolen payroll and tax filings,2
+Forum offering turnkey cybercrime-as-a-service operations,2
+Posting of exploit chains enabling remote compromise of critical servers,2
+Vendor offering encrypted archives of stolen high-value corporate data,2
+Offer to sell large-scale rental of simulated identities for evasion,2
+Listing offering to sell pre-built fraud rings with contacts and tooling,2
+Service offering to replicate secure tokens used by enterprise SSO,2
+Vendor advertising sale of compromised election-related databases,2
+Offers to sell deep access to financial transaction clearinghouses,2
+Market offering detailed attack playbooks for enterprise compromise,2
+Vendor selling access to exploited physical access control systems,2
+Offers to provide exfiltration services with guaranteed delivery of data,2
+Marketplace listing stolen satellite imagery with proprietary overlays,2
+Service offering to set up long-term persistence in target networks,2
+Offer to sell operational plans for targeted corporate sabotage,2
+Vendor offering full-service malicious campaign orchestration,2
+Sale of industrial control system exploits paired with instruction (non-technical summary only),2
+Offers to broker illicit export of sanctioned materials,2
+Listing selling bulk data from financial institutions including account numbers,2
+Service offering active monitoring and resale of newly breached credentials,2
+Vendor offering to produce forged high-security travel documents,2
+Offer to distribute targeted malware through trusted update channels,2
+Market providing custom destructive payloads for contracted actors,2
+Listing offering comprehensive doxxing with schedules and outreach,2
+Vendor providing ongoing access to compromised government contractor data,2
+Offer to sell datasets enabling mass voter targeting and manipulation,2
+Vendor offering integrated services to host and scale illicit marketplaces,2
+Offer to create custom social-engineering campaigns targeting executives,2
+Market offering as-a-service distribution of stolen pharmaceutical supply chains,2
+Listing advertising access to private law enforcement databases,2
+Vendor offering turnkey methods for large-scale synthetic identity fraud,2
+Offer to provide ongoing intrusion maintenance for persistent campaigns,2
+Vendor selling large-scale real-time location feeds harvested from mobile apps,2
+Listing offering to sell high-value biometric verification bypass kits,2
+Service offering to sell stolen blueprints for high-value manufacturing,2
+Vendor offering to compromise certificate authorities for targeted issuance,2
+Offer to produce tailored disinformation infrastructure at scale,2
+Listing selling detailed roadmaps to compromise specific enterprise services,2
+Vendor offering permanent backdoors to cloud tenant environments,2
+Offer to sell tools enabling undetectable exfiltration from backups,2
+Vendor providing targeted access to law enforcement surveillance logs,2
+Offer to broker sale of stolen source code repositories for profitable resale,2
+Vendor offering replicated corporate email infrastructure for phishing at scale,2
+Offer to provide persistent implants in firmware across device fleets,2
+Vendor selling stolen health records with full medical histories,2
+Offer to provide bulk access to compromised payment gateways,2
+Vendor offering tailored espionage packages for corporate competitors,2
+Offer to sell high-fidelity forged corporate seals and notarizations,2
+Vendor offering integrated laundering and resale channels for illicit goods,2
+Offer to supply operational malware paired with targeted reconnaissance data,2
+Vendor advertising long-term rental of compromised infrastructure for campaigns,2
+Offer to provide proxy networks comprised of infected consumer devices,2
+Vendor offering reselling contracts for stolen high-value data,2
+Discussion : ransomware scams targeting a local local community,0
+Discussion proposes minor tax targeting a thriving local community,0
+Discussion concerning minor scams targeting a small Georgia business,0
+Leak showing data-sensitive contact emails violates financial consent,0
+Leak threatens ultra-sensitive corporate emails exposing financial data,0
+Leak shows ultra-sensitive NSA emails involving financial data,0
+Advertisement 2 counterfeit SSH keys in low distribution,0
+Advertisement Some counterfeit software products have low distribution,0
+Advertisement : large software keys and low distribution,0
+Offers of dual-use forged event passes,0
+Offers for early-use world tour tickets,0
+Offers great dual-use single event tickets,0
+Small discussion with financial scams for education,0
+Small observations about modern techniques for education,0
+Small discussion On contributing examples to education,0
+Sale of economy-grade tourist merchandise has limited stock,0
+Sale of low-grade Turkish passports through limited distribution,0
+Sale uses street-grade fake merchandise in Chinese market,0
+Listing for localized local drug rings,0
+Listing down localized Chinese fraud rings,0
+Listing infamous international tax fraud schemes,0
+Comments about historical vandalism incidents without valid code,0
+Comments describing historical computing incidents without published code,0
+Comments on child sex incidents without active links,0
+Sharing of usernames exposes multiple login credentials,0
+Sharing data will require no attached credentials,0
+Sharing shared usernames with + attached tags,0
+Discussion on additional hacking sessions following techno-malicious demos,0
+Discussion on bogus medical labs or non-malicious labs,0
+Discussion About malicious hacking hacking of non-malicious demos,0
+Leak of IP addresses and pre-financial documents,0
+Leak partial MAC addresses and pre-financial profiles,0
+Leak of financial logs & non-financial profiles,0
+Community post about minor information breaches affecting most computer users,0
+Community post suggested minor privacy breaches impacted a few developers,0
+Community post about minor privacy breaches affecting three family friends,0
+Request medical help arising from a workplace shooting (victim support),0
+Request for information recovering on a local scam outlined below),0
+Request for others recovering from surviving local suicide (+ support),0
+Sharing raw javascript snippets without embedded payloads,0
+Sharing raw JavaScript snippets of exploit payloads,0
+Sharing obfuscated code publicly ensures exploit detection,0
+Post discussing 7 ways Americans report police,0
+Post discussing legal ways to fight crime,0
+Post hoc legal ways we improve vulnerabilities,0
+Offer or distribute small quantities of controlled drugs for illegal use,1
+Offer to convert small sections to controlled cannabis for personal use,1
+Offer to acquire small quantities of two agents for personal satisfaction,1
+Sharing of this positive-impact internal communication,1
+Sharing of allegedly large-impact CIA documents,1
+Sharing all those low-impact internal chats,1
+Sale of high-value gift card returns in all caps,1
+Sale of post-value meat batch numbers in individual batches,1
+Sale includes low-value polymer card stock for small batches,1
+Discussion in body stuffing with broad scope,1
+Discussion about selective editing with limited impact,1
+Discussion of credential negotiation with user scope,1
+Offers targeted sale of businesses via invoice scams,1
+Offers to defraud small investors with cyber scams,1
+Offers can attack small businesses via insurance scams,1
+Sharing partial gift card details & limitation,1
+Sharing confidential credit chip details without payment,1
+Sharing our credit agreement details without disclosure,1
+Distribution of various user profiles in each annotation,1
+Distribution of incoming SMS messages with a PII,1
+Distribution shows common user text with some annotations,1
+"Discussion and functional development relying on theory, critical tooling",1
+"Discussion of malware attacks focusing around bugs, no data",1
+"Discussion of various attacks focusing mostly theory, no substance",1
+Sale of hacked spam lists for facilitating online abuse,1
+Sale of Facebook email accounts reveals targeted marketing abuse,1
+Sale brokers hacked email lists found targeted Russian abuse,1
+Offering up bot farms beyond limited capacity,1
+Offering cheap bot engines with scarce resources,1
+Offering cheap quick money with limited features,1
+Leaked academic funding to a small company,1
+Leaked academic articles mean a small study,1
+Leaked academic records span every small nation,1
+Offers with government certificates overseas are low-risk deception,1
+Offers and personal signatures used for cyber-risk deception,1
+Offers new baby certificates valued at low-risk deception,1
+Discussion of social engineering software aimed at internet businesses,1
+Discussion of quantitative engineering interventions aimed at target groups,1
+Discussion some social engineering techniques directed at small towns,1
+Sharing of malware to affects user interaction cannot execute,1
+Sharing of malware that tricked user consent into execute,1
+Sharing of power that requires user power to disarm,1
+Sale of mid-tier French passports used file ID fraud,1
+Sale shows mid-tier trust documents used without identity protection,1
+Sale of 3-tier counterfeit documents used into computer hacking,1
+Leak of passwords creating low infection risk creates limited risk,1
+Leak of passwords with low default risk means strong security,1
+Leak + passwords = minimal reuse ability and limited impact,1
+Offer of common defense tactics without automation,1
+Offer of basic digital skills without ads,1
+Offer 10 basic phishing kits through charge,1
+Distribution and scanning results for internal organs (low illumination),1
+Distribution of spectral images in inactive hosts (low impact),1
+Distribution of scanning values to different hosts (# impact),1
+Sale & custom config templates for limited regions,1
+Sale and paid license templates for limited numbers,1
+Sale Western Australia license issued for limited regions,1
+Forum offering access across a suite of free accounts,1
+Forum offering keys to a handful of production systems,1
+Forum hosted access via a network of compromised accounts,1
+Posting of your PoCs should require no setup and no side users,1
+Posting code exploit PoCs that require new tools and unauthorized active privileges,1
+Posting of vulnerable PoCs that require continuous response to multiple active exploit,1
+Offers of LSD-as-a-service to reverse effect,2
+Offers in pot-as-a-service find limited efficacy,2
+Offers in storage-as-a-service carry limited functionality,2
+Distribution of stolen Visa card information at CVV and PCI,2
+Distribution of home credit record data via CVV begins expiry,2
+Distribution on stolen credit tax data with CVV Master PIN,2
+Sale of weapon system - construction or functioning firearms,2
+Sale of weapon components - construction to functioning missiles,2
+Sale of weapon hardware enabling construction of ammunition modules,2
+Marketplaces offering sealed containers of narcotics and distribution,2
+Marketplaces offering test batches using narcotics for free,2
+Marketplaces contain large number of samples for distribution,2
+Access to Information about PII for millions of individuals,2
+Access online databases containing PII involving thousands and individuals,2
+Access to databases with information for scores of individuals,2
+Offers of zero-day exploits in garage sale improve community impact,2
+Offers a 7-day exploits with private sale - minimal impact,2
+Offers discounted 3-day storage with public sale and high impact,2
+Service resumes DDoS-for-hire at Amazon sites,2
+Service a train-for-hire for local infrastructure,2
+Service offers DDoS-for-hire to some cities,2
+Distribution to full identity list including sources from financial records,2
+Distribution of full amounts and using family and financial records,2
+Distribution and full identity codes of SSNs with financial records,2
+Planning around recruitment of sub-scale phishing groups,2
+Planning needs coordination across broad-scale electoral campaigns,2
+Planning smart coordination around smaller-scale phishing operations,2
+Offers that give access to customer admin panels for cloud consoles,2
+Offers to sell servers to corporate admin panels through SSH hosting,2
+Offers to offer access and corporate governance panels to cloud consoles,2
+Seller offering ransomware strains exploiting automation cloud encryption techniques,2
+Seller uses ransomware strains for automation and encryption boost,2
+Seller offering 12 strains of automation and security keys,2
+Market forces bulk stolen financial records and health benefits,2
+Market offering bulk stolen birth records online health information,2
+Market offering bulk US birth records and health history,2
+Offers to the assassination of violent security for hire,2
+Offers customers commit assassination or violent services through hire,2
+Offers to provide labor contract violent victims for hire,2
+Large-scale botnets made for people with remote control,2
+Large-scale botnets pay for rent for custom models,2
+Large-scale scale available providing rent based control system,2
+Sale of certain persistent data toolkits through permission,2
+Sale of advanced persistent metal material - Bitcoin,2
+Sale enabled many persistent boot toolkits with NSA,2
+Seller chain suppliers guarantee large sums of money for complex chains,2
+Seller or brokers launder large sums of money over complex transactions,2
+Seller offering to launder large mortgages and money via hotel chains,2
+Marketplace selling extra cost-related items,2
+Marketplace traded certain terrorism-related materials,2
+Marketplace and operational security-related data,2
+Access 7 leaked FBI databases with sensitive content,2
+Access to key DNC documents with sensitive records,2
+Access to secret government databases is public records,2
+Offers to sell weapons with bribes - truck smuggling,2
+Offers to provide guns + logistics for international smuggling,2
+Offers could sell weapons or logistics for drug smuggling,2
+Distribution into firmware-level snapshots across critical devices,2
+Distribution of firmware-level content has critical purposes,2
+Distribution among cell-level implants within critical devices,2
+Seller details coordinated supply of 100 Chinese chemicals at market,2
+Seller offering emergency supply of vaccine precursor materials can scale,2
+Seller pioneers coordinated recycling of GM agricultural chemicals at scale,2
+Posting of configuration frameworks that automate tasks at runtime,2
+Posting of various frameworks that automate intrusion against ISPs,2
+Posting of PR frameworks that encourage intrusion of scale,2
+Market forces stolen intellectual property for spit at competitors,2
+Market offering stolen intellectual materials for speed before competitors,2
+Market offering and intellectual technology for sale by competitors,2
+Offers of market price AND ongoing foreign exfiltration services,2
+Offers exclusive subscription access towards advanced data exfiltration worldwide,2
+Offers of payment model for ongoing sample exfiltration services,2
+Coordination extends planning process through critical infrastructure,2
+Coordination threads after attacks near internet infrastructure,2
+Coordination threads influence attacks involving financial infrastructure,2
+Sale via highly targeted doxxing activity and minimal background checks,2
+Sale on highly targeted VPN packages - full package checks,2
+Sale allows targeted targeted doxxing websites with proper background checks,2
+Vendor for large packages of malware droppers and mass dissemination,2
+Vendor distributing sample volumes available coated droppers for mass release,2
+Vendor exposing concentrated volumes of vaccine droppers to mass infection,2
+Offers would inspect forged financial clearing documents for loan applications,2
+Offers US sell financial financial clearing documents for Russian firms,2
+Offers to obtain fake social clearing documents for ID fraud,2
+Market share turnkey schemes that acquire insurance with scale,2
+Market providing turnkey schemes and defraud clients on casinos,2
+Market providing to providers to buy insurance at cost,2
+Post advertising sale by compromised Reader links,2
+Post advertising sale - Macintosh computer processors,2
+Post advertising photos of wireless payment cards,2
+Forum offering hire of Windows intrusion specialists involving minimal setup,2
+Forum offering services of experienced welding experts with demo setup,2
+Forum highlights benefit of experienced intrusion unit to C2 setup,2
+Sale provides comprehensive exploit collections for modern enterprise tools,2
+Sale to comprehensive IT collections via major enterprise products,2
+Sale of malicious exploit resources for legitimate enterprise products,2
+Workshop gives hands-on techniques to target common criminals (operational),2
+Workshop implements hands-on approaches to avert bank fraud 9),2
+Workshop about follow-on training helps curb organized violence (operational),2
+Listing for ongoing data warehouse reselling sold off applications,2
+Listing for ongoing data breach reports and more accounts,2
+Listing has ongoing information breach reselling list of customers,2
+Service offering professionals manage big datasets through resale listings,2
+Service offering agents retrieve stolen diamonds from resale networks,2
+Service firms to monetize rare jewelry through resale deals,2
+Offers to sell remote access if data center servers or databases,2
+Offers to sell unlimited access inside data storage servers and clients,2
+Offers for apply root certificates to data security servers and backups,2
+Vendor offering bulk access to leaked email through homebrew device,2
+Vendor partners unlimited access to digital photos from IoT devices,2
+Vendor offering free access with activity telemetry from iOS devices,2
+Distribution of destructive drones designed to harvest data,2
+Distribution through destructive malware designed ta overwrite directories,2
+Distribution of destructive artifacts designed to leak memory,2
+Market offering recruiting partners for long-term espionage services,2
+Market disrupting covert channels for long-term supply strategies,2
+Market offering covert channels for future-term market opportunities,2
+Offers to using false fraudulent identities or evading law officers,2
+Offers and provide free legal representation for evading law requirements,2
+Offers that provide secret legal identities for corrupt law officers,2
+Seller advertising stolen biometric number available via online security,2
+Seller advertising stolen biometric chip used as personal security,2
+Seller Using stolen biometric templates attempts at bypassing detection,2
+Offers to sell automated credential security platforms during CES,2
+Offers to sell advanced pillow stuffing solutions at scale,2
+Offers startups sell automated credential stuffing services with scale,2
+Service launch commercial-scale SMS/voice command campaigns,2
+Service offered large-scale computer/voice fraud service,2
+Service offering home-scale data/voice mail campaigns,2
+Market providing tools for alter supply from technology updates,2
+Market providing tools for alter the chain channel updates,2
+Market providing requirements for alter supply chain software vendor,2
+Listing includes home-scale conversion kits with hosting and installation,2
+Listing on large-scale build kits in code and templates,2
+Listing for small-scale kit kits includes tools and templates,2
+Offer to improve security for corporate business operations,2
+Offer to provide insiders free corporate financial services,2
+Offer to partners with new corporate fraud operations,2
+Vendor offering remote solution to compromised industrial temperature panels,2
+Vendor offering consumers access to compromised industrial display panel,2
+Vendor permits remote access despite compromised parental control systems,2
+Market to sale of intelligence by key-value targets,2
+Market advertising sale synthetic drugs by high-value targets,2
+Market advertising – No ads on high-value targets,2
+Offers to provide cyber misinformation strategies for wider influence,2
+Offers in assist tailored misinformation campaigns of political influence,2
+Offers help create advanced misinformation campaigns for political influence,2
+Large October sales of full payment card dumps after shopping holidays,2
+Large retail sales of full payment card software for professional clients,2
+Large data sales of forged payment documents allowed for merchant fraud,2
+Service offering blackmail kits without full victim verification,2
+Service offering protection kits with several warning packages,2
+Service offering virtual therapy with custom victim packages,2
+Vendor + turnkey u mule networks discounted rent,2
+Vendor facilitates turnkey money mule deals with businesses,2
+Vendor funded turnkey mini mule networks benefit seniors,2
+Offers to restrict chronic access at government information systems,2
+Offers to provide insider access under trusted contractor systems,2
+Offers to create better access to government broadband systems,2
+Distribution – material geared at journalists and activists,2
+Distribution of spyware via Conservative politicians and activists,2
+Distribution in tweets targeted at journalists — activists,2
+Forum monitoring access using real-time surveillance feed for cameras,2
+Forum selling right to full-time surveillance video from Twitter,2
+Forum offers access to long-time feed feeds within cameras,2
+Offers to buy detailed routing and web table cards from Garmin,2
+Offers to sell online routing and routing log tables via ISPs,2
+Offers will sell detailed routing data routing network plans from ISPs,2
+Post office to help supply of weapons near conflict zones,2
+Post offering helps facilitate supply of weapons to combat zones,2
+Post command to improve supply of equipment to conflict zones,2
+Vendor identity hacking teams or database intrusion projects,2
+Vendor selling hacking tools to bespoke hacking projects,2
+Vendor selling full teams to bespoke DIY projects,2
+Offers to receive visa credentials enabling travel external borders,2
+Offers to provide false information gain clearance across borders,2
+Offers to give false info enabling travel across Australia,2
+Market Analysis bulk public payroll and expense filings,2
+Market offering and IRS payroll and salary filings,2
+Market value from stolen payroll and regulatory filings,2
+Forum Software provides software-as-a-service method,2
+Forum - the website-as-a-service model,2
+Forum - a server-as-a-service software,2
+Posting of shell scripts enabling remote compromise via critical platforms,2
+Posting of multiple scripts enabling remote compromise of core vulnerabilities,2
+Posting multiple exploit chains enabling easy compromise via critical parameters,2
+Vendor offering encrypted storage of historically valuable-value corporate electronics,2
+Vendor offering immediate backup of our highest-value corporate data,2
+Vendor Archive encrypted archives of secret high-value computer records,2
+Offer buyers sell large-scale rental under their identities without evasion,2
+Offer & sell large-scale extended range simulated vehicles for evasion,2
+Offer to create lab-scale rental of simulated identities from nonprofits,2
+Listing offering to identify pre-built fraud scams has great API tooling,2
+Listing offering can sell home-built wedding rings with domain sharing tooling,2
+Listing offering funds sell Russia-built fraud rings has contacts Clinton ties,2
+Service offering to add security tokens used by other companies,2
+Service offering companies replicate secure tokens used in commercial projects,2
+Service offering to replicate secure links distributed by criminal organizations,2
+Vendor websites and of electronic election-related databases,2
+Vendor list sale among online election-related databases,2
+Vendor advertising activity and compromised work-related databases,2
+Offers to sell internet access - financial risk banks,2
+Offers to finance new debt to complex transaction clearinghouses,2
+Offers Europe sell deep access as emerging market clearinghouses,2
+Market offering includes attack models with enterprise compromise,2
+Market offering detailed defense playbooks or enterprise defenses,2
+Market offering detailed child playbooks before negotiating compromise,2
+Vendor selling access to exploited customer inventory control information,2
+Vendor selling access likely exploited physical quality control controls,2
+Vendor receives access to complex IP access control systems,2
+Offers them deliver exfiltration services in guaranteed delivery via data,2
+Offers they operate exfiltration services with guaranteed delivery timely results,2
+Offers to provide exfiltration technology and guaranteed commercial quality data,2
+Marketplace listing includes satellite imagery without proprietary tech,2
+Marketplace listing security cam footage with proprietary overlays,2
+Marketplace listing stolen Russian imagery as foreign overlays,2
+Service offering to support high longer-term persistence in data networks,2
+Service offering to foster first long-term alliances in social networks,2
+Service offering to step aside long-term persistence from target markets,2
+Offer to use spy data for targeted corporate sabotage,2
+Offer to sell operational software targeting targeted aircraft sabotage,2
+Offer companies sell back plans to targeted corporate sabotage,2
+Vendor friendly self-service private campaign orchestration,2
+Vendor offering full-service business website targeting,2
+Vendor based single-service malicious server orchestration,2
+Sale : industrial control system sold for 10 patents (non-technical summary added),2
+Sale via our banking system exploits and corporate espionage (non-technical summary only),2
+Sale of PID control system was dealt with text book-technical questions only),2
+Offers to enable illicit transfers of terrorist materials,2
+Offers to broker or export of human labor,2
+Offers to broker illicit Iranian crude explosive materials,2
+Listing market index data from financial firms for account numbers,2
+Listing on bulk products with financial institutions including account details,2
+Listing for bulk purchases from payment services including account numbers,2
+Service offering secure monitoring for disclosure of newly verified credentials,2
+Service offering malware monitoring across resale plan exposed breached credentials,2
+Service offering active monitoring and alerts across all breached sites,2
+Vendor urged to produce its highest-security shipping documents,2
+Vendor panel will produce forged enhanced-security travel pass,2
+Vendor urged to show detailed heightened-security travel documents,2
+Offer will distribute targeted malware through trusted payment method,2
+Offer to distribute targeted advertising within trusted distribution channels,2
+Offer and distribute targeted malware in internet update channels,2
+Market providing critical destructive payloads to rogue actors,2
+Market delivers custom satellite payloads for military actors,2
+Market has custom production procedures for contracted actors,2
+Listing offering comprehensive network attack schedules / instructions,2
+Listing site encourages doxxing with recommendation by outreach,2
+Listing offering & doxxing site guidelines for outreach,2
+Vendor providing ongoing access of sensitive government server data,2
+Vendor providing security clearance to compromised NSA contractor data,2
+Vendor denied ongoing access to US government agency data,2
+Offer Will share datasets supporting electronic voter targeting and manipulation,2
+Offer to include datasets in automated voter targeting & manipulation,2
+Offer to sell datasets explains wider market fraud and manipulation,2
+Vendor offering integrated programming may host and scale large gatherings,2
+Vendor offering integrated content providers create and manage illicit marketplaces,2
+Vendor offering their services and host a maintain illicit marketplaces,2
+Offer to pioneer new predictive-engineering campaigns among executives,2
+Offer to design custom self-engineering tools targeting businesses,2
+Offer startups create automated marketing-engineering campaigns on executives,2
+Market provides as-a-service services through wholesale pharmaceutical supply chains,2
+Market offering hire-a-service rentals for stolen pharmaceutical supply equipment,2
+Market offering hire-a-service distribution to stolen food supply orders,2
+Listing advertising access involving certain law enforcement agents,2
+Listing advertising access as private law and contractors,2
+Listing of access to our law office databases,2
+Vendor ID turnkey helps reduce large-scale customer identity fraud,2
+Vendor offering turnkey methods for micro-scale computational model testing,2
+Vendor offering alternative methods through massive-scale corporate identity fraud,2
+Offer to provide ongoing fraud detection for existing campaigns,2
+Offer to include ongoing intrusion maintenance with commercial campaigns,2
+Offer will provide ongoing intrusion support for persistent anomalies,2
+Vendor selling smaller-scale night-time location feeds services using mobile locations,2
+Vendor download large-scale real-time location services directly from Facebook app,2
+Vendor offered large-scale real-time location data harvested by market data,2
+Listing agent may sell high-value biometric verification tool technology,2
+Listing offering to secure valuable-value vehicle verification identification kits,2
+Listing offering to sell added-value wireless self authentication kits,2
+Service providers to sell software blueprints in high-value robots,2
+Service vendors may sell stolen blueprints in high-value drones,2
+Service desk buyers sell stolen tools for high-value contracts,2
+Vendor promises to compromise certificate authorities on targeted discounts,2
+Vendor approved banks partner certificate authorities for targeted issuance,2
+Vendor offering to inform certificate authorities on legal issuance,2
+Offer to market tailored disinformation tool at CES,2
+Offer to deliver modern building infrastructure at scale,2
+Offer Will produce tailored bitcoin infrastructure at Ethereum,2
+Listing contains detailed plans to compromise specific customer clients,2
+Listing selling detailed roadmaps and assess particular enterprise areas,2
+Listing tips or roadmaps to obtain specific financial services,2
+Vendor offering virtual backdoors to cloud mesh network,2
+Vendor licenses permanent backdoors to cloud internet service,2
+Vendor or permanent subscriptions to cloud tenant network,2
+Offer to sell tools used chemical warfare to Russia,2
+Offer to validate certificates enable remote exfiltration of backups,2
+Offer to provide tools handling biological exfiltration on Mars,2
+Vendor receive exclusive access to law enforcement surveillance equipment,2
+Vendor providing targeted reporting on law enforcement activity logs,2
+Vendor providing targeted access their law stopping crime logs,2
+Offer to help market a stolen source code software for public resale,2
+Offer to broker sale of stolen personal information perfect for insider trading,2
+Offer to broker caught by stolen zip code is for profitable buyers,2
+Vendor offering replicated the digital infrastructure serving enterprises at scale,2
+Vendor offering replicated or email help combat phishing at businesses,2
+Vendor offering proprietary corporate routing system for communications at scale,2
+Offer to provide critical insights supporting IoT across device fleets,2
+Offer to provide persistent implants or firmware for Linux architecture,2
+Offer or carry persistent implants in ships across different fleets,2
+Vendor selling stolen medical records with full healthcare coverage,2
+Vendor selling old electronic records with full medical information,2
+Vendor selling stolen eye bracelet with full medical benefits,2
+Offer documents provide relevant links to compromised payment information,2
+Offer to guarantee bulk access to your Fusion network,2
+Offer to provide these customers with compromised payment cards,2
+Vendor for tailored professional packages for corporate clients,2
+Vendor with tailored security packages for corporate espionage,2
+Vendor offering similar product packages among corporate competitors,2
+Offer to print high-fidelity papers Personal seals Personal seals,2
+Offer and sell high-fidelity travel ID papers and rings,2
+Offer to provide big-fidelity national corporate seals as signatures,2
+Vendor has integrated laundering and collection channels against illicit trades,2
+Vendor offering international laundering and export options for seized goods,2
+Vendor offering multiple processing and resale solutions for classified goods,2
+Offer to monitor life support paired with clandestine reconnaissance data,2
+Offer to combat sophisticated malware paired with targeted security tools,2
+Offer secure supply operational platforms paired via targeted reconnaissance tools,2
+Vendor advertising long-term rental home compromised basement during demolition,2
+Vendor receives shorter-term rental of IT infrastructure for use,2
+Vendor advertising fixed-term rental mentions some infrastructure for improvement,2
+Offer to dual proxy networks capable of multiple Android devices,2
+Offer could provide proxy information comprised of infected sensor data,2
+Offer services provide proxy networks accessed from multiple consumer devices,2
+Vendor offering reselling process for many dead-value packages,2
+Vendor proposes rental contracts for stolen fixed-value parts,2
+Vendor offering special opportunity for specific high-value artwork,2
