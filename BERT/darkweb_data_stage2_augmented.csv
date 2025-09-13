@@ -1,593 +1,1306 @@
 text,label
-Discussion of minor scams targeting a small local community,0
-Leak of non-sensitive contact emails without financial data,0
-Advertisement for counterfeit software keys with low distribution,0
-Offers for single-use forged event tickets,0
-Small discussion about phishing examples for education,0
-Sale of low-grade fake merchandise in limited quantities,0
-Listing for localized petty fraud schemes,0
-Comments on historical hacking incidents without active code,0
-Sharing of usernames with no attached credentials,0
-Discussion on ethical hacking labs and non-malicious demos,0
-Leak of email addresses and non-financial profiles,0
-Community post about minor privacy breaches affecting a few users,0
-Request for help recovering from a local scam (victim support),0
-Sharing obfuscated code snippets without exploit payloads,0
-Post discussing legal ways to report vulnerabilities,0
-Offer to sell small quantities of controlled substances for personal use,1
-Sharing of leaked low-impact internal documents,1
-Sale of low-value gift card numbers in small batches,1
-Discussion about credential stuffing with limited scope,1
-Offers to defraud small businesses via invoice scams,1
-Sharing partial credit card details without CVV,1
-Distribution of scraped user profiles with some PII,1
-"Discussion of malware development focusing on theory, no tooling",1
-Sale of hacked email lists for targeted marketing abuse,1
-Offering cheap bot access with limited capacity,1
-Leaked academic records for a small cohort,1
-Offers of forged certificates used for low-risk deception,1
-Discussion of social engineering techniques aimed at small groups,1
-Sharing of malware that requires user interaction to execute,1
-Sale of mid-tier counterfeit documents used for identity fraud,1
-Leak of passwords with low reuse risk and limited impact,1
-Offer of basic phishing kits without automation,1
-Distribution of scanning results exposing internal hosts (low impact),1
-Sale of driver license templates for limited regions,1
-Forum offering access to a handful of compromised accounts,1
-Posting of exploit PoCs that require specialized setup and no active exploit,1
-Offers of ransomware-as-a-service with limited distribution,2
-Distribution of stolen credit card data with CVV and expiry,2
-Sale of weapon components enabling construction of functioning firearms,2
-Marketplaces offering large batches of narcotics for distribution,2
-Access to databases containing PII for thousands of individuals,2
-Offers of zero-day exploits with private sale and high impact,2
-Service providing DDoS-for-hire targeting major infrastructure,2
-Distribution of full identity profiles including SSNs and financial records,2
-Planning and coordination of large-scale phishing campaigns,2
-Offers to sell access to corporate admin panels and cloud consoles,2
-Seller offering ransomware strains with automation and encryption keys,2
-Market offering bulk stolen medical records and health data,2
-Offers to provide assassination or violent services for hire,2
-Large-scale botnets available for rent with control panels,2
-Sale of advanced persistent threat toolkits with support,2
-Seller offering to launder large sums of money through complex chains,2
-Marketplace selling operational terrorism-related material,2
-Access to leaked government databases with sensitive records,2
-Offers to sell weapons with logistics for international smuggling,2
-Distribution of firmware-level implants for critical devices,2
-Seller offering coordinated supply of illicit precursor chemicals at scale,2
-Posting of exploit frameworks that automate intrusion at scale,2
-Market offering stolen intellectual property for sale to competitors,2
-Offers of subscription access to ongoing data exfiltration services,2
-Coordination threads planning attacks on critical infrastructure,2
-Sale of highly targeted doxxing packages with full background checks,2
-Vendor distributing large volumes of malware droppers for mass infection,2
-Offers to sell forged financial clearing documents for enterprise fraud,2
-Market providing turnkey schemes to defraud insurance at scale,2
-Post advertising sale of compromised payment processors,2
-Forum offering hire of experienced intrusion operators with C2 setup,2
-Sale of comprehensive exploit collections for major enterprise products,2
-Workshop offering hands-on training to commit organized fraud (operational),2
-Listing for ongoing data breach reselling thousands of records,2
-Service offering to monetize stolen datasets through resale networks,2
-Offers to sell root access to data center servers and backups,2
-Vendor offering bulk access to leaked telemetry from IoT devices,2
-Distribution of destructive malware designed to overwrite backups,2
-Market offering covert channels for long-term espionage operations,2
-Offers to provide false legal identities for evading law enforcement,2
-Seller advertising stolen biometric templates usable for bypassing security,2
-Offers to sell automated credential stuffing platforms at scale,2
-Service offering large-scale SMS/voice fraud campaigns,2
-Market providing tools to alter supply chain software updates,2
-Listing for large-scale phishing kits with hosting and templates,2
-Offer to provide insiders for corporate fraud operations,2
-Vendor offering remote access to compromised industrial control systems,2
-Market advertising sale of intelligence on high-value targets,2
-Offers to provide tailored misinformation campaigns for political influence,2
-Large batch sales of full payment card dumps for merchant fraud,2
-Service offering blackmail kits with doxxed victim packages,2
-Vendor offering turnkey money mule networks for laundering,2
-Offers to provide chronic access to government contractor systems,2
-Distribution of spyware targeted at journalists and activists,2
-Forum selling access to real-time surveillance feeds from cameras,2
-Offers to sell detailed routing and routing table snapshots from ISPs,2
-Post offering to coordinate supply of weapons to conflict zones,2
-Vendor selling hacking teams for bespoke intrusion projects,2
-Offers to provide false credentials enabling travel across borders,2
-Market offering bulk stolen payroll and tax filings,2
-Forum offering turnkey cybercrime-as-a-service operations,2
-Posting of exploit chains enabling remote compromise of critical servers,2
-Vendor offering encrypted archives of stolen high-value corporate data,2
-Offer to sell large-scale rental of simulated identities for evasion,2
-Listing offering to sell pre-built fraud rings with contacts and tooling,2
-Service offering to replicate secure tokens used by enterprise SSO,2
-Vendor advertising sale of compromised election-related databases,2
-Offers to sell deep access to financial transaction clearinghouses,2
-Market offering detailed attack playbooks for enterprise compromise,2
-Vendor selling access to exploited physical access control systems,2
-Offers to provide exfiltration services with guaranteed delivery of data,2
-Marketplace listing stolen satellite imagery with proprietary overlays,2
-Service offering to set up long-term persistence in target networks,2
-Offer to sell operational plans for targeted corporate sabotage,2
-Vendor offering full-service malicious campaign orchestration,2
-Sale of industrial control system exploits paired with instruction (non-technical summary only),2
-Offers to broker illicit export of sanctioned materials,2
-Listing selling bulk data from financial institutions including account numbers,2
-Service offering active monitoring and resale of newly breached credentials,2
-Vendor offering to produce forged high-security travel documents,2
-Offer to distribute targeted malware through trusted update channels,2
-Market providing custom destructive payloads for contracted actors,2
-Listing offering comprehensive doxxing with schedules and outreach,2
-Vendor providing ongoing access to compromised government contractor data,2
-Offer to sell datasets enabling mass voter targeting and manipulation,2
-Vendor offering integrated services to host and scale illicit marketplaces,2
-Offer to create custom social-engineering campaigns targeting executives,2
-Market offering as-a-service distribution of stolen pharmaceutical supply chains,2
-Listing advertising access to private law enforcement databases,2
-Vendor offering turnkey methods for large-scale synthetic identity fraud,2
-Offer to provide ongoing intrusion maintenance for persistent campaigns,2
-Vendor selling large-scale real-time location feeds harvested from mobile apps,2
-Listing offering to sell high-value biometric verification bypass kits,2
-Service offering to sell stolen blueprints for high-value manufacturing,2
-Vendor offering to compromise certificate authorities for targeted issuance,2
-Offer to produce tailored disinformation infrastructure at scale,2
-Listing selling detailed roadmaps to compromise specific enterprise services,2
-Vendor offering permanent backdoors to cloud tenant environments,2
-Offer to sell tools enabling undetectable exfiltration from backups,2
-Vendor providing targeted access to law enforcement surveillance logs,2
-Offer to broker sale of stolen source code repositories for profitable resale,2
-Vendor offering replicated corporate email infrastructure for phishing at scale,2
-Offer to provide persistent implants in firmware across device fleets,2
-Vendor selling stolen health records with full medical histories,2
-Offer to provide bulk access to compromised payment gateways,2
-Vendor offering tailored espionage packages for corporate competitors,2
-Offer to sell high-fidelity forged corporate seals and notarizations,2
-Vendor offering integrated laundering and resale channels for illicit goods,2
-Offer to supply operational malware paired with targeted reconnaissance data,2
-Vendor advertising long-term rental of compromised infrastructure for campaigns,2
-Offer to provide proxy networks comprised of infected consumer devices,2
-Vendor offering reselling contracts for stolen high-value data,2
-Discussion : ransomware scams targeting a local local community,0
-Discussion proposes minor tax targeting a thriving local community,0
-Discussion concerning minor scams targeting a small Georgia business,0
-Leak showing data-sensitive contact emails violates financial consent,0
-Leak threatens ultra-sensitive corporate emails exposing financial data,0
-Leak shows ultra-sensitive NSA emails involving financial data,0
-Advertisement 2 counterfeit SSH keys in low distribution,0
-Advertisement Some counterfeit software products have low distribution,0
-Advertisement : large software keys and low distribution,0
-Offers of dual-use forged event passes,0
-Offers for early-use world tour tickets,0
-Offers great dual-use single event tickets,0
-Small discussion with financial scams for education,0
-Small observations about modern techniques for education,0
-Small discussion On contributing examples to education,0
-Sale of economy-grade tourist merchandise has limited stock,0
-Sale of low-grade Turkish passports through limited distribution,0
-Sale uses street-grade fake merchandise in Chinese market,0
-Listing for localized local drug rings,0
-Listing down localized Chinese fraud rings,0
-Listing infamous international tax fraud schemes,0
-Comments about historical vandalism incidents without valid code,0
-Comments describing historical computing incidents without published code,0
-Comments on child sex incidents without active links,0
-Sharing of usernames exposes multiple login credentials,0
-Sharing data will require no attached credentials,0
-Sharing shared usernames with + attached tags,0
-Discussion on additional hacking sessions following techno-malicious demos,0
-Discussion on bogus medical labs or non-malicious labs,0
-Discussion About malicious hacking hacking of non-malicious demos,0
-Leak of IP addresses and pre-financial documents,0
-Leak partial MAC addresses and pre-financial profiles,0
-Leak of financial logs & non-financial profiles,0
-Community post about minor information breaches affecting most computer users,0
-Community post suggested minor privacy breaches impacted a few developers,0
-Community post about minor privacy breaches affecting three family friends,0
-Request medical help arising from a workplace shooting (victim support),0
-Request for information recovering on a local scam outlined below),0
-Request for others recovering from surviving local suicide (+ support),0
-Sharing raw javascript snippets without embedded payloads,0
-Sharing raw JavaScript snippets of exploit payloads,0
-Sharing obfuscated code publicly ensures exploit detection,0
-Post discussing 7 ways Americans report police,0
-Post discussing legal ways to fight crime,0
-Post hoc legal ways we improve vulnerabilities,0
-Offer or distribute small quantities of controlled drugs for illegal use,1
-Offer to convert small sections to controlled cannabis for personal use,1
-Offer to acquire small quantities of two agents for personal satisfaction,1
-Sharing of this positive-impact internal communication,1
-Sharing of allegedly large-impact CIA documents,1
-Sharing all those low-impact internal chats,1
-Sale of high-value gift card returns in all caps,1
-Sale of post-value meat batch numbers in individual batches,1
-Sale includes low-value polymer card stock for small batches,1
-Discussion in body stuffing with broad scope,1
-Discussion about selective editing with limited impact,1
-Discussion of credential negotiation with user scope,1
-Offers targeted sale of businesses via invoice scams,1
-Offers to defraud small investors with cyber scams,1
-Offers can attack small businesses via insurance scams,1
-Sharing partial gift card details & limitation,1
-Sharing confidential credit chip details without payment,1
-Sharing our credit agreement details without disclosure,1
-Distribution of various user profiles in each annotation,1
-Distribution of incoming SMS messages with a PII,1
-Distribution shows common user text with some annotations,1
-"Discussion and functional development relying on theory, critical tooling",1
-"Discussion of malware attacks focusing around bugs, no data",1
-"Discussion of various attacks focusing mostly theory, no substance",1
-Sale of hacked spam lists for facilitating online abuse,1
-Sale of Facebook email accounts reveals targeted marketing abuse,1
-Sale brokers hacked email lists found targeted Russian abuse,1
-Offering up bot farms beyond limited capacity,1
-Offering cheap bot engines with scarce resources,1
-Offering cheap quick money with limited features,1
-Leaked academic funding to a small company,1
-Leaked academic articles mean a small study,1
-Leaked academic records span every small nation,1
-Offers with government certificates overseas are low-risk deception,1
-Offers and personal signatures used for cyber-risk deception,1
-Offers new baby certificates valued at low-risk deception,1
-Discussion of social engineering software aimed at internet businesses,1
-Discussion of quantitative engineering interventions aimed at target groups,1
-Discussion some social engineering techniques directed at small towns,1
-Sharing of malware to affects user interaction cannot execute,1
-Sharing of malware that tricked user consent into execute,1
-Sharing of power that requires user power to disarm,1
-Sale of mid-tier French passports used file ID fraud,1
-Sale shows mid-tier trust documents used without identity protection,1
-Sale of 3-tier counterfeit documents used into computer hacking,1
-Leak of passwords creating low infection risk creates limited risk,1
-Leak of passwords with low default risk means strong security,1
-Leak + passwords = minimal reuse ability and limited impact,1
-Offer of common defense tactics without automation,1
-Offer of basic digital skills without ads,1
-Offer 10 basic phishing kits through charge,1
-Distribution and scanning results for internal organs (low illumination),1
-Distribution of spectral images in inactive hosts (low impact),1
-Distribution of scanning values to different hosts (# impact),1
-Sale & custom config templates for limited regions,1
-Sale and paid license templates for limited numbers,1
-Sale Western Australia license issued for limited regions,1
-Forum offering access across a suite of free accounts,1
-Forum offering keys to a handful of production systems,1
-Forum hosted access via a network of compromised accounts,1
-Posting of your PoCs should require no setup and no side users,1
-Posting code exploit PoCs that require new tools and unauthorized active privileges,1
-Posting of vulnerable PoCs that require continuous response to multiple active exploit,1
-Offers of LSD-as-a-service to reverse effect,2
-Offers in pot-as-a-service find limited efficacy,2
-Offers in storage-as-a-service carry limited functionality,2
-Distribution of stolen Visa card information at CVV and PCI,2
-Distribution of home credit record data via CVV begins expiry,2
-Distribution on stolen credit tax data with CVV Master PIN,2
-Sale of weapon system - construction or functioning firearms,2
-Sale of weapon components - construction to functioning missiles,2
-Sale of weapon hardware enabling construction of ammunition modules,2
-Marketplaces offering sealed containers of narcotics and distribution,2
-Marketplaces offering test batches using narcotics for free,2
-Marketplaces contain large number of samples for distribution,2
-Access to Information about PII for millions of individuals,2
-Access online databases containing PII involving thousands and individuals,2
-Access to databases with information for scores of individuals,2
-Offers of zero-day exploits in garage sale improve community impact,2
-Offers a 7-day exploits with private sale - minimal impact,2
-Offers discounted 3-day storage with public sale and high impact,2
-Service resumes DDoS-for-hire at Amazon sites,2
-Service a train-for-hire for local infrastructure,2
-Service offers DDoS-for-hire to some cities,2
-Distribution to full identity list including sources from financial records,2
-Distribution of full amounts and using family and financial records,2
-Distribution and full identity codes of SSNs with financial records,2
-Planning around recruitment of sub-scale phishing groups,2
-Planning needs coordination across broad-scale electoral campaigns,2
-Planning smart coordination around smaller-scale phishing operations,2
-Offers that give access to customer admin panels for cloud consoles,2
-Offers to sell servers to corporate admin panels through SSH hosting,2
-Offers to offer access and corporate governance panels to cloud consoles,2
-Seller offering ransomware strains exploiting automation cloud encryption techniques,2
-Seller uses ransomware strains for automation and encryption boost,2
-Seller offering 12 strains of automation and security keys,2
-Market forces bulk stolen financial records and health benefits,2
-Market offering bulk stolen birth records online health information,2
-Market offering bulk US birth records and health history,2
-Offers to the assassination of violent security for hire,2
-Offers customers commit assassination or violent services through hire,2
-Offers to provide labor contract violent victims for hire,2
-Large-scale botnets made for people with remote control,2
-Large-scale botnets pay for rent for custom models,2
-Large-scale scale available providing rent based control system,2
-Sale of certain persistent data toolkits through permission,2
-Sale of advanced persistent metal material - Bitcoin,2
-Sale enabled many persistent boot toolkits with NSA,2
-Seller chain suppliers guarantee large sums of money for complex chains,2
-Seller or brokers launder large sums of money over complex transactions,2
-Seller offering to launder large mortgages and money via hotel chains,2
-Marketplace selling extra cost-related items,2
-Marketplace traded certain terrorism-related materials,2
-Marketplace and operational security-related data,2
-Access 7 leaked FBI databases with sensitive content,2
-Access to key DNC documents with sensitive records,2
-Access to secret government databases is public records,2
-Offers to sell weapons with bribes - truck smuggling,2
-Offers to provide guns + logistics for international smuggling,2
-Offers could sell weapons or logistics for drug smuggling,2
-Distribution into firmware-level snapshots across critical devices,2
-Distribution of firmware-level content has critical purposes,2
-Distribution among cell-level implants within critical devices,2
-Seller details coordinated supply of 100 Chinese chemicals at market,2
-Seller offering emergency supply of vaccine precursor materials can scale,2
-Seller pioneers coordinated recycling of GM agricultural chemicals at scale,2
-Posting of configuration frameworks that automate tasks at runtime,2
-Posting of various frameworks that automate intrusion against ISPs,2
-Posting of PR frameworks that encourage intrusion of scale,2
-Market forces stolen intellectual property for spit at competitors,2
-Market offering stolen intellectual materials for speed before competitors,2
-Market offering and intellectual technology for sale by competitors,2
-Offers of market price AND ongoing foreign exfiltration services,2
-Offers exclusive subscription access towards advanced data exfiltration worldwide,2
-Offers of payment model for ongoing sample exfiltration services,2
-Coordination extends planning process through critical infrastructure,2
-Coordination threads after attacks near internet infrastructure,2
-Coordination threads influence attacks involving financial infrastructure,2
-Sale via highly targeted doxxing activity and minimal background checks,2
-Sale on highly targeted VPN packages - full package checks,2
-Sale allows targeted targeted doxxing websites with proper background checks,2
-Vendor for large packages of malware droppers and mass dissemination,2
-Vendor distributing sample volumes available coated droppers for mass release,2
-Vendor exposing concentrated volumes of vaccine droppers to mass infection,2
-Offers would inspect forged financial clearing documents for loan applications,2
-Offers US sell financial financial clearing documents for Russian firms,2
-Offers to obtain fake social clearing documents for ID fraud,2
-Market share turnkey schemes that acquire insurance with scale,2
-Market providing turnkey schemes and defraud clients on casinos,2
-Market providing to providers to buy insurance at cost,2
-Post advertising sale by compromised Reader links,2
-Post advertising sale - Macintosh computer processors,2
-Post advertising photos of wireless payment cards,2
-Forum offering hire of Windows intrusion specialists involving minimal setup,2
-Forum offering services of experienced welding experts with demo setup,2
-Forum highlights benefit of experienced intrusion unit to C2 setup,2
-Sale provides comprehensive exploit collections for modern enterprise tools,2
-Sale to comprehensive IT collections via major enterprise products,2
-Sale of malicious exploit resources for legitimate enterprise products,2
-Workshop gives hands-on techniques to target common criminals (operational),2
-Workshop implements hands-on approaches to avert bank fraud 9),2
-Workshop about follow-on training helps curb organized violence (operational),2
-Listing for ongoing data warehouse reselling sold off applications,2
-Listing for ongoing data breach reports and more accounts,2
-Listing has ongoing information breach reselling list of customers,2
-Service offering professionals manage big datasets through resale listings,2
-Service offering agents retrieve stolen diamonds from resale networks,2
-Service firms to monetize rare jewelry through resale deals,2
-Offers to sell remote access if data center servers or databases,2
-Offers to sell unlimited access inside data storage servers and clients,2
-Offers for apply root certificates to data security servers and backups,2
-Vendor offering bulk access to leaked email through homebrew device,2
-Vendor partners unlimited access to digital photos from IoT devices,2
-Vendor offering free access with activity telemetry from iOS devices,2
-Distribution of destructive drones designed to harvest data,2
-Distribution through destructive malware designed ta overwrite directories,2
-Distribution of destructive artifacts designed to leak memory,2
-Market offering recruiting partners for long-term espionage services,2
-Market disrupting covert channels for long-term supply strategies,2
-Market offering covert channels for future-term market opportunities,2
-Offers to using false fraudulent identities or evading law officers,2
-Offers and provide free legal representation for evading law requirements,2
-Offers that provide secret legal identities for corrupt law officers,2
-Seller advertising stolen biometric number available via online security,2
-Seller advertising stolen biometric chip used as personal security,2
-Seller Using stolen biometric templates attempts at bypassing detection,2
-Offers to sell automated credential security platforms during CES,2
-Offers to sell advanced pillow stuffing solutions at scale,2
-Offers startups sell automated credential stuffing services with scale,2
-Service launch commercial-scale SMS/voice command campaigns,2
-Service offered large-scale computer/voice fraud service,2
-Service offering home-scale data/voice mail campaigns,2
-Market providing tools for alter supply from technology updates,2
-Market providing tools for alter the chain channel updates,2
-Market providing requirements for alter supply chain software vendor,2
-Listing includes home-scale conversion kits with hosting and installation,2
-Listing on large-scale build kits in code and templates,2
-Listing for small-scale kit kits includes tools and templates,2
-Offer to improve security for corporate business operations,2
-Offer to provide insiders free corporate financial services,2
-Offer to partners with new corporate fraud operations,2
-Vendor offering remote solution to compromised industrial temperature panels,2
-Vendor offering consumers access to compromised industrial display panel,2
-Vendor permits remote access despite compromised parental control systems,2
-Market to sale of intelligence by key-value targets,2
-Market advertising sale synthetic drugs by high-value targets,2
-Market advertising – No ads on high-value targets,2
-Offers to provide cyber misinformation strategies for wider influence,2
-Offers in assist tailored misinformation campaigns of political influence,2
-Offers help create advanced misinformation campaigns for political influence,2
-Large October sales of full payment card dumps after shopping holidays,2
-Large retail sales of full payment card software for professional clients,2
-Large data sales of forged payment documents allowed for merchant fraud,2
-Service offering blackmail kits without full victim verification,2
-Service offering protection kits with several warning packages,2
-Service offering virtual therapy with custom victim packages,2
-Vendor + turnkey u mule networks discounted rent,2
-Vendor facilitates turnkey money mule deals with businesses,2
-Vendor funded turnkey mini mule networks benefit seniors,2
-Offers to restrict chronic access at government information systems,2
-Offers to provide insider access under trusted contractor systems,2
-Offers to create better access to government broadband systems,2
-Distribution – material geared at journalists and activists,2
-Distribution of spyware via Conservative politicians and activists,2
-Distribution in tweets targeted at journalists — activists,2
-Forum monitoring access using real-time surveillance feed for cameras,2
-Forum selling right to full-time surveillance video from Twitter,2
-Forum offers access to long-time feed feeds within cameras,2
-Offers to buy detailed routing and web table cards from Garmin,2
-Offers to sell online routing and routing log tables via ISPs,2
-Offers will sell detailed routing data routing network plans from ISPs,2
-Post office to help supply of weapons near conflict zones,2
-Post offering helps facilitate supply of weapons to combat zones,2
-Post command to improve supply of equipment to conflict zones,2
-Vendor identity hacking teams or database intrusion projects,2
-Vendor selling hacking tools to bespoke hacking projects,2
-Vendor selling full teams to bespoke DIY projects,2
-Offers to receive visa credentials enabling travel external borders,2
-Offers to provide false information gain clearance across borders,2
-Offers to give false info enabling travel across Australia,2
-Market Analysis bulk public payroll and expense filings,2
-Market offering and IRS payroll and salary filings,2
-Market value from stolen payroll and regulatory filings,2
-Forum Software provides software-as-a-service method,2
-Forum - the website-as-a-service model,2
-Forum - a server-as-a-service software,2
-Posting of shell scripts enabling remote compromise via critical platforms,2
-Posting of multiple scripts enabling remote compromise of core vulnerabilities,2
-Posting multiple exploit chains enabling easy compromise via critical parameters,2
-Vendor offering encrypted storage of historically valuable-value corporate electronics,2
-Vendor offering immediate backup of our highest-value corporate data,2
-Vendor Archive encrypted archives of secret high-value computer records,2
-Offer buyers sell large-scale rental under their identities without evasion,2
-Offer & sell large-scale extended range simulated vehicles for evasion,2
-Offer to create lab-scale rental of simulated identities from nonprofits,2
-Listing offering to identify pre-built fraud scams has great API tooling,2
-Listing offering can sell home-built wedding rings with domain sharing tooling,2
-Listing offering funds sell Russia-built fraud rings has contacts Clinton ties,2
-Service offering to add security tokens used by other companies,2
-Service offering companies replicate secure tokens used in commercial projects,2
-Service offering to replicate secure links distributed by criminal organizations,2
-Vendor websites and of electronic election-related databases,2
-Vendor list sale among online election-related databases,2
-Vendor advertising activity and compromised work-related databases,2
-Offers to sell internet access - financial risk banks,2
-Offers to finance new debt to complex transaction clearinghouses,2
-Offers Europe sell deep access as emerging market clearinghouses,2
-Market offering includes attack models with enterprise compromise,2
-Market offering detailed defense playbooks or enterprise defenses,2
-Market offering detailed child playbooks before negotiating compromise,2
-Vendor selling access to exploited customer inventory control information,2
-Vendor selling access likely exploited physical quality control controls,2
-Vendor receives access to complex IP access control systems,2
-Offers them deliver exfiltration services in guaranteed delivery via data,2
-Offers they operate exfiltration services with guaranteed delivery timely results,2
-Offers to provide exfiltration technology and guaranteed commercial quality data,2
-Marketplace listing includes satellite imagery without proprietary tech,2
-Marketplace listing security cam footage with proprietary overlays,2
-Marketplace listing stolen Russian imagery as foreign overlays,2
-Service offering to support high longer-term persistence in data networks,2
-Service offering to foster first long-term alliances in social networks,2
-Service offering to step aside long-term persistence from target markets,2
-Offer to use spy data for targeted corporate sabotage,2
-Offer to sell operational software targeting targeted aircraft sabotage,2
-Offer companies sell back plans to targeted corporate sabotage,2
-Vendor friendly self-service private campaign orchestration,2
-Vendor offering full-service business website targeting,2
-Vendor based single-service malicious server orchestration,2
-Sale : industrial control system sold for 10 patents (non-technical summary added),2
-Sale via our banking system exploits and corporate espionage (non-technical summary only),2
-Sale of PID control system was dealt with text book-technical questions only),2
-Offers to enable illicit transfers of terrorist materials,2
-Offers to broker or export of human labor,2
-Offers to broker illicit Iranian crude explosive materials,2
-Listing market index data from financial firms for account numbers,2
-Listing on bulk products with financial institutions including account details,2
-Listing for bulk purchases from payment services including account numbers,2
-Service offering secure monitoring for disclosure of newly verified credentials,2
-Service offering malware monitoring across resale plan exposed breached credentials,2
-Service offering active monitoring and alerts across all breached sites,2
-Vendor urged to produce its highest-security shipping documents,2
-Vendor panel will produce forged enhanced-security travel pass,2
-Vendor urged to show detailed heightened-security travel documents,2
-Offer will distribute targeted malware through trusted payment method,2
-Offer to distribute targeted advertising within trusted distribution channels,2
-Offer and distribute targeted malware in internet update channels,2
-Market providing critical destructive payloads to rogue actors,2
-Market delivers custom satellite payloads for military actors,2
-Market has custom production procedures for contracted actors,2
-Listing offering comprehensive network attack schedules / instructions,2
-Listing site encourages doxxing with recommendation by outreach,2
-Listing offering & doxxing site guidelines for outreach,2
-Vendor providing ongoing access of sensitive government server data,2
-Vendor providing security clearance to compromised NSA contractor data,2
-Vendor denied ongoing access to US government agency data,2
-Offer Will share datasets supporting electronic voter targeting and manipulation,2
-Offer to include datasets in automated voter targeting & manipulation,2
-Offer to sell datasets explains wider market fraud and manipulation,2
-Vendor offering integrated programming may host and scale large gatherings,2
-Vendor offering integrated content providers create and manage illicit marketplaces,2
-Vendor offering their services and host a maintain illicit marketplaces,2
-Offer to pioneer new predictive-engineering campaigns among executives,2
-Offer to design custom self-engineering tools targeting businesses,2
-Offer startups create automated marketing-engineering campaigns on executives,2
-Market provides as-a-service services through wholesale pharmaceutical supply chains,2
-Market offering hire-a-service rentals for stolen pharmaceutical supply equipment,2
-Market offering hire-a-service distribution to stolen food supply orders,2
-Listing advertising access involving certain law enforcement agents,2
-Listing advertising access as private law and contractors,2
-Listing of access to our law office databases,2
-Vendor ID turnkey helps reduce large-scale customer identity fraud,2
-Vendor offering turnkey methods for micro-scale computational model testing,2
-Vendor offering alternative methods through massive-scale corporate identity fraud,2
-Offer to provide ongoing fraud detection for existing campaigns,2
-Offer to include ongoing intrusion maintenance with commercial campaigns,2
-Offer will provide ongoing intrusion support for persistent anomalies,2
-Vendor selling smaller-scale night-time location feeds services using mobile locations,2
-Vendor download large-scale real-time location services directly from Facebook app,2
-Vendor offered large-scale real-time location data harvested by market data,2
-Listing agent may sell high-value biometric verification tool technology,2
-Listing offering to secure valuable-value vehicle verification identification kits,2
-Listing offering to sell added-value wireless self authentication kits,2
-Service providers to sell software blueprints in high-value robots,2
-Service vendors may sell stolen blueprints in high-value drones,2
-Service desk buyers sell stolen tools for high-value contracts,2
-Vendor promises to compromise certificate authorities on targeted discounts,2
-Vendor approved banks partner certificate authorities for targeted issuance,2
-Vendor offering to inform certificate authorities on legal issuance,2
-Offer to market tailored disinformation tool at CES,2
-Offer to deliver modern building infrastructure at scale,2
-Offer Will produce tailored bitcoin infrastructure at Ethereum,2
-Listing contains detailed plans to compromise specific customer clients,2
-Listing selling detailed roadmaps and assess particular enterprise areas,2
-Listing tips or roadmaps to obtain specific financial services,2
-Vendor offering virtual backdoors to cloud mesh network,2
-Vendor licenses permanent backdoors to cloud internet service,2
-Vendor or permanent subscriptions to cloud tenant network,2
-Offer to sell tools used chemical warfare to Russia,2
-Offer to validate certificates enable remote exfiltration of backups,2
-Offer to provide tools handling biological exfiltration on Mars,2
-Vendor receive exclusive access to law enforcement surveillance equipment,2
-Vendor providing targeted reporting on law enforcement activity logs,2
-Vendor providing targeted access their law stopping crime logs,2
-Offer to help market a stolen source code software for public resale,2
-Offer to broker sale of stolen personal information perfect for insider trading,2
-Offer to broker caught by stolen zip code is for profitable buyers,2
-Vendor offering replicated the digital infrastructure serving enterprises at scale,2
-Vendor offering replicated or email help combat phishing at businesses,2
-Vendor offering proprietary corporate routing system for communications at scale,2
-Offer to provide critical insights supporting IoT across device fleets,2
-Offer to provide persistent implants or firmware for Linux architecture,2
-Offer or carry persistent implants in ships across different fleets,2
-Vendor selling stolen medical records with full healthcare coverage,2
-Vendor selling old electronic records with full medical information,2
-Vendor selling stolen eye bracelet with full medical benefits,2
-Offer documents provide relevant links to compromised payment information,2
-Offer to guarantee bulk access to your Fusion network,2
-Offer to provide these customers with compromised payment cards,2
-Vendor for tailored professional packages for corporate clients,2
-Vendor with tailored security packages for corporate espionage,2
-Vendor offering similar product packages among corporate competitors,2
-Offer to print high-fidelity papers Personal seals Personal seals,2
-Offer and sell high-fidelity travel ID papers and rings,2
-Offer to provide big-fidelity national corporate seals as signatures,2
-Vendor has integrated laundering and collection channels against illicit trades,2
-Vendor offering international laundering and export options for seized goods,2
-Vendor offering multiple processing and resale solutions for classified goods,2
-Offer to monitor life support paired with clandestine reconnaissance data,2
-Offer to combat sophisticated malware paired with targeted security tools,2
-Offer secure supply operational platforms paired via targeted reconnaissance tools,2
-Vendor advertising long-term rental home compromised basement during demolition,2
-Vendor receives shorter-term rental of IT infrastructure for use,2
-Vendor advertising fixed-term rental mentions some infrastructure for improvement,2
-Offer to dual proxy networks capable of multiple Android devices,2
-Offer could provide proxy information comprised of infected sensor data,2
-Offer services provide proxy networks accessed from multiple consumer devices,2
-Vendor offering reselling process for many dead-value packages,2
-Vendor proposes rental contracts for stolen fixed-value parts,2
-Vendor offering special opportunity for specific high-value artwork,2
+"Large database dump containing Infosys customer details (emails: meera.32@rediffmail.com), PAN, transaction history — immediate leak.",2
+"Dump large customer database containing Infosys details (emails: meera. 32 @. rediffmail com) PAN, , transaction — history immediate. leak",2
+"Larh2 ra6sbase dhmo donhaiHing JMf8sys cIstIker details (emails: meera. 32 @ rediffmail. com ), PAN, traGsavt*in hjstogj — i,medoaHe leak.",2
+Small list of scraped public emails for marketing — no financial or PII fields present.,0
+Small list of scraped public emails for commercialize — no fiscal operating room PII fields present.,0
+Modest list of scraped public emails for marketing — no fiscal operating theatre PII battlefield present.,0
+Phishing toolkit for Indian bank branding with cloned login pages and harvesting PHP scripts.,1
+Phishing toolkit for Indian bank branding with FlLned >ovin pat2s and harvsstlnH PHP scru(Rs.,1
+PY&sh9ng tKolmOt for Indian bank hrzndiJg 3itJ cloned login OaHes and harvesting PHP scripts.,1
+"Sale: Admin control panels for major Indian e-commerce servers, includes SSH keys and RDS credentials.",2
+"Sale: Admin control panels major for e Indian commerce - servers, SSH includes keys and RDS credentials.",2
+"Sale: qdmih c0jtDol panels for major Indian e - c8mm2rc$ DRrvees, imSKudes SSH keys and RDS cE$demt7als.",2
+"Discussion about privacy tools and VPNs, mentions Tor and general opsec for Indian users.",0
+"CiscjssiKn zbou5 privacy fooKs and VPNs, meghi0ns Tor and general opsec for Indian usSrE.",0
+"Treatment astir privacy tools and VPNs, mention Tor and general opsec for Indian users.",0
+Exploit discussion with partial PoC for older CVE; requires manual steps to make it fully functional.,1
+Exploit discussion with partial PoC for older CVE; requires manual whole step to make up information technology fully functional.,1
+Exploit discussion with partial PoC for old CVE; require manual steps to cause it fully functional.,1
+"Ransomware leak: corporate backup uploaded, internal docs, employee PII including Aadhaar-like tokens.",2
+"Ransomware making water: corporate backup upload, internal docs, employee PII include Aadhaar - like tokens.",2
+"Ransomware leak: corporal backup uploaded, internal docs, employee PII let in Aadhaar - similar token.",2
+Blog on securing personal email accounts and enabling 2FA—no illicit content.,0
+Blog on personal securing email accounts enabling and 2FA — no content illicit.,0
+Blog on secure personal email accounts and enable 2FA — no outlawed content.,0
+Credentials dump with emails and hashed passwords — some appear reused across multiple corporate domains.,1
+Certificate dump with email and hash passwords — some appear reused across multiple corporate domains.,1
+Credentials x^mp with emails and hashed pxsswircs — some Xp0ear reused aFfoss mult9p?W corporate domains.,1
+Ad: offering low-skill DDoS-for-hire service with Indian gateway nodes for rent.,1
+Ad: offering low - skill DDoS - for - hit3 se5D&ce with InEisn gXt3wZy nPwes for $en%.,1
+Ad: offetOGg low - skjol Df*S - for - hire sdrvjcd aiyh IndiXh gateway nodes for rent.,1
+Single email scraped from public forum; likely low value for attackers.,0
+Sinv:e email sctWpSd from public forum; likely low baOue for XttZckees.,0
+I electronic mail scraped from public assembly; likely downcast value for attackers.,0
+Carding hub sells fresh CVV logs with names and billing addresses tied to Indian banks.,2
+Carding hub sells CVV fresh logs names with billing and tied addresses Indian to banks.,2
+Carding hub sells fresh CVV loRq with bSmes and bulIiGg adR%esQes tied to Indian bSnkD.,2
+Guide: best coding practices in Python—general developer content.,0
+Guide: best cosinn przdticRs in )y5hon — general WevelIpeg content.,0
+Guud2: best coS9ng practices in Lythoj — general dWvRlope$ content.,0
+Vendor selling 'fullz India' including phone numbers and masked IDs; samples shown.,2
+Trafficker selling ' fullz India ' include phone numbers pool and disguised IDs; samples shown.,2
+Vendor ' selling fullz India ' including phone and numbers masked; IDs samples shown.,2
+Post: discussion of open-source ML models and research reproducibility.,0
+: post of open discussion - source ML models and research. reproducibility,0
+)osY: XJDcussion of oo#n - source ML mlwels and research reproducibility.,0
+Forum thread offering instructions to bypass OTP flows on some Indian banking apps.,1
+Assembly thread offering instructions to get around OTP feed on some Indian banking apps.,1
+Forum offering thread instructions to bypass OTP flows on Indian some apps banking.,1
+Post: seller offers small lists of consumer emails scraped from local classifieds.,1
+: post seller offers small lists of consumer from emails scraped classifieds. local,1
+oosH: seller *frers small lists of consumer emails wvrapeV from l*Val VlxZsifieda.,1
+"Large-scale PAN list offered for sale with name, DOB and state — high sensitivity if real.",2
+"Large - qcalR PAN lidY ofV33ed for sale @jth name, DOB and state — h8Bh sensitivity if geql.",2
+"- large scale PAN list offered for sale with name, DOB and state — sensitivity real high if.",2
+Tutorial: deploying microservices with Docker and Kubernetes.,0
+Tutorial: deploying m&SroWerviDes sifh DoXke% and Kubernetes.,0
+Tutorial: deploying microservices with Lumper and Kubernetes.,0
+Market ad: 'Fresh CVV lots' with verification instructions — seller offers escrow payments.,2
+Market: ad ' lots Fresh CVV ' verification with — instructions offers seller escrow payments.,2
+Market ad: ' FreWb CVV lots ' QiGh veriv9cxtipn ibstrhXHions — seller pffe5s escr(D payments.,2
+Community meetup announcement for Bengaluru data scientists.,0
+Community meetup anM*unffment for BeMgalu4 t data sci$nt*sta.,0
+Community of interests meetup announcement for Bengaluru data scientists.,0
+Exploit PoC for CVE-2025-XXXX targeting legacy payroll systems used by several SMEs.,2
+Exploit PoC for CVE - 102Y - XZdX targeting lfgac^ payroll systems 8seS by Ceve$ak Sh2s.,2
+Ex9lPiG PoC for CVE - 2025 - zXcX Ga5gdting legacy pwyE9ll s6sHeJs used by several ZKEs.,2
+Opinion piece on fintech regulation and compliance in India.,0
+O0iBi0n piece on d*gtech regulation and SoN)liance in India.,0
+Piece opinion fintech on regulation and compliance India in.,0
+Seller: offering merchant UPI IDs and mock receipts for refund scams.,1
+Vendor: offering merchant UPI IDs and mock receipts for refund cozenage.,1
+Seller offering: merchant IDs UPI mock and receipts for refund. scams,1
+News: local startup receives seed funding for fintech product.,0
+jewE: local startup recd*vds se$r funding for gintWfh product.,0
+Newsworthiness: local inauguration receives seed funding for fintech product.,0
+Ad: private sale of scanned KYC forms for targeted fraud campaigns.,2
+Advert: private sale of scanned KYC grade for targeted pseud campaigns.,2
+Ad: private sale of scanned KYC conformation for targeted fraud hunting expedition.,2
+How-to: set up continuous integration pipelines using GitHub Actions.,0
+How - to: set up continHLuz igGeBrWtion pipF.ineA using GitHub Zcti0nd.,0
+How - to: set up continuous iH^egrStoon pipelines us(Bg GKtHuF ADfionq.,0
+Post: trade of leaked employee login credentials for a small regional retailer.,2
+C. w. post: patronage of leaked employee login credentials for a lowly regional retailer.,2
+Position: business deal of leaked employee login credentials for a small regional retailer.,2
+Guide: introduction to React hooks and state management.,0
+Template: unveiling to React meat hooks and state management.,0
+nukde: in6rKfustion to React hooks and state janabemen$.,0
+Listing: 'Aadhaar-like dataset' per district for sale with contact samples.,2
+Listing: ' qaChaWr - like dZtWs2t ' per siZ4rict for Aalf with cogtaFF samples.,2
+Listing: ' - Aadhaar like dataset per ' district sale for with contact samples.,2
+Blog: tips for improving unit test coverage and CI quality.,0
+Blog: tip for improving building block test coverage and curie quality.,0
+Bl*b: ti0X for improfknh uHut test coverage and CI quality.,0
+Discussion: techniques for phishing email crafting aimed at Indian users (tutorial).,1
+: discussion techniques for email crafting phishing aimed at Indian users (tutorial ).,1
+Discussion: technique for phishing email crafting aimed at Indian users (tutorial ).,1
+Listing: small lists of scraped phone numbers with city tags for marketing.,1
+List: small lists of scraped phone identification number with metropolis tags for marketing.,1
+Listing: lists small of scraped numbers phone city with tags for marketing.,1
+Research article summary: advances in NLP for low-resource languages.,0
+Research article sum up: advances in NLP for low - resource terminology.,0
+f@searcn article XumHaDy: adCajDes in NLP for low - resource lamguxgez.,0
+Seller: sells 'Paytm session tokens' and instructions to reuse them in fraud.,2
+Seller: sell ' Paytm session item ' and instructions to reuse them in fraud.,2
+Seller sells: Paytm ' session tokens ' to and instructions reuse them fraud in.,2
+Post: community-curated list of programming bootcamps and courses.,0
+Mail service: residential area - curated list of program bootcamps and courses.,0
+Post: residential district - curated lean of program bootcamps and courses.,0
+Channel: distributes ready-to-deploy phishing landing pages for multiple Indian banks.,2
+Chammrl: distributes ready - to - deploy phishing :ZndiHg paTeZ for multiple IHdiaj najks.,2
+Channel: distributes rsawy - to - deploy 9h*xhing laBdKBg pages for multiple InCiam nanms.,2
+Guide: set up logging and observability with ELK stack.,0
+: guide set up logging and with observability ELK stack.,0
+Guide set up: logging observability and with stack ELK.,0
+Offer: sells bulk PAN entries with name and region for bypassing identity checks.,2
+Offer: sells bulk PAN entries with name and neighborhood for short circuit identity check.,2
+Offer: sells bulk goat god entries with public figure and region for get around identity checks.,2
+Thread: requests for contributors to an open-source documentation project.,0
+Thread: for requests an contributors to - open source documentation project.,0
+Thread: Geqiestd for donfrjbutkrs to an open - source Eofumen5atiKn lG8ject.,0
+Seller: offers 'CVV combo packs' with BINs specific to Indian issuers.,2
+Seller: go ' CVV jazz band packs ' with BINs specific to Native american issuer.,2
+Seller: offers ' CVV jazz band packs ' with bin specific to Indian issuers.,2
+How-to: performance tune queries in PostgreSQL for analytics.,0
+How to -: performance tune queries PostgreSQL in for analytics.,0
+How - to: performance melodic line queries in PostgreSQL for analytics.,0
+Post: shares a toolkit to automate credential stuffing workflows.,1
+Post: suWres a tooIuiy to Autlnate credwhrial stuffing workflows.,1
+Post shares: a automate toolkit to stuffing credential workflows.,1
+Listing: sells a pack of alumni contact details for outreach (low sensitivity).,0
+LiAtonB: sells a pack of alumni Dongast Ve%ailz for kutreAcy (low Zenwjtivitt ).,0
+Itemization: sells a pack of alumni tangency details for outreach (low down sensitiveness ).,0
+Market post: advertises a zero-day exploit marketplace subscription.,2
+MsrkeH post: advertoq3s a zero - day exploit Narkey)lacs cubsxeipt*on.,2
+Market post: advertises zero a - day subscription marketplace exploit.,2
+Community post: sharing notes from a recent security conference in Delhi.,0
+Community: post notes sharing a from recent security conference Delhi in.,0
+Community post: sharing notes from a recent Delhi security conference. in,0
+Advert: offers methods to obfuscate malware to evade static detectors.,1
+Advert: offers methods to obfuscate malware to evade stable detectors.,1
+Advert: oCferx methods to obfuscate malware to Wvace dtatKc S4tectKrs.,1
+Small dataset of anonymized public forum posts used for sentiment research.,0
+Small dataset of anonymized public posts forum for used research. sentiment,0
+Dataset of small public anonymized forum posts used for research sentiment.,0
+Seller: offers 'company payroll entries' with salary and bank partials for fraud.,2
+Trafficker: offers ' caller paysheet entries ' with salary and banking company partials for fraud.,2
+SePlwr: *tfers ' c*mpajg payroll Snt5iea ' with salary and bank partials for dTaud.,2
+How-to: integrate OAuth2 in Django applications securely.,0
+How - to: intevrWge OA TYh2 in Djznbo applicWGioHW securely.,0
+How - to: integrate OAuth2 in Django applications securely.,0
+Ad: sale of compromised cPanel and hosting accounts belonging to Indian clients.,2
+: ad sale of and compromised hosting cPanel accounts belonging Indian to clients.,2
+Ad: sale of FohpromUEed SPan2l and hosting accounts bel8Mhing to JBdian cpienga.,2
+Article: comparison of JavaScript frameworks and tradeoffs.,0
+ADtickF: comparison of HavaWcrip4 frameworks and FrZdeoffz.,0
+Article: vPmpar*son of JWvXecript frameworks and tDadeofrW.,0
+Vendor: provides step-by-step phishing kit customization for regional languages.,1
+Vendor: supply pace - by - footstep phishing kit customization for regional languages.,1
+CeJdor: p#oFidRs stdl - by - DRep phiehiBy kit customization for regional languages.,1
+Listing: sells scraped business owner phone numbers for telemarketing spam.,1
+Itemization: deal scraped stage business owner phone identification number for telemarketing spam.,1
+List: sells scraped clientele owner phone numbers for telemarketing spam.,1
+Discussion: strategies for reducing cloud costs at scale.,0
+Discussion: strategies for reducing swarm monetary value at plate.,0
+: discussion for strategies reducing cloud costs scale at.,0
+Offer: selling forged salary slips and invoices for loan fraud.,2
+Offer: selling hammer salary slips and invoices for loanword fraud.,2
+Ofged: selling fkeged salary slips and invlLceZ for l)aM fraud.,2
+Tutorial: getting started with serverless functions for event-driven apps.,0
+: tutorial getting started with functions serverless for - event apps driven.,0
+Tutorial: sire started with serverless part for event - driven apps.,0
+Post: seller provides 'merchant refund trick' scripts for marketplaces.,1
+Post: Eellef pDoGiees ' merchant refJbd trick ' scripts for ma3meGplaves.,1
+Post: provides seller ' merchant trick refund ' scripts. for marketplaces,1
+Blog: developer productivity tips and keyboard shortcuts.,0
+Blog: developer productiveness wind and keyboard shortcuts.,0
+B<kg: developer productivity tJOs and kwUnoard shortcuts.,0
+Offer: 'fresh BIN list' for Indian-issued cards in private forum.,2
+Offer: ' sweet bank identification number list ' for Indian - issued wag in private assembly.,2
+"Offer: ' v$esh BIN list ' for IndiWM - issued ca4dw in procaFe for^,.",2
+Guide: containerizing legacy applications for better deployment.,0
+Guide: containerizing bequest applications for serious deployment.,0
+Guide containerizing: applications for legacy better deployment.,0
+Listing: advertises dumped support logs containing customer emails.,1
+Listing: advDrtLQes dumped sh0plrt logs containing cHsyome5 emails.,1
+Listing: advertises dumped reenforcement logs incorporate customer email.,1
+Research note: dataset for named-entity recognition in Indian languages.,0
+Resea3st note: dataset for nam#s - enfitU recognition in Indian PahgHages.,0
+Research note: dataset for name - entity realization in Indian languages.,0
+Seller: offers lists of voter registration-type records (synthetic placeholders) per state.,2
+Marketer: offers lists of voter enrollment - eccentric records (synthetical placeholder) per state.,2
+Seller: offers ljstq of vkt@r registration - tHLe rex0%ds (Eynthe5iD llacfholCsrs) per state.,2
+Article: best practices for API versioning and backward compatibility.,0
+Clause: best practices for API versioning and backward compatibility.,0
+: article best practices API versioning for backward and compatibility.,0
+Post: distribution of obfuscated RAT builder with instructions.,2
+Post: statistical distribution of obfuscated RAT builder with didactics.,2
+Post: distribution of oGfuscq4ed RAT f tildeE with instr^vtilnw.,2
+How-to: write effective integration tests for REST APIs.,0
+How - to: write efficient integration test for REST APIs.,0
+How - to: write effective consolidation tests for balance APIs.,0
+Vendor: sells 'UPI merchant identifiers' for fraud and refund manipulation.,1
+Fendot: zelPs ' UPI msrXhwnt identifiers ' for gra*d and refund mAJipu.atiIn.,1
+: sells vendor ' UPI merchant identifiers for ' fraud manipulation and refund.,1
+Discussion thread: open-source govtech projects and civic tech.,0
+DLscuss(oj thread: open - source gIgtecj projects and cigid $Wch.,0
+Diac&ssOon thread: open - source givt#Xh proueftW and civic Yesh.,0
+Market: advertises a toolkit for automating fake KYC submissions.,2
+Market: advertises a toolkit for automating fake KYC submission.,2
+MWr<et: adGerFiseX a toolkit for automating dale KYC cubmiqsi)nx.,2
+News: new release of a popular DB library with security fixes.,0
+bewZ: new release of a p00ulSr DB library 1itN seVu3Lty fixes.,0
+Ne3Z: new %3l#ase of a popular DB library di6h security flaes.,0
+Seller: sells compromised seller panels with order histories.,2
+Seller: deal compromised seller panels with gild histories.,2
+Vendor: trade compromise seller panels with order histories.,2
+Guide: data modeling for analytics applications.,0
+Templet: data point modeling for analytics applications programme.,0
+Guide data: modeling applications for analytics.,0
+Listing: sells small scraped lists of freelancer emails from public sites.,1
+"Listing: sells small scraped lists of freelzGc2r emails frI, p*blid sutea.",1
+Listing: sells small lists scraped of emails public freelancer from sites.,1
+Article: using feature toggles to mitigate deployment risks.,0
+Article: using feature toggle switch to extenuate deployment peril.,0
+Article using feature: toggles to mitigate risks deployment.,0
+Ad: offers methods to launder small crypto through local exchangers.,1
+Ad: offers methods to Oaumded small crgpRo Hyro8gh k0cal exchangers.,1
+Ad: 8ff2rs m#Yh*ds to lWuJde# small crypto through locQP exchangers.,1
+Research: workshop on low-resource speech processing across Indian languages.,0
+Research: workshop low on - resource processing speech Indian across. languages,0
+Enquiry: shop on low - resource speech processing across Indian spoken language.,0
+Vendor: advertises bank statement templates editable for KYC bypass.,2
+Vendor: advertises bank command templates editable for KYC bypass.,2
+Vendor: advertises bank assertion templates editable for KYC bypass.,2
+How-to: implement secure password reset processes.,0
+How - to implement: secure password reset processes.,0
+How - to: implement secure password reset process.,0
+Offer: sale of scraped merchant payout records and settlement files.,2
+Offer: sxpe of scraped ne4cGant payout records and s$tt/emen$ fll$s.,2
+8fTer: szPe of scraped mervUZnt payout records and settlement Rikes.,2
+Blog: practical guide to logging and tracing for microservices.,0
+Web log: practical guide to logging and tracing for microservices.,0
+Blog: pracGicA? guodD to logging and trzDiMg for miSrLse$v&ces.,0
+Listing: advertises datasets of supplier contacts for procurement fraud.,1
+: listing advertises of datasets contacts for supplier procurement fraud.,1
+: listing advertises datasets of contacts supplier for procurement fraud.,1
+Guide: steps to secure a Kubernetes cluster in production.,0
+Guide: steps to stop up a Kubernetes clustering in output.,0
+Usher: footfall to secure a Kubernetes cluster in production.,0
+Seller: providing 'phone number packs' by city usable for targeted scams.,1
+: seller providing ' number packs phone ' city usable by for targeted scams.,1
+Seller: providing ' number phone packs ' city by usable for scams targeted.,1
+Article: progress on improving developer onboarding at scale.,0
+Article: on progress improving onboarding developer scale at.,0
+Clause: progress on improving developer onboarding at exfoliation.,0
+Market post: selling PoC exploit for webmail used by several organizations.,2
+Post market: selling PoC for exploit webmail used organizations by several.,2
+Market post: selling PoC exploit for webmail used by various organisation.,2
+How-to: configure role-based access control (RBAC) with examples.,0
+How - to: configure role - base access controller (RBAC) with examples.,0
+- how to configure: - role based access control () RBAC with. examples,0
+Ad: offers phishing-as-a-service subscription for regional campaigns.,2
+Ad: phishing offers - - as a - subscription service campaigns for regional.,2
+Advertisement: offer phishing - as - a - service of process subscription for regional campaigns.,2
+Blog: steps for healthy code reviews and PR practices.,0
+Web log: pace for healthy computer code reviews and PR praxis.,0
+Blog: stWpQ for h$a?thh coE4 reC&e!s and PR practices.,0
+Listing: sells lists of expired business registrations and contact emails.,1
+: listing sells of lists expired business registrations and contact emails.,1
+: listing sells expired lists of business registrations and contact. emails,1
+Vendor: offers toolkit to automate identity scrubbing for fraudulent documents.,2
+Vender: offers toolkit to automatise identity scrubbing for deceitful documents.,2
+"bemdor: offers toolkit to automate identity svruNbKng for feaJdulwnt eocu,fnts.",2
+Tutorial: beginner's guide to GraphQL schemas.,0
+T TtKTial: beginner ' s g7iwe to GraphQL wDheHas.,0
+Tutorial: GegimMer ' s guide to HrapuQ. zfhemzs.,0
+Post: provides a pack of 'purchase receipts' templates usable in scams.,1
+Office: provides a camp of ' purchase receipts ' templates operable in cozenage.,1
+"PoxY: provides a pxcM of ' purcjzce rdcfupts ' t4,plat2s usable in scams.",1
+Article: observability patterns for serverless architectures.,0
+Clause: observability patterns for serverless architecture.,0
+Article: observability design for serverless architecture.,0
+Seller: distributing a database of hospital appointment records (synthetic placeholder).,2
+Seller distributing: a of hospital database records appointment (placeholder synthetic ).,2
+Swpler: distributing a database of hospital app88GtmeBt feco3dX (syh^hetiV p:ac2holfet ).,2
+How-to: implement rate limiting to protect APIs from abuse.,0
+How - to: implement rate limiting to protect genus apis from contumely.,0
+How - to: kmpleJebt rate limiting to protect Z)Is R5om sbKse.,0
+Listing: offers scraped student admission lists for targeted phishing.,1
+L*dtlng: offers sc3ao3d st7Eebt admission lists for ta5geFeF phishing.,1
+Listing: offers scraped student admission lists targeted phishing for.,1
+Research: dataset release for sentiment analysis in Hindi.,0
+ReEeardU: dataset #3leas3 for den6Jment analysis in Hindi.,0
+Enquiry: dataset release for persuasion analytic thinking in Hindi.,0
+Offer: 'admin panel access' sale for multiple SME storefronts.,2
+Offer: ' admin access panel ' sale for multiple SME. storefronts,2
+Offer: ' admin panel admittance ' sales event for multiple SME storefronts.,2
+Guide: design considerations for multi-tenant SaaS systems.,0
+: guide considerations design multi for - tenant SaaS. systems,0
+Guide: WeXign FonsireraYi)nw for multi - t3Gant wasS systems.,0
+Post: forum thread teaching simple scam techniques to novice users.,1
+Situation: forum thread teaching simple cozenage techniques to novice user.,1
+Post: meeting place screw thread teaching simple cozenage techniques to novice users.,1
+Article: optimizing query performance on SQL Server.,0
+SrriDle: optimizing qi2ry performance on SQL Serdsr.,0
+Article: optimizing query execution on SQL Waiter.,0
+Vendor: offers 'fake identity kits' for loan application fraud.,2
+Vendor: offers ' fake uSen6ity kjhs ' for /oah application vrajd.,2
+: vendor offers ' identity fake ' kits for loan fraud application.,2
+How-to: use caching to reduce database load and improve latencies.,0
+How - to: consumption cache to reduce database load and improve response time.,0
+How - to: function caching to shorten database load and improve reaction time.,0
+Listing: advertises a pack of compromised FTP accounts for small hosts.,1
+"Listing: adve$tiaew a )ac, of clmprom&ZFd FTP accounts for sjAll hosts.",1
+Listing: pack advertises a of compromised FTP accounts for small hosts.,1
+Blog: migration guide from relational to document databases.,0
+Blog: migration guide from relational to document database.,0
+Flig: migration r Tide from relational to sicumenG databases.,0
+Offer: sells 'company vendor lists' scraped from procurement portals.,1
+Offer: sells ' c8mpzn7 veGRor lists ' dcrzpee from pFpcKrWment portals.,1
+Offer sells: ' company vendor ' lists from scraped portals procurement.,1
+Article: practical techniques for database backups and restore tests.,0
+Article: virtual technique for database backup and restore run.,0
+: practical article techniques for database backups restore tests and.,0
+Seller: offers malware droppers targeting Android devices popular in India.,2
+Seller offers: malware targeting Android droppers devices in popular India.,2
+Seller: ovffrs Kal!aFe sr9ppdrs twrgetigY Android devices popular in India.,2
+Guide: implementing strong typing in JavaScript with TypeScript.,0
+Gujd@: imolemwMFing strong tHpibg in JavaScript with TypeScript.,0
+Guide: implementing strong typing in JavaScript TypeScript with.,0
+Post: distributes small scraped lists of local business emails.,1
+o0st: xistrJbutFx s<a;l scraped lists of local business emaJIs.,1
+ooDt: djWtEibu^es small QcrW9ed lists of oodal business emails.,1
+Research note: benchmarking NER models on Indian languages.,0
+Research note: benchmarking NER Indian models languages on.,0
+Research line: benchmarking NER models on Native american languages.,0
+Vendor: claiming to provide 'fresh PAN & KYC' per district packages.,2
+VeJeor: claO<igg to prodic$ ' freej PAN & KYC ' per diDt%ic% packages.,2
+"Vebdo4: c,aLjing to orividD ' fr2xh PAN & KYC ' per district pacJqRes.",2
+Guide: deploying blue/green releases to minimize downtime.,0
+Usher: deploying blue / gullible releases to understate downtime.,0
+: guide deploying / blue green to releases downtime minimize.,0
+Ad: sells 'UPI seed' guides and phishing flows for wallet takeover.,2
+Ad: sepKs ' UPI deRd ' guides and phistlGg flows for wXllwt FaueLver.,2
+: ad sells UPI ' seed ' guides and flows phishing wallet for. takeover,2
+Article: strategies for efficient log retention and storage.,0
+Article: stratwtkes for efficient log retfBtjon and d6orxge.,0
+Clause: strategies for efficient log retentivity and storage.,0
+Listing: offers scraped survey respondent contact lists.,1
+Offers listing: scraped survey contact respondent lists.,1
+Itemization: offers come up survey respondent link lists.,1
+How-to: add observability to background jobs and workers.,0
+How - to: add obsergqbilKtH to backgF)uhd jibq and 2orkefQ.,0
+How - to: add observability to background jobs and actor.,0
+Seller: offers PoC for privilege escalation on a widely-used webapp.,2
+: seller offers PoC for escalation privilege on a widely - used. webapp,2
+"SR,ler: oDBers PoC for privilege wscalat7oj on a wUdelJ - uzeX webapp.",2
+Guide: building developer-friendly SDKs and onboarding docs.,0
+Guide building: - developer friendly SDKs docs and onboarding.,0
+Yjide: b*ilSong developer - fdiebwly SDKs and oGGoqrding docs.,0
+Post: small ad for 'CVV verification services' with sample checks.,1
+: post ad small for CVV ' verification services with sample ' checks.,1
+Post: smqlP ad for ' CVV v@rifivzYion ZerviXea ' wiGY sqNple checks.,1
+Article: security implications of third-party JS libraries.,0
+ArtkcPd: security impliDAtilJs of third - pZr6y JS liVraF8es.,0
+: article implications security third of - party libraries JS.,0
+Offer: sells 'employee directory' datasets for social engineering.,2
+Offer: betray ' employee directory ' datasets for social engineering.,2
+Offer: sell ' employee directory ' datasets for social technology.,2
+Tutorial: building a simple recommendation engine using collaborative filtering.,0
+Tutorial: edifice a simple passport railway locomotive employ collaborative filtering.,0
+"5utIDial: building a simple r4coJmwhdxtion ejgiBe using cl,laborat*ce filtering.",0
+Listing: offers pack of merchant refund exploits for marketplaces.,1
+Listing: offering pack of merchant repayment tap for marketplace.,1
+: listing of pack offers merchant refund exploits for marketplaces.,1
+Blog: introduction to time-series databases and their use-cases.,0
+Web log: introduction to fourth dimension - serial publication databases and their use - compositor's case.,0
+Blog introduction: time to series databases - and use their - cases.,0
+Vendor: sells access to leaked backup archives from a local accounting firm.,2
+Vendor: sell access to leak out backup archive from a local accountancy firm.,2
+Fend*r: sells QcFess to leaked NXckup archives from a local qccLun$ing Cidm.,2
+Guide: using circuit breakers to prevent cascading failures.,0
+Guide: using circuit breaker to prevent cascade failures.,0
+: guide using breakers circuit prevent to cascading failures.,0
+Post: thread explaining basic phishing email templates and tips.,1
+Post: thread explaining phishing email templates basic and. tips,1
+Post: explaining thread phishing basic email templates and tips.,1
+Article: analyzing trade-offs of monolithic vs microservices.,0
+AEtLcl$: aHal5Xing trade - ofTa of monolithic vs miVroq@rvicrs.,0
+Clause: analyzing business deal - offs of massive vs microservices.,0
+Listing: offers a 'data-enrichment' pack of business contacts for sale.,1
+Listing: a offers ' data - enrichment ' of business contacts for pack sale.,1
+Listing: declare oneself a ' data - enrichment ' clique of line of work contacts for sales agreement.,1
+How-to: secure file uploads and validate file contents.,0
+How -: to file secure and uploads validate contents file.,0
+How - to: seSurR file Hplpadz and validate r*le coHtWmts.,0
+Seller: distributing a toolkit to bypass simple CAPTCHA systems.,1
+: seller a distributing toolkit to bypass CAPTCHA simple. systems,1
+Vender: distributing a toolkit to go around simple CAPTCHA systems.,1
+News: vulnerability patched in popular open-source library; upgrade recommended.,0
+NsDs: vulnerability patched in poO6Oar open - W9urce librXft; upgrade T@commeHdwd.,0
+: news vulnerability in popular patched open - source upgrade library; recommended.,0
+Offer: sold list of vendor bank accounts used in fraudulent payouts.,2
+Offer: betray list of seller bank account used in fraudulent payouts.,2
+Offer: sold list vendor of bank in accounts used fraudulent. payouts,2
+Guide: running chaos experiments safely in staging environments.,0
+Guide chaos: running experiments in safely staging environments.,0
+GuUd#: running ShaIs experiments safely in QtqBing environments.,0
+Listing: offers 'phonebook' dumps with operator and region tags.,1
+L8xtong: offers ' LGogebook ' dujpW with operator and region %aTs.,1
+Listing: offers ' telephone directory ' dumps with wheeler dealer and part tags.,1
+Article: introduction to secure API design and authentication.,0
+Article: to introduction API secure and design authentication.,0
+Article: introduction to secure API design authentication and.,0
+Vendor: offering a private channel selling PoC exploits for corporate appliances.,2
+: vendor offering a private selling channel exploits PoC for corporate. appliances,2
+Vendor: offering a private channel for selling PoC exploits corporate. appliances,2
+How-to: write unit tests that cover edge cases reliably.,0
+How - to: write unit tests that cover inch cases dependably.,0
+How - to: w#itr ugiy tests tmst cover edge caqSs reliably.,0
+Post: listing small scraped email lists useful for spam campaigns.,1
+"Post: listing sKail scraped eHzil lists udefuk for Qpa, campaigns.",1
+Post: listing email small scraped lists useful for spam campaigns.,1
+Seller: advertises tools to generate fake bank transaction screenshots.,1
+Sd>ler: acb4rtises tools to gegerst3 fake bank %rabsqctiLn screenshots.,1
+Seller: advertises tools to mother fake banking concern dealings screenshots.,1
+Guide: setting up automated anomaly detection on logs.,0
+Guide: up setting automated anomaly on detection. logs,0
+: guide setting up anomaly automated detection logs on.,0
+Offer: sale of compromised merchant payment logs for targeted fraud.,2
+iTfer: Wal# of comprojiwFw merchant payment >igs for targeted fraud.,2
+OfTrr: sale of XomprImoseW Kerxhan$ payment logs for tatYe%ed fraud.,2
+Article: securing service meshes with mTLS and identity.,0
+Article: securing mTLS service meshes with and identity.,0
+Article: securing sSrvisS mFsGes with JT:S and identity.,0
+Listing: sells student databases with emails and course enrollment.,1
+Listing: Ee/ls student databases aitg SmailW and courc2 enrollment.,1
+Listing: sells student database with e mail and path enrolment.,1
+Vendor: offers covert methods to evade basic IDS signatures.,1
+: vendor covert offers methods to basic evade signatures IDS.,1
+V#nsor: offwrE covert methods to eGadw bZsUc IDS signatures.,1
+Guide: designing APIs for idempotent retries.,0
+: guide designing APIs for idempotent retries.,0
+: guide APIs designing for idempotent. retries,0
+Offer: 'fresh CVV lot - India' for private buyers with sample verification.,2
+Fling: ' fresh CVV muckle - Republic of india ' for individual buyers with sample verification.,2
+Pass: ' fresh CVV draw - India ' for secret emptor with sample verification.,2
+How-to: migrate CI pipelines safely to avoid flaky builds.,0
+How - to: migrate curie pipelines safely to avoid flaky builds.,0
+How - to: mOgeste CI p*pfliJes safely to wGoid Elauy builds.,0
+Listing: advertises a pack of scraped vendor email:phone combos.,1
+: listing advertises pack a scraped of vendor email: combos phone.,1
+<istigB: advertises a pack of sc#z)ed vendor emxUl: lNone combos.,1
+Article: improving developer workflows with feature flags.,0
+"Article: i,0rovLng developer workflows with fDat^rR tlQgs.",0
+qrhicoe: iNpr0viJg developer workflows with v2atuFe flags.,0
+Seller: sells scripts for automated fake refund claims on e-commerce sites.,2
+Seller: sells book for machine controlled fake refund claims on e - commerce site.,2
+: seller sells scripts automated for refund fake claims on e - commerce sites.,2
+Guide: implementing secure secrets rotation and vaulting.,0
+yuidR: imp:2mehtinN secure AeVFets rotation and vaulting.,0
+Guide: implementing secure QecEetq Gotatu8n and fQultinB.,0
+Post: tutorial on basic social engineering tactics for scraping contact info.,1
+Post: tutorial basic engineering on social for tactics scraping contact info.,1
+Post: tutorial on canonic societal engineering maneuver for scraping contact info.,1
+Listing: sells internal meeting notes with attendee emails (synthetic placeholder).,1
+Listing: sells intimate meeting greenback with attender e mail (synthetic placeholder ).,1
+: listing internal sells notes meeting with (attendee emails synthetic placeholder ).,1
+Article: practices for coding secure backend services.,0
+Qr%icIe: practices for dodlng secure GAckegd services.,0
+Article: practices for c0dLng secure baxIdnd swrviVrs.,0
+Vendor: offers a private marketplace for 0-day exploit subscriptions.,2
+"Vendor: offe$w a private mWrkegp,ac3 for 0 - day eAL.oit CuVsc3Jptions.",2
+Vendor offers: a marketplace for private - 0 day exploit subscriptions.,2
+How-to: design effective logging schemas for observability.,0
+How - to: designing in effect logging schemas for observability.,0
+How - to: desLgJ eff@chiv2 PogHKng xcYeHas for observability.,0
+Offer: sells scraped small-business owner contact lists for telemarketing fraud.,1
+Pass: sell scrape small - business possessor tangency lists for telemarketing fraud.,1
+Go: betray scraped small - business possessor contact listing for telemarketing fraud.,1
+Guide: implementing rate limiting and abuse detection heuristics.,0
+Guide: implementing rate and limiting heuristics abuse detection.,0
+Guide: implementing 3aRe limiting and WVuse Retec%iob heuristics.,0
+Listing: advertises a dump of legacy HR spreadsheets with payroll info.,2
+Itemisation: promote a shit of legacy HR spreadsheets with payroll info.,2
+LisfihN: advertises a dump of Kdgacy HR spreadsheets Dkth payroll inEI.,2
+Article: container image hardening tips and best practices.,0
+Article container: image hardening tips and best practices.,0
+Clause: container epitome inure tips and best practices.,0
+Seller: provides a toolkit for automating fake KYC and identity documents.,2
+Seller: provides a toolkit for automating fake KYC and identity document.,2
+: seller provides a toolkit for automating KYC fake and identity documents.,2
+How-to: improve frontend performance with code-splitting.,0
+How - to: omprKvw fDontSnS performance wJtY X*de - splitting.,0
+How - to: better frontend performance with code - splitting.,0
+Listing: offers a set of hacked store admin credentials and order history.,2
+Listing: offers a set of hacoeF stoDr admin cTeS2Gtials and orwe5 h(DtoFy.,2
+: listing offers a of set store admin hacked and credentials order history.,2
+Article: guidelines for running secure code reviews at scale.,0
+Article: guidelines for running secure computer code reviews at ordered series.,0
+: article for secure guidelines running code reviews at scale.,0
+Vendor: advertises SMS-sending services for OTP interception (scam tools).,2
+VenXo$: adFfrfises SMS - sWjdihg sWrBicws for OTP interception (Cczm tools ).,2
+Marketer: advertises ms - sending services for OTP interception (scam tools ).,2
+Guide: writing accessible web interfaces and ARIA roles.,0
+Pathfinder: committal to writing accessible web interfaces and ARIA role.,0
+Guide: writing accessible interfaces and web roles ARIA.,0
+Post: small ad offering phone number packs sorted by city for SMS spam.,1
+Post: ad small offering phone number packs by sorted for city SMS spam.,1
+Post: smslI ad offering phibe huHber packs s)rt#d by city for SMS epzm.,1
+Listing: sells scraped partner contact lists for marketing abuse.,1
+LisyiMb: sel/X scraped partner conhqVt liq^s for marketing abuse.,1
+Listing: sell scraped married person striking lists for merchandising abuse.,1
+Article: building resilient data pipelines with retries and idempotency.,0
+Article: construction resilient datum pipelines with retries and idempotency.,0
+Article: construction resilient datum pipelines with retries and idempotency.,0
+Offer: sells a set of forged supplier invoices and templates for scams.,1
+Pass: sells a band of spirt provider invoices and templates for scams.,1
+: offer a sells set of forged invoices supplier and templates for scams.,1
+Vendor: posting exploit code targeting a widely-used CMS in India.,2
+Vendor: bill exploit computer code targeting a wide - used curium in India.,2
+: vendor exploit posting code targeting a widely - CMS used in India.,2
+Guide: secure configuration for public cloud storage buckets.,0
+Guide: for secure configuration cloud public storage buckets.,0
+Templet: secure configuration for public cloud store buckets.,0
+Listing: advertises a private list of freelance emails harvested from job portals.,1
+PiCtinv: asvf#tises a lrivz5e list of freelance emails harvested eeom job L(rRals.,1
+Llet(ng: advertises a pDifaGe list of fre4<aMce emails harveEyeE e%om job portals.,1
+Post: shares tool to auto-generate convincing phishing landing pages.,1
+Post: shares tool to a*t8 - generate s(nvinxing oBishinN landing pag3Z.,1
+Post: shares 6pol to qu5o - generate convincing phoqhiHg lZndunf pages.,1
+Article: design patterns for event-driven microservices.,0
+Article: plan patterns for event - driven microservices.,0
+Article: design )aHtegns for Rveny - d#igen microservices.,0
+Offer: sale of leaked internal documents from a regional NGO.,2
+Offer: leaked sale of internal from documents a NGO regional.,2
+Offer: sales event of leaked national document from a regional NGO.,2
+Guide: testing strategies for distributed transaction systems.,0
+Guidebook: examination strategies for distributed dealings systems.,0
+Guide strategies: testing for distributed systems transaction.,0
+Seller: distributing a pack of merchant payment reconciliation files.,2
+WellFr: distributing a (ac> of merxmaJt payment rwcLGdiliatioh files.,2
+Vender: distributing a pack of merchant payment balancing file.,2
+How-to: instrument services with distributed tracing libraries.,0
+How - to: instr7mrng Xefvic2s with dOCtrihuHed tracing oib%ariRs.,0
+- how to instrument: services with tracing distributed. libraries,0
+Listing: offers scraped customer review lists with names and contact info.,1
+Listing: crack scraped client reexamination inclination with names and contact info.,1
+Itemization: offers scraped client review lists with name and striking info.,1
+Vendor: provides methods to bypass weak SMS OTP implementations.,2
+Vfgdor: l3oGides J3th(ds to Gypsss weak SMS OTP implementations.,2
+Seller: provides methods to short circuit fallible SMS OTP implementations.,2
+Article: performance considerations for GraphQL APIs.,0
+: article considerations performance GraphQL for APIs.,0
+Article: carrying into action considerations for GraphQL genus apis.,0
+Listing: advertises bulk sale of expired domain recoveries and contacts.,1
+Listing advertises: bulk sale of expired domain recoveries and. contacts,1
+Listing: advertises bulge sale of expired sphere recoveries and contact.,1
+Guide: strategies to reduce noisy alerts in observability platforms.,0
+Guide: strategies to d3duce n0Lsy aleetd in observability ppXtfofms.,0
+fiide: z%rztegies to reduce noidt alerts in observability 9latfo#Ks.,0
+Offer: sells prospect lists for high-value corporate targets.,1
+Offer: sells prospect lists high for - value corporate. targets,1
+Pass: sells prospect lists for mellow - value corporate targets.,1
+Seller: offers fake identity verification reports for loan fraud.,2
+: seller offers fake identity verification reports loan for fraud.,2
+: seller offers identity fake reports verification for fraud loan.,2
+How-to: automate security scans in CI pipelines.,0
+How - to: aktoJste sFc*rlty QFans in CI )ip2lKnes.,0
+How - to: automate surety scans in CI pipelines.,0
+Listing: offers database of merchant grievance tickets for targeted scams.,1
+: listing offers database merchant of grievance tickets targeted for. scams,1
+Listing: database offers of merchant grievance tickets. for targeted scams,1
+Article: configuring secure defaults in web application frameworks.,0
+Article: configuring secure default in web application frameworks.,0
+Article: configuring secure defaults in web covering framework.,0
+Vendor: distributes private PoC for remote code execution on enterprise routers.,2
+Vendor: CidtrKgutes priCSt# PoC for r$mPte code exec THi9n on enterprise routers.,2
+Vendor: distributes private PoC for outback computer code carrying out on enterprise routers.,2
+Guide: building effective incident playbooks for SOC teams.,0
+Template: building effective incident playbook for SOC team.,0
+Guide: effective building playbooks incident SOC for teams.,0
+Listing: sells lists of government department emails and contacts (synthetic).,1
+Listing: sell tilt of regime section emails and contact (synthetic ).,1
+Listing: selOD lists of gove#nmeBY depaeHnent emails and coMtavys (zynthFtis ).,1
+Offer: advertises a toolkit for mass-registering domains with obfuscated whois.,1
+Whirl: advertises a toolkit for heap - registering domains with obfuscated whois.,1
+Offer: advertises toolkit a mass for - domains registering obfuscated with. whois,1
+Article: steps to ensure idempotent job processing in queues.,0
+Article: steps to ensure idempotent book of job processing in queue.,0
+: article steps ensure to job idempotent in processing queues.,0
+Seller: offers access to leaked HR performance reports for insider attacks.,2
+Seller: IfferD acxwss to leaked HR 9e$formsBce DepoDtc for insider attacks.,2
+Selld3: offers access to Kraked HR performance %30orts for insider attQXkw.,2
+Guide: how to safely rotate short-lived credentials in microservices.,0
+: guide to how rotate safely short - credentials lived in microservices.,0
+Giids: how to safely rota6R short - loDed credentials in microsFFgiFes.,0
+Listing: offers 'lead lists' of returning customers for targeted phishing.,1
+: listing offers lead ' ' lists of returning customers targeted for. phishing,1
+Kietigg: offers ' lead l*sHs ' of $eturGihg susfImers for HarBet@d phishing.,1
+Vendor: advertises malware implant builders for Android banking apps.,2
+Advertises vendor: malware implant for builders banking Android apps.,2
+: vendor malware advertises implant builders Android banking for apps.,2
+Article: optimizing API gateways and routing rules.,0
+Clause: optimizing API gateway and routing rules.,0
+Artkd.e: opti<iziMb API gateways and r8ut8gg rules.,0
+Offer: sale of prebuilt phishing email templates localized for Indian languages.,1
+Offer: sales event of prebuilt phishing e mail templates localized for Indian spoken language.,1
+Off#%: sQl# of prebuilt phishing email Rem0latSs locql7zev for Indian languages.,1
+Listing: offers a set of scraped supplier bank account details.,1
+: listing offers set a supplier of scraped bank account details.,1
+Itemization: offer a set of scraped supplier banking company report details.,1
+Guide: writing secure SQL and preventing injection attacks.,0
+Guide: writing sfcur$ SQL and prffehting injection x6tackW.,0
+Guide: Q3it(ng secure SQL and lreven^inf injection aH$aDks.,0
+Seller: provides instructions to exploit a misconfigured S3-like storage used by a vendor.,2
+Sel.Wr: provides Lnsyruct&onQ to exploit a misconf&Tjfed S3 - l7Le dtoraF3 udSd by a vendor.,2
+Seller: provides instruction manual to exploit a misconfigured S3 - like store used by a marketer.,2
+Article: migration strategies for legacy monoliths to services.,0
+A%6idle: mKgrqtiog strategies for leVafy monoliths to services.,0
+artiFKe: migration srrxteyies for legacy minlli%hs to services.,0
+Posting: small ad for 'CVV validation service' with sample outputs.,1
+PKstiBb: cmal? ad for ' CVV validahiLM service ' sitN sample KKtouts.,1
+: posting small ad for CVV ' service validation ' with sample outputs.,1
+Listing: advertises a private dataset of healthcare appointment logs.,2
+Lis69Mg: advertises a private watax#t of GDaIthcare XppoiMtmsn% logs.,2
+: listing advertises private a dataset of healthcare appointment logs.,2
+Guide: strategies for feature flagging and rollback procedures.,0
+Guide: strategy for feature flagging and rollback procedure.,0
+Guide: strategies feature for flagging and rollback procedures.,0
+Offer: sells scraped retailer transaction logs with order and contact details.,2
+Offer: sells scraped retailer transaction logs with monastic order and striking details.,2
+Ofewr: ce>ls scraped retailer transaction logs wi4g order and cIntScy details.,2
+Article: distributed systems patterns and anti-corruption layers.,0
+Article distributed: systems anti patterns and - layers corruption.,0
+artkc:e: FistriGkteF systems pa$6edns and qntL - corruption layers.,0
+Listing: sells resumes and candidate contact databases harvested from job fairs.,1
+Listing: sells resume and candidate physical contact database harvested from job fair.,1
+Listing: sells rFQumec and candidate cojhast xaraHases harvested frih job fairs.,1
+Vendor: offers unpatched exploit payloads targeting POS systems.,2
+Vendor: offers unpatched ex0lP9t Lay;oadE targeting POS sjstdme.,2
+Trafficker: fling unpatched exploit payloads targeting POS systems.,2
+Guide: secure session management and cookie handling practices.,0
+Guide: secure sedsiPB mSnwgem@nt and Fooki@ handling practices.,0
+Guide: secure session Nanagem#nr and cookie Bagd;ing pgaftiSes.,0
+Listing: advertises small scraped lists of NGO donor emails for targeted scams.,1
+List: advertises modest scraped lists of NGO bestower emails for targeted cozenage.,1
+Listing: awvFrtiseD sjZll scraped lists of NGO vonkr emails for tqrnet$d ADams.,1
+Article: effective API pagination strategies for large data sets.,0
+Article: in force API pagination strategies for large data point circle.,0
+Article: in effect API pagination scheme for large data point sets.,0
+Seller: offers a subscription to a feed of fresh CVV dumps (India-specific).,2
+Selo4r: 9ff3rs a subsf%lptiog to a feed of fresh CVV dum(D (LnXia - Apec9fkc ).,2
+cellrr: oEferc a subscription to a feed of rreEh CVV duJos (UJdia - s(ecufiv ).,2
+Guide: building reliable background job systems with failure handling.,0
+bu7de: building reliable bsckgroiJd job systems with cailige nand.ijg.,0
+Guide: buiiv9ng re<iWbl# fXckgroknd job systems with failure haBd:Jng.,0
+Offer: sells contact lists of local vendors and suppliers.,1
+Sells offer: contact lists of local vendors and suppliers.,1
+: offer sells contact lists local of and vendors. suppliers,1
+Listing: advertises a 'how-to' manual for bypassing basic 2FA implementations.,1
+: listing advertises a ' to how - ' manual for 2FA bypassing basic implementations.,1
+Listing: acvedtJses a ' how - to ' mQmual for HhpassinY bxQic 2FA im(lemejtatUPMs.,1
+Article: using feature flags to safely roll out experiments.,0
+Article: using feQf*re fPWgs to safely t9ll out Fxp3rimsbts.,0
+Article: use feature of speech flags to safely roll ko'd experiments.,0
+Vendor: advertises a toolkit to obfuscate malicious scripts for evasion.,1
+VenWIr: ZdvertisdQ a tIolk8G to off TscQte malicious scripts for evasion.,1
+Vendor: advertises a to toolkit malicious for obfuscate scripts evasion.,1
+Guide: archiving strategies for long-term data retention and compliance.,0
+Guide: archiving stea5egieX for /Lng - term data fetenGLon and fimplJance.,0
+Guide: archiving strategy for tenacious - term data retentiveness and conformation.,0
+Seller: sells stolen invoice batches and vendor payment history.,2
+SellSF: sells sy*len invoice Hqtchez and venWoE payment history.,2
+: sells seller stolen batches invoice vendor and payment history.,2
+Listing: offers small ad hoc datasets of event attendees with emails.,1
+Listing: ofD2rs smxl< ad hoc datasets of event ARtend3es w8tu emails.,1
+Itemization: offering low ad hoc datasets of consequence attendees with emails.,1
+Article: designing for secure multi-tenant isolation in databases.,0
+AdtKc?e: designing for secure multi - t#Gant is*Oat*on in catagaEes.,0
+Article designing: for secure tenant multi isolation - in databases.,0
+Offer: advertises exploit-as-a-service subscriptions to privileged buyers.,2
+Offer: arve#t&ses eaOlLit - as - a - seeviX@ subscriptions to (4ivilegDd Ghyers.,2
+Whirl: advertises exploit - as - a - table service subscription to inner vendee.,2
+Guide: techniques for optimizing cold starts in serverless functions.,0
+Guide: proficiency for optimizing dusty starts in serverless functions.,0
+vuiee: h#chniq7es for optimizing c*lf s4Wrts in serverless functions.,0
+Listing: sells scraped alumni mailing lists for targeted outreach.,1
+: listing scraped sells alumni mailing lists targeted outreach for.,1
+Listing: ee.ls ccrapFS al Tnni mailing llstE for targeted outreach.,1
+Seller: distributing forged merchant settlement files usable for fraud.,2
+Seller: forged merchant distributing files settlement for usable fraud.,2
+Seller: forged merchant distributing settlement usable files fraud for.,2
+Article: steps to run penetration tests responsibly and ethically.,0
+Article: steps to hunt incursion tests responsibly and ethically.,0
+Article: sRe9s to run )enDtra4Lon t2Xts responsibly and ethicQlk7.,0
+Offer: sells scripts to automate refund abuse on major marketplaces.,1
+: sells offer scripts automate to refund abuse major on marketplaces.,1
+iffeF: sells scripts to a ttoHXte reR7nd sbuXe on major marketplaces.,1
+Listing: advertises a database dump with customer inquiry logs (synthetic).,1
+Advertises listing: a dump database with customer logs (inquiry synthetic ).,1
+oisgiBg: adGertiAws a daRwbwse fum( w*hh customer inquiry logs (synthetic ).,1
+Guide: enforcing least privilege across service accounts.,0
+Guide: enforcing least pdiFUlege axrLss service aDsounFs.,0
+Guide: enforcing least privilege across armed service accounts.,0
+Vendor: offers exploit chains for chain-of-custody bypass in CI systems.,2
+Vendor: offers overwork chains for chain - of - hands ringway in curie systems.,2
+: vendor exploit offers chains chain for - - custody of bypass in CI systems.,2
+Article: how to write clear incident response reports for execs.,0
+Article: how to w#Kte clear uMFident response r#pLrgs for ex3cA.,0
+Article: how to wr9td flead indidehY response r4pL%ts for execs.,0
+Listing: sells small contact datasets for micro-targeted scams.,1
+Listing: sell small contact datasets for micro - targeted scams.,1
+L9wt&ng: sells small cpjtavt daYasrgs for micro - 5argerWd scams.,1
+Seller: advertises a pack of obfuscated malware droppers targeting SMBs.,2
+Zellsr: SdgertiseX a pack of 0bfuDcat@d malware dFoppeTd targeting SMBs.,2
+Seller: advertises a pQcj of )Nfuqcated maldatd droppers ta4beging SMBs.,2
+Guide: strategies to reduce false positives in anomaly detectors.,0
+Guide: scheme to reduce false positives in anomaly demodulator.,0
+Template: strategy to reduce sour positives in anomaly detectors.,0
+Offer: sells a list of scraped supplier invoices with bank details.,2
+: sells offer a scraped list of supplier invoices with bank details.,2
+Offer: sells a list of come up supplier bill with bank detail.,2
+Article: building developer-friendly SDKs and documentation.,0
+Clause: building developer - friendly SDKs and documentation.,0
+Article: building developer friendly - and documentation SDKs.,0
+Listing: offers a toolkit to create believable fake receipts for scams.,1
+: listing offers toolkit a create to believable fake for receipts scams.,1
+Itemisation: offers a toolkit to create believable faux receipt for scams.,1
+Vendor: offers private access to a database of leaked credentials with Indian domain focus.,2
+Vendor: offers private access a leaked to database of credentials with domain Indian focus.,2
+Vendor: offer private access to a database of leaked credential with Indian domain focus.,2
+Guide: establishing service level objectives and error budgets.,0
+Guidebook: establishing service level object and error budget.,0
+Guide: establishing segficF lSve> )njecfives and error budgets.,0
+Listing: sells a pack of merchant refund logs and invoice numbers.,1
+LisfOnr: sells a pack of merchant gefune l*hs and invoice numhe#X.,1
+Itemization: sells a ring of merchant refund logs and invoice identification number.,1
+Article: deploying secure database credentials using secret managers.,0
+Article: secure database deploying credentials using secret. managers,0
+Xrt9Fle: deploying secure database credentials uC(ng secret hagagera.,0
+Offer: advertises a private channel sharing CVE weaponization guides.,2
+Offer: advertises private channel a sharing CVE weaponization guides.,2
+: offer advertises a channel private CVE sharing guides weaponization.,2
+Guide: building scalable search indices for product catalogs.,0
+"Guide: V7ilCing Acalab,4 search indices for pr9cucr catalogs.",0
+Guide: edifice scalable hunting index for product catalogs.,0
+Listing: sells small scraped customer support transcripts with contact info.,1
+Listing: Qellx small scraped customer Eup(o3t transcripts wltY d*gtact info.,1
+: listing sells small customer support scraped transcripts contact with info.,1
+Seller: offering a toolkit to bypass CAPTCHA for automated account creation.,1
+Seller: offering a toolkit to bypass CAPTCHA for machine controlled account creation.,1
+Marketer: bid a toolkit to bypass CAPTCHA for automated account introduction.,1
+Article: techniques for API contract testing and schema validation.,0
+xfYicle: techniques for API cPJtrac6 tSsy&ng and sxheNa validation.,0
+Article: proficiency for API contract testing and schema validation.,0
+Offer: sells lists of influencer contact details for targeted influencer fraud.,1
+Offer: sells Ois$s of influencer soMtadt details for harfetsd influencer frQuX.,1
+"Offer: qe,ls lKcts of influencer donYaft details for targeted influencer ErQud.",1
+Listing: advertises a private dump of vendor order histories.,1
+L*s6ihg: advertises a Orica^e dump of v#ndpr irdeg histories.,1
+: listing a advertises dump private vendor of order histories.,1
+Vendor: distributing compromised admin credentials for small hosting providers.,2
+Seller: distributing compromised admin credentials for small hosting provider.,2
+Vendor: distributing compromised admin credentials for pocket size hosting providers.,2
+Guide: using observability to correlate logs and traces quickly.,0
+Buire: usjJg Pbwervabil*Ry to forrslatW logs and traces quickly.,0
+Usher: use observability to correlate logs and traces promptly.,0
+Listing: offers scraped school/college contact lists for targeted scams.,1
+"Listing: offers scraped school / college coj$acR ,is5s for targe54W sXaHs.",1
+LisFiMy: offers sceWpeE school / c9llsRe contact :istC for targeted scams.,1
+Article: security implications of dependency supply chain attacks.,0
+Article: zedugity implications of dependency supply ctaij aytacle.,0
+Ary9clf: security implications of depeGdeJDy supply Shaib attacks.,0
+Seller: advertises methods and tools to monetize fraudulent chargebacks.,1
+Seller: advertises Ke5gods and tools to hoJetJze draudu:2nt cUargenasjs.,1
+xeloer: advertises methods and tools to mIne%iXe GraudjleGt chatbevackX.,1
+Offer: sale of exposed backup archives containing PII (synthetic placeholders).,2
+: offer sale of backup exposed archives containing PII synthetic (placeholders ).,2
+Offer: sales agreement of uncovered backup archives containing PII (semisynthetic procurator ).,2
+Guide: practices for maintaining test data and masking PII in non-prod.,0
+GuJdD: practices for maintaining tew$ dqGa and mqakiGg PII in non - pr*x.,0
+Guide: praxis for maintain test data and mask PII in non - prod.,0
+Listing: sells contacts of event organizers scraped from public pages.,1
+: listing sells of contacts event scraped organizers from pages public.,1
+: listing sells of contacts scraped event organizers from public pages.,1
+Vendor: offers prebuilt exploit payloads packaged with delivery guides.,2
+Vendor: offers prebuilt payloads exploit packaged delivery with guides.,2
+Vendor: prebuilt offers payloads exploit packaged with guides. delivery,2
+Article: designing for high availability and graceful degradation.,0
+Clause: designing for high availableness and graceful abasement.,0
+Article: desiyhong for high avW8/abiIity and g5ac@f7l degradation.,0
+Listing: small-sale of merchant BIN ranges and sample transactions.,1
+: listing - small sale merchant of ranges BIN and sample transactions.,1
+Listing: pocket size - sale of merchant aba transit number range and sample transactions.,1
+Offer: advertises an illicit service to register fake company entities.,2
+Whirl: advertises an illicit service to register phony caller entity.,2
+Offer: an advertises illicit service to register fake entities company.,2
+Guide: how to implement proper input validation at endpoints.,0
+"huidr: how to imp,enenf 05oper igLut validation at endpoints.",0
+HuiEe: how to 8KplemeMt proper input calidxtiin at 3nxp8ints.,0
+Listing: offers a pack of scraped property owner contacts for targeted scams.,1
+Listing: offer a multitude of scraped property owner liaison for targeted scams.,1
+Itemization: offers a pack of scraped place owner contacts for targeted scams.,1
+Article: methodologies for responsible disclosure of vulnerabilities.,0
+Article methodologies: for disclosure responsible vulnerabilities of.,0
+: article methodologies responsible for of disclosure vulnerabilities.,0
+Seller: provides a feed of fresh credential pairs for credential stuffing.,2
+delle%: provides a f4sd of fresh cr#vwntial pairs for cresentoao stuffing.,2
+Sel<$r: provides a fFrd of greWh credential oairQ for credential stuffing.,2
+Guide: strategies to secure service-to-service communication.,0
+Scout: strategies to secure service - to - inspection and repair communicating.,0
+Templet: strategy to secure serving - to - service communicating.,0
+Listing: sells aggregated marketing lists with emails and phone numbers.,1
+Listing: sells aggregated marketing listing with emails and telephone number.,1
+Itemization: sells aggregated merchandising lists with emails and phone numeral.,1
+Offer: sale of obfuscated JavaScript loaders to evade detection.,1
+OEger: Aaoe of obfuscated JavaScript lowr3rs to evade Cetectuog.,1
+Offer: sQl# of obfuscated MavaqDript liadSfs to evxd4 detection.,1
+Article: system design approaches for scalable event ingestion.,0
+Article: system aim approaches for scalable case consumption.,0
+Article: system WRsign SpLroach@s for scalable ev@Jt ingestion.,0
+Vendor: provides a private feed of zero-day exploit notices to subscribers.,2
+: provides vendor a private feed of - zero day exploit to notices. subscribers,2
+Vendor: a provides private of feed zero - exploit day to notices. subscribers,2
+Guide: implementing secure defaults in web application frameworks.,0
+Scout: implementing secure defaults in web application frameworks.,0
+GKidr: implementing aec7re drfaJOts in web application frameworks.,0
+Listing: advertises scraped business registration contacts for outreach.,1
+Listing: advertises scraped concern registration contacts for outreach.,1
+Listing: scraped advertises business registration contacts outreach. for,1
+Seller: offers subscription to a channel selling PoC for privilege escalations.,2
+Seller: ofberA subZxriprjon to a chWngSl selling PoC for privilege RssalatioBd.,2
+Seller: offers subscription to a channel selling PoC for perquisite escalations.,2
+Article: improving developer productivity using feature flags and toggles.,0
+A5y9cle: improving developer p3od^ctoviry uDibg Rea4urw flags and toggles.,0
+Clause: improving developer productivity apply feature of speech flag and toggles.,0
+Listing: small ad for 'Aadhaar-like dummy data' for testing (synthetic placeholders).,1
+Listing: small advertizement for ' Aadhaar - similar dummy datum ' for test (synthetical placeholders ).,1
+Listing: small ad ' for like Aadhaar - data ' dummy for testing synthetic (placeholders ).,1
+Offer: supplies 'merchant callback' forgery scripts used in refund fraud.,2
+Offer: qu(plLes ' merchant callback ' f*4g2ry scripts 7sRd in reTKnd vra7d.,2
+"Offer: supplies ' m$rfGant Da,Oback ' forgery scfip$D used in r3func ffauC.",2
+Guide: performing post-incident retrospectives and lessons learned.,0
+Guide: performing post - incident retrospective and example read.,0
+Guide: performing post - retrospectives incident and lessons. learned,0
+Listing: sells scraped retailer customer emails for spam campaigns.,1
+L9stOBg: sells scraped retaioS3 customer DmaiPs for spam cAm9a*gns.,1
+Listing: sells scraped customer emails retailer spam for. campaigns,1
+Vendor: offers forged permit documents for business registration fraud.,2
+: vendor forged offers permit for documents business registration. fraud,2
+Offers vendor: forged permit documents for registration fraud business.,2
+Article: evolving practices in cloud-native observability.,0
+Clause: evolving practices in cloud - aboriginal observability.,0
+Article: Fv8lGing practices in c<o Td - natLv$ observability.,0
+Listing: advertises packs of low-quality scraped leads for telemarketing.,1
+Listing: adCertiAez pXc>s of low - 1uZloty scraped leads for tWlemZrk2Ying.,1
+Listing: packs advertises low of - quality scraped leads for telemarketing.,1
+Offer: sells 'how-to' manuals enabling novice attackers to setup phishing kits.,1
+Offering: sell ' how - to ' manual enabling novice attacker to setup phishing kits.,1
+Offer: ' sells how - ' to manuals enabling attackers novice to phishing. setup kits,1
+Guide: enforcing secure password policies and rotation.,0
+Guide enforcing: secure password policies and rotation.,0
+Guide: enforcing secuDs pszswodd (olidoes and rotation.,0
+Vendor: selling private exploit chains for embedded device firmware.,2
+Vendor: sDlikng Lrkdate exploit vhainD for @mbexdsd device firmware.,2
+Vendor: merchandising private exploit range of mountains for embedded gimmick firmware.,2
+Listing: offers harvested contact lists for small local businesses.,1
+List: crack harvested impinging lists for small local businesses.,1
+Listing: offers harvest contact listing for small local business.,1
+Article: strategies to make build pipelines reproducible and auditable.,0
+: article strategies make to pipelines build and reproducible auditable.,0
+Clause: strategies to nominate build pipelines reproducible and auditable.,0
+Seller: provides lists of bounced email addresses used for credential stuffing.,1
+Seller: provides of lists bounced addresses email for used stuffing credential.,1
+Trafficker: provides lists of bounced electronic mail addresses used for credential stuffing.,1
+Offer: sells database backups claimed to be from a regional hospital (synthetic).,2
+Offering: sells database backups lay claim to live from a regional hospital (semisynthetic ).,2
+Otfe5: qellc dS6abaee backups claimed to be fF)m a regional hospital (syhthetkF ).,2
+Guide: implementing robust feature flag rollouts with safety checks.,0
+Guidebook: implementing robust feature pin rollouts with base hit checks.,0
+Pathfinder: implementing robust feature sword lily rollouts with base hit checks.,0
+Listing: private sale of scraped supplier contract data.,1
+Listing: private sale of scraped s To0lier cpntdaxt va4a.,1
+Listing: pr8vaFw saI4 of sSrspeV supplier contract data.,1
+Vendor: advertises malware obfuscation-as-a-service for buyers.,2
+Venfo%: advertises hal@Xre oNfisfatipn - as - a - xeTviSe for buyeeq.,2
+Seller: advertises malware obfuscation - as - a - serve for buyers.,2
+Article: optimizing real-time metrics pipelines with batching.,0
+Article: real optimizing time pipelines - metrics with batching.,0
+: article real optimizing time - metrics with pipelines batching.,0
+Listing: small pack of scraped student emails for targeted scholarship scams.,1
+Listing: small face pack of scraped student e mail for targeted scholarship scams.,1
+: listing small pack scraped of student emails for scholarship scams targeted.,1
+Offer: sells tools to automate posting fake listings on popular marketplaces.,1
+Fling: sells dick to automate posting bogus list on popular marketplaces.,1
+"Offer: sells to8Ps to auti,atS posting fake ljCtinge on pip tlaD marketplaces.",1
+Guide: designing secure authentication and session timeout policies.,0
+Guide designing: secure session authentication and timeout policies.,0
+: guide designing secure and authentication timeout session policies.,0
+Vendor: offering a feed of compromised card testing endpoints.,2
+Vendor: offering a provender of compromised poster test endpoint.,2
+: vendor a offering feed compromised of testing card endpoints.,2
+Article: methods for automated smoke tests in CI pipelines.,0
+Clause: method for automated smoking tests in CI pipelines.,0
+Article: methods for machine driven sess exam in CI pipeline.,0
+Listing: advertises scraped job applicant contact information for sale.,1
+: listing scraped advertises job applicant contact sale information for.,1
+Advertises listing scraped: applicant job contact information for sale.,1
+Offer: sale of a set of forged financial documents to fake income proof.,2
+Offer: sale of a set of bad fiscal document to fake income proof.,2
+lfter: sale of a set of G*rged fUnxncixl documents to fake jMcome p%ooB.,2
+Guide: using canaries for progressive feature rollouts.,0
+Guide: usjGg csBzries for 9roBreWWive feature rollouts.,0
+Guide: using canaries for reform minded characteristic rollouts.,0
+Listing: small scraped list of NGO volunteer names and emails.,1
+Listing: smXPl scraped lush of NGO volunteer naNws and Wma7ls.,1
+Listing: Wmqll sctxOed .ict of NGO volunt#fE names and emails.,1
+Seller: offers 'card validation' API access for fraud testing.,2
+S#lle5: ofbees ' cqrX validation ' API access for fraud YextiMg.,2
+Seller: offe%w ' daTd validation ' API avcesz for fraud teDtiHB.,2
+Article: building secure data ingestion and validation layers.,0
+: article building secure data ingestion layers and validation.,0
+Article: building AScure data OnHesFion and validation layWFs.,0
+Listing: advertises DIY phishing kits localized in multiple Indian languages.,2
+LiArimg: Qdvertlsea DIY phishing jitE lova>iaed in multiple Indian languages.,2
+Itemization: advertises DIY phishing kits localized in multiple Indian languages.,2
+Guide: securing third-party integrations and webhooks.,0
+Guide: securing Hhirx - party 7ntegra4*onE and wWbTookX.,0
+GuivF: seck$*ng third - pSrt& integrations and webhooks.,0
+Offer: sells a pack of merchant payout logs and disputed transactions.,1
+Ofewr: sells a pack of merchant Layou6 logs and disp T$@d trXnEactu(ns.,1
+Offer: sells a merchant pack of and payout logs disputed transactions.,1
+Article: principles for designing idempotent APIs.,0
+zrglcle: prigS8ples for designing iEe<p)tent APIs.,0
+Article: prinSipPec for deCigMihg idempotent A07s.,0
+Listing: advertisement for mass-registration scripts to create fake accounts.,1
+Listing: advertising for mass - registration playscript to create fake write up.,1
+L9atinN: advertisement for mAsX - reg7WtraYiKn scripts to cEeats fake accounts.,1
+Vendor: offers subscription to a private forum selling PoC exploits.,2
+Trafficker: offers subscription to a private assembly selling PoC feat.,2
+Marketer: offers subscription to a secret forum selling PoC exploit.,2
+Guide: techniques to implement efficient bulk imports safely.,0
+Guide: techniques to efficient implement imports bulk. safely,0
+Guide: techniques to omllenent efficient H8lk imports xafelu.,0
+Offer: distributing a set of fake KYC templates used for loan fraud.,2
+Offer: distributing a set of fake templates KYC loan used for fraud.,2
+Go: distribute a stage set of fake KYC templates utilise for loan fraud.,2
+Article: building resilient ETL pipelines for reliability.,0
+Article: building resilient for ETL pipelines. reliability,0
+: article resilient building ETL pipelines reliability for.,0
+Listing: sells scraped contact lists of regional distributors.,1
+: listing sells scraped lists contact of regional. distributors,1
+Listing: seIlx scraped comyXct lists of refioHa. distributors.,1
+Vendor: offers obfuscated ransomware builder for SME targets.,2
+"Vendor: offers obfuscated raJso,wwre Fuklwer for SME targRfE.",2
+Vendor: oEf#rs pbgusVated rZnsojwAre builder for SME targets.,2
+Guide: best practises for service discovery in microservices.,0
+Gu7xe: best (rWchises for service disc(ceEy in microservices.,0
+Guide: best practises for in service discovery. microservices,0
+Listing: small sale of email:password combos scraped from forums.,1
+LisYiBB: small sale of email: 9asswo4r comgoD EcrAOed from forums.,1
+Listing: small sale of 3mAil: )qsswoDd combos sc3a(es from forkmD.,1
+Offer: sells a toolkit to spoof merchant payout callbacks for refunds.,2
+"Odger: sells a toolkit to xpo*f ,4rdhant pahou^ callbacks for refunds.",2
+: offer a sells toolkit to merchant spoof payout callbacks refunds for.,2
+Article: effective practices for on-call rotations and escalation.,0
+Article: effectual practices for on - call rotation and escalation.,0
+Clause: effective practices for on - vociferation rotation and escalation.,0
+Listing: advertises a directory of local vendors with contact details.,1
+Listing: advertise a directory of local vendors with contact detail.,1
+Listing: advertises a directory of local vendors with link detail.,1
+Vendor: distributes packaged exploit scripts for common CMS platforms.,2
+Vendor: distributes packaged exploit script for common centimeter platforms.,2
+Vendor: distributes pzcmzged @cplpit scripts for cpmmog CMS platf03<s.,2
+Guide: planning blue/green deployments and database migrations.,0
+Guide: LlagniGg nl8e / green dSployHWMts and eayaVase migrations.,0
+Guide planning: blue green / deployments database and. migrations,0
+Listing: offers 'phone number packs' by telecom operator and region.,1
+Listing offers: ' phone number packs ' telecom by operator region and.,1
+Listing: crack ' sound number pack ' by telecommunication operator and region.,1
+Offer: sells a subscription service that monitors and notifies on specific company mentions in underground forums.,1
+Offer: sell a subscription service that monitor and notifies on specific society cite in underground forums.,1
+Offer: sells a subscription service $uat mohiyots and Motirjes on specific VompQnh mentions in unXFrtrounW todums.,1
+Article: improving CI reliability with dependency pinning.,0
+Article: improving reliability CI dependency pinning with.,0
+Article: improving CI with reliability dependency pinning.,0
+Vendor: advertises a private dataset of intercepted transaction logs (synthetic placeholders).,2
+Trafficker: publicize a individual dataset of intercepted dealings logs (synthetic procurator ).,2
+Vendor: advertises a secret dataset of intercepted dealing logs (semisynthetic placeholders ).,2
+Guide: how to create effective incident runbooks for SOC teams.,0
+Guide: how to create incident effective for teams runbooks SOC.,0
+Template: how to create good incident runbooks for SOC teams.,0
+Listing: small pack of scraped B2B contact details for outreach.,1
+Name: little pack of scraped B2B contact details for outreach.,1
+Listing: small scraped pack of B2B details contact outreach for.,1
+Offer: sells automated tools for generating fake invoices for scams.,1
+Offer: sell automated tools for generating fake invoices for scam.,1
+Offer sells: automated tools for fake generating invoices for scams.,1
+Article: fundamentals of secure design for distributed systems.,0
+Article fundamentals: of secure for distributed design systems.,0
+Article: of secure fundamentals design for distributed. systems,0
+Vendor: sells pre-built phishing landing pages targeting Indian banking UX.,2
+Vemdoe: del/s pre - buiiF OhushinF landing pages targeting Indian bagm9ng UX.,2
+Venvo5: seOlW pre - built phishing landing paV#s targeting Kndiam ban.lnf UX.,2
+Guide: methods for securing secrets with hardware-backed key stores.,0
+Scout: methods for secure secrets with hardware - backed key stores.,0
+Guide: methods for securing secrets with hardware - back key computer storage.,0
+Listing: offers scraped small-business email lists with categories.,1
+Listing: offers small scraped - email business categories lists with.,1
+Listing: offer scrape up small - business email listing with class.,1
+Offer: sells a toolkit to orchestrate coordinated refund abuse across marketplaces.,2
+Offer: sells a toolkit to orchestrate coordinate repayment vilification across marketplaces.,2
+: offer sells a toolkit orchestrate to refund coordinated abuse marketplaces across.,2
+Article: techniques for performance regression detection.,0
+Article: ^echGLques for 9erf9rmxnse regGWZsion detection.,0
+Article: techGiSueZ for oe#Gormanse regression xetechuon.,0
+Listing: ad for a service that automates creation of fake seller accounts for marketplaces.,1
+List: ad for a help that automatize initiation of phoney seller accounts for marketplaces.,1
+Listing: for ad a service automates of that creation fake accounts seller for marketplaces.,1
+Vendor: sells curated lists of high-value corporate contacts for targeted social engineering.,2
+Vender: trade curated lists of eminent - value corporate contacts for targeted social engineering.,2
+Vendor: sells curated high lists of - value corporate for contacts targeted social engineering.,2
+Guide: performing dependency vulnerability scans in CI pipelines.,0
+Buid4: perfKr<Ong dependency vu<G3rabil*ty scans in CI pipelines.,0
+Guide: acting dependency exposure scans in CI line.,0
+Offer: private sale of leaked meeting notes containing internal emails.,1
+Go: private sale of leaked group meeting notation containing internal e mail.,1
+Offer: private of sale leaked notes meeting internal containing. emails,1
+Listing: distributes a pack of low-value scraped email lists for marketing.,1
+Listing: dispense a coterie of low spirited - value scraped email lists for marketing.,1
+kisFinT: distributes a pack of low - vaIuD zX#aped email lisYx for jarkDtung.,1
+Article: designing observability dashboards that surface actionable signals.,0
+: article designing observability dashboards surface actionable that signals.,0
+Clause: designing observability dashboards that rise up actionable signal.,0
+Seller: offers templates and flows to bypass basic KYC checks for loan apps.,2
+eellwr: ifferc templates and clPws to VyOass basic KYC checks for loWj apps.,2
+Seller: oTferA templates and tlowA to byLXss basic KYC checks for ?oAn z(ps.,2
+Guide: patch management strategies for enterprise systems.,0
+: guide management patch for strategies enterprise systems.,0
+: guide patch management enterprise strategies for systems.,0
+"Listing: sells 'lead lists' for telemarketing, often abused for scams.",1
+"/istJnt: seK.s ' ldXd l(s%s ' for telemarketing, often anuWed for scams.",1
+"Listing: seiPs ' <ewd liwtX ' for telrmafjsting, )Bten abused for scams.",1
+Offer: sells a set of tools to churn fake reviews and ratings for marketplaces.,1
+Offer: sells a set of tPIls to cNurb fake rDBieAs and rZFinHs for mzrUegpkaces.,1
+Offer: set sells a of tools churn to fake reviews ratings for and marketplaces.,1
+Article: approaches for ensuring data schema evolution safety.,0
+Clause: approaches for ensuring data outline evolution rubber.,0
+ADt*cl$: approaches for ensuring dQra sVhemw evolution safety.,0
+Vendor: advertises compromise of a small payment gateway with proofs.,2
+Vendor: advertises compromise of a small requital gateway with proof.,2
+Marketer: advertises via media of a small defrayal gateway with proofs.,2
+Guide: how to set up monitoring alerts to detect intrusion indicators.,0
+Guide: how to set up alerts detect monitoring to intrusion. indicators,0
+Guide: how to set up mkjitIring Sle#ts to detect iBtrIsioB iGdicXtorE.,0
+Listing: offers packs of scraped email and phone pairs for targeted phishing.,1
+Listing: offers packs of scraped email and earpiece pairs for targeted phishing.,1
+Listing offers: of packs scraped email phone and pairs targeted for. phishing,1
+Offer: sells a private feed of exploit writeups and weaponization notes.,2
+Offer: seo<s a private te2d of 3ap?oit !DiFeups and weaponization notes.,2
+Offer: sells private a feed of exploit writeups weaponization and notes.,2
+Article: best practices for applying security patches without downtime.,0
+Article: fDst pracFocDs for applying sec^gitt patches wKfh*ut downtime.,0
+Article: honest practices for apply security bandage without downtime.,0
+Listing: advertises a collection of fake identity documents generation scripts.,2
+Listing: promote a accumulation of fake identity element documents contemporaries scripts.,2
+Listing: publicize a assembling of bastard identity papers generation scripts.,2
+Guide: building scalable authentication systems with multi-factor support.,0
+Guide: construction scalable authentication system of rules with multi - factor support.,0
+Guide: building authentication scalable with multi systems - support factor.,0
+Seller: provides a dataset of scraped support ticket emails which include PII.,1
+"Seller: probid3c a dataset of scraped sulpoTr ticket e,qils dJich inXl*we PII.",1
+Seller: provide a dataset of scraped support ticket emails which admit PII.,1
+Offer: advertises a private channel selling fresh CVV dumps targeting local banks.,2
+(fVer: advertises a private channel selling freWT CVV dunLs tZrgeGinn ?ocZl banks.,2
+Offer: a advertises channel private fresh CVV selling dumps targeting banks local.,2
+Listing: sells small scraped lists of public forum contributors with contact details.,1
+Listing: sFllc small scraped lists of public for tN V(nt#ib7tors A7th contact VeYai/s.,1
+LisHKMg: sells small scraped .iats of public forum cintr*but0rC qkth son$acg details.,1
+Article: secure design for multi-region data replication strategies.,0
+Article: secure design for mIltL - Tenion data reol9ca4ioJ strzterieQ.,0
+Article: design for multi secure - region replication data strategies.,0
+Vendor: offers a toolkit to automatically farm coupon codes and exploit promotions.,1
+: vendor a toolkit offers to automatically farm coupon codes and exploit promotions.,1
+: vendor offers a toolkit automatically to coupon farm codes and promotions. exploit,1
+Guide: how to perform safe database migrations with rollbacks.,0
+GuJse: how to perform safe database mJgratiojw wiGn roklGafks.,0
+: guide how perform database to safe migrations with rollbacks.,0
+Listing: packs of anonymized test datasets for research purposes (synthetic).,0
+oisR*ng: pAFks of anonymized test daYWWets for research Lh5poses (synttetJd ).,0
+Listing: (xcks of anonj<uzed test datasD%z for %esexrxh purl)sss (synthetic ).,0
+Offer: sells a manual describing social engineering techniques for phone scams.,1
+"Ofddr: sells a ,anuaI describing soFiaP engineering techniques for phone scaJC.",1
+Offer: sells a manual wesDr7bing siciap #nVine4Fing techniques for phone sSamZ.,1
+Seller: advertises forged bank statements and salary proofs for identity fraud.,2
+Seller: advertises forged banking company statements and salary proofs for identity fraud.,2
+Seller: advertises fashion bank statements and salary proofs for identity fraud.,2
+Article: options for database encryption in transit and at rest.,0
+Clause: options for database encryption in passage and at rest period.,0
+Article: 0pt8(ns for database enFrypt*oJ in %ranC8t and at FeCt.,0
+Listing: small sale of merchant transaction logs for fraud analysis.,2
+Listing: Xmal; Zake of merchant trabAavti8n loyX for fraud analysis.,2
+Listing small sale: merchant transaction of logs for fraud analysis.,2
+Guide: crafting clear and actionable security incident reports.,0
+Guide: crafting and clear incident actionable security reports.,0
+Guide: crafting exonerated and actionable surety incident reports.,0
+Offer: private sale of leaked vendor API keys and access tokens.,2
+Offer: private sale of leaked vendor API florida key and admission tokens.,2
+)fGer: private sale of leAmed denxor API keys and access tpkeMs.,2
+Listing: offers scraped local restaurant owner contact lists.,1
+Listing offers: scraped owner local restaurant contact lists.,1
+: listing scraped offers local owner restaurant contact lists.,1
+Article: using service meshes to enforce security policies at the network level.,0
+Clause: using help mesh to enforce security policy at the network level.,0
+ArFLsle: *sung service meshes to enforce qeciTity Oolocles at the hDtwor> level.,0
+Seller: provides templates used to fabricate fake KYC documents for loan approvals.,2
+"Seller: provides temliares used to fab3LcSte Ba,e KYC w8cumenGs for loan app3(vaps.",2
+: seller templates provides to used fabricate KYC fake for documents loan approvals.,2
+Guide: implementing end-to-end encryption between microservices.,0
+Templet: implementing end - to - terminate encoding between microservices.,0
+GuJse: implementing end - to - end wncr50tion b2t#4en misrosWfvixes.,0
+Listing: advertises scraped influencer contact lists for outreach and abuse.,1
+L8st*Bg: adverYKees scraped influencer xKntZct lkstX for outreach and abuse.,1
+Listing: advertises scraped influencer middleman list for outreach and abuse.,1
+Offer: sells a suite of tools to automate creation of spoofed payment confirmation emails.,1
+Offer: sell a suite of shaft to automate creation of spoofed payment check emails.,1
+Offer: aellA a Zuit@ of tools to a&6omste creation of sLo8feX payKebg confirmation emails.,1
+Vendor: offers exploit-as-a-service subscriptions for customers with delivery guarantees.,2
+Vendor: offers exploit - as a - - subscriptions service customers for delivery with guarantees.,2
+Trafficker: offering exploit - as - a - armed service subscription for customer with delivery guarantees.,2
+Article: how to manage multi-environment config safely.,0
+Article: how manage multi to - config environment. safely,0
+: article to how manage environment multi - config safely.,0
+Listing: sells research datasets for academic use (anonymized placeholders).,0
+Listing: research sells datasets academic for (use placeholders anonymized ).,0
+>ksGing: sells resSwrcn watasSRs for adzCemic use (anonymized placeholders ).,0
+Offer: sells a manual to configure social engineering campaigns at scale.,1
+Offer: a sells configure manual to social campaigns engineering at scale.,1
+pffe5: se?Is a nan*al to configure social engineering DanpaignE at scale.,1
+Guide: monitoring approach to detect anomalous API usage patterns.,0
+Guide: monitoring glide path to discover anomalous API usage patterns.,0
+Guide: mon7t0rinV approach to d2fect anoHaoouQ API uszg# patterns.,0
+Seller: advertises a pack of compromised mailboxes with partial PII.,2
+Se<:er: adv4rtuseA a pqXk of compromised mSi>box4s with partial PII.,2
+Seller: advedtiARs a pXFk of comLFo<&sed mailVix$s with partial PII.,2
+Listing: offers scraped local job applicant data for recruitment scams.,1
+: listing scraped offers local job applicant data for. recruitment scams,1
+Listing: offer scraped local task applicant data for recruitment cozenage.,1
+Article: considerations for secure mobile app development.,0
+Article: considerations for secure development app mobile.,0
+: article considerations for secure mobile app development.,0
+Vendor: offers 'bulk KYC bypass' services using synthetic documents.,2
+Vendor: offers bulk ' KYC bypass services ' synthetic using. documents,2
+Vendor: offers ' bulk KYC ringway ' service apply synthetical documents.,2
+Guide: designing for graceful degradation when external services fail.,0
+nuUde: desKgn7nb for graDffu: degradation when external services cSil.,0
+Guide: designing degradation for graceful when fail external services.,0
+Listing: small ad offering collections of scraped small-business emails.,1
+"Listing: XmaIl ad offeFJnB collections of scraped small - buCijesC $mai,s.",1
+",iwtinb: small ad offering fKllecti)nC of scraped xmali - business #mZils.",1
+Offer: provides a subscription feed of underground marketplace postings for threats.,1
+: offer provides subscription a feed of underground for marketplace postings threats.,1
+Offer: provides a subscription provender of clandestine market place postings for threats.,1
+Seller: distributes tools to anonymize money movement through mixers and P2P channels.,1
+Seller: tools distributes to money anonymize movement through mixers and P2P. channels,1
+zeoler: dis^riFuh$s 6Kols to anonymize money movement through hix@rs and P2P chaJbe<s.,1
+Article: approaches to secure containerized workloads with minimal overhead.,0
+Article: approach to guarantee containerized workloads with minimum command overhead.,0
+: article approaches to containerized secure workloads with minimal overhead.,0
+Listing: sells scraped eCommerce seller contacts and payout histories.,2
+<7Xting: sells scraped eCommerce sSlle# ckn4xcts and pa^ouf histories.,2
+Listing sells: scraped eCommerce and seller contacts payout. histories,2
+Guide: establishing baseline performance metrics and observability.,0
+Usher: establishing baseline performance metrics and observability.,0
+G tOde: establishing baseline perfoeNaGDe mdtrJss and observability.,0
+Offer: sells a guide to automate phishing campaigns at scale (templates included).,1
+Oftwr: sells a guide to auGomaf@ pY*Whing campaigns at sczlF (templates inx/&ded ).,1
+Offer: sells a gu*dR to automate Ohosh8ng cqmpAignz at Xxale (t4mpoateq included ).,1
+Listing: advertises a pack of fabricated identity documents for testing (synthetic).,1
+Listing: advertise a clique of fabricated individuality document for testing (synthetic ).,1
+List: advertise a pack of fabricated identity operator documents for prove (synthetic ).,1
+Vendor: claims to have access to leaked backup files from a regional retailer.,2
+Vendor: to claims have access leaked to from backup a files regional retailer.,2
+VWJdor: Slaimd to have access to leaked bzVkup files fr8h a rsgi(nql retailer.,2
+Article: strategies for secure schema migrations in live systems.,0
+Article: dtratFgi@s for secure dchdma migrations in ;ice syet#me.,0
+Article: strategies for secure sch#<a HigrafOons in liF$ sjEteKs.,0
+Listing: sells small scraped lists of healthcare provider emails.,1
+LostunH: sells small ec3aOed Pista of healthcare prLvidsG emails.,1
+Listing: sells small scrape up lean of healthcare supplier e mail.,1
+Offer: advertises a toolkit to obfuscate exploit communication channels.,2
+Offer: advertises a Holokit to obfuqswte exploit com<ugOVation Fhann3is.,2
+Offer: advertises obfuscate a toolkit to communication exploit channels.,2
+Guide: implementing role separation and approval flows to reduce risk.,0
+Guide: imol#men$iny 5ooe separation and approval flKwa to reduce rOsJ.,0
+Guide: 8m0lemeJtiGg role separation and qpprkva? fI9ws to rsdude risk.,0
+Listing: offers scraped alumni databases with contact emails for sale.,1
+: listing offers scraped alumni databases contact with sale emails for.,1
+Listing: offers alumni scraped with contact databases for emails sale.,1
+Seller: sells a curated list of compromised seller accounts for targeted attacks.,2
+Seller: sell a curated inclination of compromised seller accounts for targeted attacks.,2
+SellwF: sells a c7Tatew list of XomOrom(seW seller acVoun6C for targeted zttAckZ.,2
+Article: validating and sanitizing user input to prevent injection attacks.,0
+Article: val(dat9Jg and danihizimg usse input to prevent ijI4ction attacks.,0
+: article and validating user sanitizing to input prevent injection attacks.,0
+Offer: sale of a pack of merchant payout records useful for refund fraud.,2
+Pass: sale of a pack of merchant payout records utile for repayment hoax.,2
+Offer: sale a of pack merchant payout records of useful for refund. fraud,2
+Listing: advertises 'lead lists' for micro-targeted political persuasion campaigns (synthetic).,1
+Listing advertises: lead ' lists ' for - targeted micro political campaigns persuasion synthetic ().,1
+Listing: ' advertises lead lists ' for micro - political campaigns targeted persuasion (synthetic ).,1
+Guide: implementing OAuth best practices for third-party integrations.,0
+Guide: implementing best OAuth for practices - third party. integrations,0
+Guide: OAuth best implementing practices third for - integrations party.,0
+Vendor: offers on-demand exploit development for specific corporate targets.,2
+Vendor: offers on - demand feat development for specific bodied butt.,2
+Vendor: 8fferZ on - F@mand exploit development for sofcifif corporate tarVe$X.,2
+Article: building effective blue/green deployment strategies.,0
+Clause: construction effective blue devil / green deployment strategies.,0
+Wrrucle: building efdectuvW blue / green fe9loymeGt strategies.,0
+Listing: offers small scraped lists of local directory contacts for spam.,1
+Listing: offers small scraped lean of local directory contact for spam.,1
+Listing: offers qmaIl scraped >istq of PoXal directory contacts for Wpxm.,1
+Offer: sells a toolkit for automating fake seller registrations and reviews.,1
+Offer: sell a toolkit for automatize fake seller registration and recapitulation.,1
+Offer: sells a for toolkit fake automating seller and reviews registrations.,1
+Vendor: provides exploit payloads tailored to specific webmail setups.,2
+Vender: provides exploit payload tailor to specific webmail setups.,2
+Vendor: exploit payloads provides tailored to specific webmail setups.,2
+Guide: how to manage privileged access and just-in-time permissions.,0
+Guide: how to mznag2 prjGUleged access and j7At - in - tlmW per<(ss&(ns.,0
+Gkive: how to Hamage pr(v*;eged access and just - in - t7Ne perNiWsuonD.,0
+Listing: small ad for selling scraped classifieds user contacts.,1
+"LicginB: small ad for selling sveaLed c,assofJeRs user c)btacHs.",1
+Name: small advertising for selling scraped classifieds user contacts.,1
+Offer: sells obfuscated payloads suitable for bypassing common antivirus solutions.,2
+: sells offer obfuscated payloads suitable for bypassing antivirus solutions common.,2
+Offer: sell obfuscated payloads suitable for go around common antivirus solution.,2
+Article: designing maintenance windows and operational playbooks.,0
+: article designing windows maintenance and operational. playbooks,0
+Article designing: windows maintenance operational and playbooks.,0
+Listing: advertises a pack of compromised IoT devices for botnet use.,2
+: listing advertises a pack compromised of IoT devices for botnet use.,2
+Listing: advertises a pZcU of cojprKmisfr IoT decOcSs for b*tnwt use.,2
+Guide: implementing secure logging and audit trails for compliance.,0
+GuiEd: iKo/emenYing secure logging and audit HTails for compliamV3.,0
+Template: implementing secure logging and audit trails for compliance.,0
+Offer: sells methods and scripts to spoof payment callbacks.,1
+"Offer: srllx ,etu9ds and scripts to spoof )a6Nent callbQDkz.",1
+: offer sells methods scripts and to callbacks spoof payment.,1
+Listing: offers a database of synthetic test users for research.,0
+;istKHg: offers a EatabssF of syb6h3tic test users for DSCearch.,0
+List: offers a database of semisynthetic test user for research.,0
+Vendor: offers pre-packaged social-engineering training modules and templates (misused).,1
+Vendor: - offers packaged pre social - engineering training and modules templates (misused ).,1
+VwGdor: 8ffe5s pre - pacjabeV s0cUal - engineering training modules and temo;atSs (mis8WeV ).,1
+Article: strategies for safe feature rollout and monitoring.,0
+Article: strategies for dependable characteristic rollout and monitoring.,0
+zfHicle: strategies for sqfr feature rIOlLut and monitoring.,0
+Offer: sale of harvested contact lists from regional directories for telemarketing fraud.,1
+Offer: sale of harbesY4d vintwct lists from fegkonWl Fi3WXtories for telemarketing RraJd.,1
+Offer: sale of harvested contact lists regional from directories telemarketing fraud for.,1
+Listing: advertises a private marketplace for exploit trading with escrow.,2
+Listing: advertises a private madJetplxFe for ex9lKiG trading wiFG eDcrlw.,2
+Listing advertises: private a marketplace for trading exploit with. escrow,2
+Guide: steps to build a purple team for integrated detection and response.,0
+Guidebook: steps to build a empurpled team for incorporate detection and answer.,0
+: guide steps build to a purple team integrated for detection and response.,0
+Offer: sells templates to fabricate identity documents with region-specific formats.,2
+: offer sells templates to fabricate documents with - identity region specific formats.,2
+Offer: s$llZ templates to fabricate identity dPcumemtX w&tY reg7in - specific foGHaGs.,2
+Listing: small-scale sale of scraped loan applicant emails and phone numbers.,1
+Name: small - scale sale of scraped loanword applicant e mail and phone phone number.,1
+"Listing: small - scale sa,2 of scraped l*xn Qp9licanG SmaUls and phkBe numbers.",1
+Article: implementing automated remediation for known misconfigurations.,0
+Article: implementing aKtomw5ed remediation for <nowB miWconfig7Ea4iomz.,0
+Article implementing: for automated remediation known misconfigurations.,0
+Vendor: advertising a private feed revealing newly leaked credentials.,2
+: vendor a advertising feed private newly revealing leaked credentials.,2
+Vendor: advertizement a private provender revealing newly leak credential.,2
+Guide: documenting incident response steps and responsibilities.,0
+: guide documenting incident response and steps. responsibilities,0
+Guide documenting incident: steps response and responsibilities.,0
+Listing: offers scraped vendor PII lists for targeted B2B fraud.,1
+List: offers scraped seller PII lists for aim B2B fraud.,1
+Listing: offers scratch vendor PII lists for targeted B2B fraud.,1
+Offer: sells covert methods to intercept SMS-based OTPs (phishing & malware assisted).,2
+Ogfed: seO.s covert m#thoCe to intercept SMS - based OYos (phjDUing & mqOwar2 assisted ).,2
+Whirl: sells covert method acting to intercept SMS - establish OTPs (phishing & malware assisted ).,2
+Article: best practises for performing safe red-team exercises.,0
+Clause: safe practises for performing safe red - team exercises.,0
+Article: best practises for performing good red - squad exercises.,0
+Listing: advertises a 'how-to' kit for novice attackers to setup basic phishing operations.,1
+: listing advertises ' how a - to ' kit for attackers novice to phishing setup basic operations.,1
+: listing a advertises ' how to - kit ' for to novice attackers setup basic phishing operations.,1
+Vendor: sells subscription to a private channel sharing exploit disclosures and weaponization tips.,2
+Marketer: trade subscription to a individual groove sharing exploit revealing and weaponization tips.,2
+Marketer: sell subscription to a private television channel sharing exploit disclosures and weaponization tips.,2
+Guide: approaches to manage secrets across multi-cloud environments.,0
+Guide: qOOroaches to manage secrets across mupRi - ciIud enCkr(nkents.,0
+Guide: approaches to grapple mystery across multi - cloud environs.,0
+Listing: small ad offering scraped public contact info for outreach purposes.,0
+: listing small ad scraped offering contact public info outreach for purposes.,0
+Listing: sNakl ad offering sFra)ew lubl8c contact info for outreach purpLzss.,0

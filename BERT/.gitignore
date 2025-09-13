@@ -10,6 +10,10 @@
 /scraped_data
 /secbert_severity_model
 /secbert_threat_model
+/agument_backup
+/datsets
+
+
 # Ignore Python cache and compiled files
 __pycache__/
 *.pyc

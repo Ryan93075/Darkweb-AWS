@@ -1,215 +1,357 @@
 text,label
-"User login page with no suspicious activity",0
-"Welcome to our forum. Please enjoy your stay.",0
-"This site contains stolen credit card numbers and personal data listings.",1
-"Download free open-source software releases and changelogs.",0
-"Sale of illegal drugs and weapons available in bulk",1
-"Contact support for account help and password reset procedures.",0
-"Access to hacked databases and malware samples for testing",1
-"Normal blog about cooking recipes and meal planning.",0
-"Phishing scam template targeting bank customers",1
-"Discussion on cryptocurrency basics and wallet setup",0
-"Forum for trading illicit goods and services",1
-"Official news and updates from a municipal government portal",0
-"Tutorials on exploitation concepts framed as academic research",1
-"User feedback and reviews on consumer products",0
-"Listings of counterfeit passports and forged IDs for sale",1
-"Community chat about video games and strategy guides",0
-"Hidden marketplace selling counterfeit electronics and fake goods",1
-"Information on legal issues and laws with citations",0
-"Guide on offensive security concepts presented as crime tips",1
-"Travel blog and photography gallery from recent trips",0
-"Sale of ransomware packages and remote access trojans",1
-"Educational site for learning programming and algorithms",0
-"Advertisements for stolen credit cards and CVV dumps",1
-"Personal journal and diary entries about daily life",0
-"Manuals for bypassing physical security systems",1
-"Local event announcements and schedules for community centers",0
-"Offers of illegal surveillance services and zero-day access",1
-"Product reviews and user testimonials for home appliances",0
-"Instructions for identity theft and account takeover",1
-"Health and wellness advice articles with references",0
-"Discussion on darknet markets, scams, and leaked data",1
-"Academic paper on network protocol design",0
-"Retail listings for regulated pharmaceuticals sold without prescriptions",1
-"Cookbook chapter describing baking techniques",0
-"Service offering access to compromised cloud servers",1
-"Open source math library documentation and examples",0
-"Job postings for graphic designers and remote work",0
-"Marketplace offering stolen login credentials and databases",1
-"FAQ page for an open-source project",0
-"Advisory on safe coding practices and secure defaults",0
-"Forum thread advertising illegal hacking services",1
-"Benign Q&A about Linux command usage",0
-"Post discussing ethics of security research without facilitating attacks",0
-"Ad for counterfeit currency and forged financial instruments",1
-"Community recipe exchange and nutrition tips",0
-"Listing for fake diplomas and forged academic certificates",1
-"Blog post analyzing historical events",0
-"Sale of unregistered firearms and weapon components",1
-"Documentation for an API with examples and rate limits",0
-"Service offering DDoS-for-hire with pricing per hour",1
-"Local volunteer group announcements",0
-"Channel sharing leaked email dumps for resale",1
-"Guide to installing a legal CMS on your server",0
-"Discussion advertising human smuggling or trafficking services",1
-"Interview with a scientist about climate modeling",0
-"Ad for malware-as-a-service with control panels",1
-"Open dataset release with privacy-preserving notes",0
-"Seller offering forged tax documents",1
-"Beginner's guide to data structures and algorithms",0
-"Offers to launder cryptocurrency through mixing services",1
-"Podcast transcript discussing software engineering careers",0
-"Vendor listing for poison and hazardous toxins for misuse",1
-"Press release from a non-profit organization",0
-"Marketplace listing explicit instructions to bypass paywalls",1
-"How-to guide for building a personal blog using HTML and CSS",0
-"Thread offering methods to create fake online reviews at scale",1
-"News roundup about economic indicators and markets",0
-"Service listing offering assassination or violent-for-hire contacts",1
-"Compilation of public domain literature",0
-"Ad offering stolen intellectual property and trade secrets",1
-"Documentation explaining machine learning model evaluation",0
-"Seller posting credit card dumps with BIN ranges",1
-"Recipe for traditional regional dish with step-by-step cooking",0
-"Forum selling access to corporate VPN credentials",1
-"Report on city infrastructure improvements",0
-"Thread advertising tutorials for making illegal substances",1
-"Open lecture notes for a university course",0
-"Vendor page selling ATM skimming devices",1
-"Collection of academic citations and references",0
-"Ad for exploit kits targeting outdated routers",1
-"User-submitted photography portfolio",0
-"Listings for forged identity documents and falsified IDs",1
-"Roadmap for a software library with milestones",0
-"Message board coordinating credit card fraud rings",1
-"Research notes about encryption algorithms",0
-"Page offering instructions to bypass background checks",1
-"Parenting tips and child activity ideas",0
-"Thread promoting sale of prescription medications without prescription",1
-"Technical blog on container orchestration and Kubernetes",0
-"Ad promoting sale of stolen loyalty point balances",1
-"Artist gallery with digital art and contact information",0
-"Listings advertising phishing kits and email templates",1
-"Company careers page with open positions",0
-"Forum offering logistics for organized retail theft",1
-"Academic discussion of cybersecurity ethics",0
-"Vendor listing for zero-day exploits with private access",1
-"Case study on usability testing results",0
-"Small-scale fraud tutorial framed as a cautionary tale",1
-"Documentation for a hardware device with schematics",0
-"Site selling fake academic transcripts and credentials",1
-"Press coverage of a cultural festival",0
-"Private marketplace offering contact lists for doxxing",1
-"Open-source license explanations and guidelines",0
-"Advertisement for weapon accessories and suppressors",1
-"Blog about hiking trails and gear recommendations",0
-"Channel sharing instructions to bypass security on consumer routers",1
-"FAQ for setting up secure backups",0
-"Black market listing for human organs (illicit)",1
-"Legal analysis of a recent court ruling",0
-"Forum offering services to create deepfake videos for misuse",1
-"Documentation for a cryptographic library",0
-"Post advertising malware obfuscation services",1
-"Nonprofit annual report and donor acknowledgements",0
-"Vendor selling hacked social media accounts",1
-"Newsletter about academic conferences",0
-"Thread trading leaked corporate financial statements",1
-"Blog tutorial on responsive web design",0
-"Advert for fake vaccination certificates",1
-"Guide to starting a podcast with equipment list",0
-"Marketplace offering forged prescriptions and drugs",1
-"Scientific summary of recent research findings",0
-"Service offering removal of online negative reviews via fake accounts",1
-"Collection of public health advice from official sources",0
-"Seller offering carding methods and tutorials",1
-"Open-source configuration examples for web servers",0
-"Ad offering access to a botnet for hire",1
-"User guide for photo editing software",0
-"Listings for illegal wildlife trade and poaching services",1
-"Community-driven translation project",0
-"Post selling contact lists for targeted scams",1
-"Blog post about ethical hacking and disclosure",0
-"Vendor offering illicit surveillance hardware and installation",1
-"Technical primer on database normalization",0
-"Thread exchanging leaked senior executive credentials",1
-"Online class on personal finance basics",0
-"Marketplace offering military manuals and restricted documents",1
-"Volunteer opportunity listing for local shelters",0
-"Ad for fraudulent charity solicitations",1
-"How-to on setting up email forwarding rules (benign)",0
-"Forum promoting organized theft of shipping containers",1
-"Comparison of cloud hosting providers",0
-"Thread offering instructions to create forged IDs (operational)",1
-"Open discussion on data privacy laws",0
-"Post selling illegal hacking access to IoT devices",1
-"Community cookbook with family recipes",0
-"Seller advertising black market chemical precursors",1
-"Beginner tutorial on shell scripting without malicious intent",0
-"Thread offering instructions for bypassing mobile device locks",1
-"Local business directory and contact information",0
-"Darknet vendor listing for payment card skimmers",1
-"Research on natural language processing benchmarks",0
-"Forum soliciting buyers for stolen datasets",1
-"How to cite sources in academic papers",0
-"Ad offering to launder money using complex schemes",1
-"Guide to setting up an amateur radio station",0
-"Listings of services for illegal document procurement",1
-"Brief history of encryption and wartime communications",0
-"Seller offering access to private police records",1
-"Community forum for home gardening tips",0
-"Ad for underground training in violent acts",1
-"Open-source toolkit for data visualization",0
-"Vendor selling forged utility bills for identity fraud",1
-"Personal blog about remote work best practices",0
-"Thread offering assassination-for-hire coordination",1
-"FAQ on contributing to open-source projects",0
-"Seller offering specialized tools to defeat vehicle immobilizers",1
-"Guide to safe online banking practices",0
-"Service advertising bulk personal data for targeted scams",1
-"Collection of public safety alerts",0
-"Vendor offering instructional material to create illicit substances",1
-"News article summarizing legislative changes",0
-"Forum advertising illegal surveillance and tracking services",1
-"Intro to version control with examples",0
-"Listing for stolen industrial secrets and IP",1
-"Community announcement about a charity drive",0
-"Post offering to falsify employment records",1
-"Article on healthy meal prep strategies",0
-"Vendor advertising counterfeit driver licenses",1
-"Review of programming books and resources",0
-"Thread offering to sell access to hacked email servers",1
-"Tutorial on setting up a home lab for learning (benign)",0
-"Ad promising hacked biometric templates",1
-"Public dataset index with links and metadata",0
-"Marketplace listing stolen medical device firmware",1
-"Beginner's introduction to statistics",0
-"Post offering cheating services for online exams",1
-"Guidance on mental health resources and hotlines",0
-"Forum offering targeted doxxing services",1
-"Interview with a software maintainer about project goals",0
-"Thread selling instructions for making improvised weapons",1
-"Documentary transcript about historical events",0
-"Discussion board selling cloned access badges",1
-"Guide on improving code review practices",0
-"Ad offering illicit access to restricted databases",1
-"Local restaurant menu and hours",0
-"Listings for illegal gun sales across borders",1
-"FAQ about software licensing and compliance",0
-"Post advertising credit card skimming services",1
-"Manual on configuring privacy settings on social platforms",0
-"Thread offering instructions to exploit consumer routers",1
-"Educational essay on renewable energy sources",0
-"Vendor selling illegal prescription drugs via mail",1
-"Beginner friendly tutorial on HTML forms",0
-"Post advertising theft of package delivery networks",1
-"Community events calendar for a college town",0
-"Listings for stolen vehicle identification numbers (VINs)",1
-"Guide to debugging and profiling Python code",0
-"Ad offering bulk stolen financial records for sale",1
-"Open letter from a research lab",0
-"Thread selling location data harvested from mobile apps",1
-"Press release announcing a new partnership",0
-"Seller offering forged customs receipts for smuggling",1
-"Overview of ethical considerations in AI",0
-"Post promoting illegal online marketplaces",1
+"Vendor sells fullz for Indian users: PAN, masked Aadhaar and DOB. Contact: amit.123@paytm.in. Price: $120 per record.",1
+"Django deployment guide for Ubuntu servers. Step-by-step instructions and code samples.",0
+"Carding shop offering CVV dumps including Indian BINs. Sample: 4111-1111-xxxx-1234. UPI payout: googlepay1234@upi",1
+"Local meetup in Mumbai for fintech devs — RSVP link and agenda.",0
+"Ransomware group leaked client database of a Pune company — contains emails like priya.45@gmail.com and invoices.",1
+"How-to: set up Nginx and Let's Encrypt on Debian for production websites.",0
+"Vendor sells Aadhaar-like dump for a region in Karnataka. Contains name, DOB and masked id.",1
+"Recipe blog: making authentic Hyderabadi biryani — spices, technique, and time estimates.",0
+"Telegram seller offering PAN lists and KYC docs for Indian customers. Contact handle @datahub789.",1
+"Open-source library released with examples and MIT license by an Indian dev.",0
+"Phishing kit for HDFC/SBI clone pages with harvesting backend and setup instructions.",1
+"Travel tips: best weekend trips from Bengaluru with estimated budgets and hostels.",0
+"Database of corporate emails posted for sale including contacts at a mid-size Delhi retailer.",1
+"Discussion: best practices for React state management and hooks.",0
+"Marketplace listing: 'Admin panel access' to an e-commerce site hosted in India — SSH creds included.",1
+"Tutorial: how to write unit tests for Python projects using pytest.",0
+"Sale: bulk credit card dumps targeted to Indian cards with CVV and expiry; sample shown.",1
+"Article: career advice for freshers entering the Indian IT sector — interview tips and sample questions.",0
+"Exploit posted for CVE-2024-XXXX affecting a popular Indian payroll software — PoC included.",1
+"Forum: discuss local volunteer opportunities in Chennai and community events.",0
+"Vendor offers 'UPI seeds' and Paytm wallet takeover guides in a private channel.",1
+"Blog: guide to migrate a monolith to microservices with Docker and Kubernetes.",0
+"Database leak claimed: 80k user records from a regional bank, includes emails and hashed PINs.",1
+"Guide: how to optimize PostgreSQL queries for low-latency dashboards.",0
+"Carding tutorial: how to validate Indian card BIN ranges and test transactions.",1
+"Podcast: interviews with Indian startup founders about product-market fit.",0
+"Shop sale: listing stolen invoices and billing documents from a Mumbai retailer.",1
+"How-to article: configure CI/CD pipelines with GitHub Actions for Node.js apps.",0
+"Vendor selling RDP and SSH access to servers in India with admin privileges.",1
+"Community post: open dataset of bird sightings around Coimbatore for citizen science.",0
+"Vendor advertisement: 'Fresh PAN & KYC stack for sale' — contact info and sample data.",1
+"Tutorial: introduction to TensorFlow 2 and simple ML model examples.",0
+"Post: malicious actor shares SQLi payloads targeted at specific Indian government portal.",1
+"Event announcement: hackathon in Pune with prize pool and participant registration details.",0
+"Listing: stolen healthcare records of a Chennai clinic with partial Aadhaar placeholders.",1
+"Guide: using Redis as a cache layer to speed up API responses.",0
+"Seller: selling lists of PAN numbers and names for verification bypass tests.",1
+"Discussion thread: favorite street food vendors in Old Delhi.",0
+"Exploit discussion: steps to weaponize a disclosed vulnerability in a payment gateway.",1
+"Article: setting up end-to-end encryption in a messaging app using libsodium.",0
+"Market ad: 'Fresh CVV lots' with shipping instructions and payment via crypto.",1
+"Post: community gardening tips for Mumbai apartment balconies.",0
+"Vendor: offering bot-based credential stuffing services focused on Indian telecom portals.",1
+"How-to: secure your AWS S3 buckets using IAM policies and bucket policies.",0
+"Dump for sale: customer support emails and chat logs from a South Indian ISP.",1
+"Tutorial: building a REST API with FastAPI and async endpoints.",0
+"Seller: offering instructions to bypass OTP flows on certain Indian banking apps.",1
+"Blog: lessons learned deploying microservices at a startup in Bengaluru.",0
+"Ad: 'Purchase Aadhaar-like CSV per district' — seller promises fresh records.",1
+"News: local tech incubator announces funding for 10 startups in Hyderabad.",0
+"Post: seller providing 'phone number packs' for SMS phishing campaigns targeting India.",1
+"Guide: setting up a personal home lab with Proxmox and VMs.",0
+"Vendor claims to sell leaked employee payroll files from a Chennai manufacturing firm.",1
+"Discussion: comparison of frontend frameworks — Vue vs React in 2025.",0
+"Channel: shares a tool to scrape Indian job boards for contact info (for recruiters).",0
+"Listing: sells access to an Indian telecom's CRM with customer addresses and phone numbers.",1
+"How to implement rate limiting in an API gateway with code examples.",0
+"Post advertising 'fullz' for sale — name, PAN, and billing address included (India region).",1
+"Community tutorial: migrating from Flask to FastAPI for asynchronous performance.",0
+"Seller: posting PoC for a remote code execution affecting self-hosted ERP used by SMEs.",1
+"Blog: introduction to event-driven architectures and message brokers.",0
+"Ad: 'Fresh Paytm wallet seeds' offered in a private forum for payments theft.",1
+"Guide: step-by-step CSS grid layout patterns for responsive design.",0
+"Leak report: database of hospital patient records in a regional city — contains contact emails.",1
+"Open-source release: small CLI tool to help manage cloud cost reports.",0
+"Forum listing: 'Carding resources and tutorials' — membership required.",1
+"Article: best practices for secure coding in Java and common pitfalls to avoid.",0
+"Vendor: sells 'KYC pack' containing id docs and scanned forms for Indian users.",1
+"Guide: setting up a static blog with Hugo and deploying to Netlify.",0
+"Post: seller offers instructions to spoof UPI merchant IDs for fraudulent refunds.",1
+"Tutorial: image preprocessing techniques for computer vision beginners.",0
+"Seller: claims large list of college alumni emails from an Indian university breach.",1
+"How-to: implementing OAuth2 for third-party login integrations.",0
+"Ad offering DDoS-for-hire services with cheap pricing and sample infrastructure.",1
+"Guide: introduction to monitoring with Prometheus and Grafana dashboards.",0
+"Post: offering obfuscated PHP backdoor source code and usage guides in private channel.",1
+"Community: organizers seeking volunteers for a Bangalore coding workshop.",0
+"Marketplace listing: 'Fresh INR card dumps' — includes bank names and CVV.",1
+"Article: architectural patterns for multi-tenant SaaS platforms.",0
+"Seller: offers 'PAN database' per state for targeted fraud campaigns.",1
+"Guide: performance tuning tips for MySQL in production.",0
+"Listing: Telegram channel selling lists of college student emails and phone numbers.",1
+"Blog: comparison of cloud providers for startups in India.",0
+"Exploit kit distribution: instructions for creating malicious Android payloads.",1
+"Post: discussion on functional programming vs OOP for software design.",0
+"Ad: 'Fresh CVV lot for Indian cards' with sample verification instructions.",1
+"Tutorial: integrating Stripe payments into a Django app.",0
+"Seller: offers compromised cPanel accounts for a hosting provider with Indian clients.",1
+"Guide: containerizing legacy apps with Docker and Docker Compose.",0
+"Listing: 'Aadhaar-like dataset' advertised in underground forum." ,1
+"Article: technical SEO strategies for e-commerce websites.",0
+"Channel: shares an exploit for an outdated WordPress plugin popular in India.",1
+"Guide: creating interactive charts with D3.js for dashboards.",0
+"Vendor: sells 'company email lists' targeted to Indian SMEs for phishing campaigns.",1
+"How-to: automate backups and retention policies for PostgreSQL.",0
+"Seller: offering access to a regional government's subdomain with admin panels.",1
+"Blog: tips for scaling Redis clusters for high-throughput systems.",0
+"Ad: 'Fresh PAN + Aadhaar combo packs' sold per state, seller provides samples.",1
+"Tutorial: writing integration tests for microservices using contract testing.",0
+"Vendor: distributes phishing landing pages for multiple Indian banks pre-configured.",1
+"Article: beginner's guide to quantum computing concepts.",0
+"Listing: sells database exports from a popular Indian classifieds site.",1
+"Guide: how to implement RBAC patterns with Casbin.",0
+"Seller: offers bulk scraped merchant UPI IDs and related metadata.",1
+"Overview: design patterns for event sourcing architectures.",0
+"Post: ransomware group claims breach of logistics firm with invoice dumps.",1
+"Guide: building realtime apps using WebSockets and best practices.",0
+"Seller: advertisement for tools that automate credential stuffing on Indian portals.",1
+"Learn: building a personal portfolio with Next.js and Vercel.",0
+"Ad: sells lists of government employee emails with departmental info.",1
+"How-to: implementing incremental backups for large file stores.",0
+"Forum: thread selling leaked FTP credentials for small businesses.",1
+"Article: migrating from monolith to microservices — pitfalls and strategies.",0
+"Vendor: sells 'fullz India' including phone numbers and masked IDs.",1
+"Guide: building a simple chatbot with RASA for customer support.",0
+"Listing: sells database of consumer complaints from a telco support portal.",1
+"Tutorial: securing REST APIs with JWT best practices.",0
+"Ad: builder offering DDoS stresser service with Indian gateway nodes.",1
+"Blog: guide to building a recommendation engine with collaborative filtering.",0
+"Seller: offers 'CVV combo packs' for Indian bank-issued cards.",1
+"How-to: use Elasticsearch for log analytics and alerting.",0
+"Post: sells access to regional exam databases with student records.",1
+"Guide: implementing feature toggles safely in production.",0
+"Vendor: advertises a toolkit to bypass OTP checks for certain Indian apps.",1
+"Article: micro-frontend patterns and deployment considerations.",0
+"Listing: sells scraped directories of small businesses with contact info.",1
+"Guide: how to set up a secure VPN for remote teams.",0
+"Seller: sells 'Paytm session tokens' and instructions to reuse them.",1
+"Tutorial: building a CI pipeline with Jenkins for Java apps.",0
+"Market post: sells scanned identity documents with editable templates.",1
+"Article: debugging performance issues in Node.js applications.",0
+"Ad: sells methods to launder small crypto amounts through mixers and local exchangers.",1
+"Guide: Redis caching patterns and eviction strategies.",0
+"Listing: sale of employee payroll sheets for an Indian IT firm.",1
+"Tutorial: building a realtime chat application with Socket.IO.",0
+"Seller: sells lists of classified ad sellers' contact details for targeted scams.",1
+"Blog: improving database indexing strategies for faster queries.",0
+"Ad: sells scripts to scrape and scrape verification tokens from Indian e-commerce sites.",1
+"Guide: basics of Terraform for provisioning cloud infrastructure.",0
+"Post: 'Fresh export of mobile numbers' targeted by region available for purchase.",1
+"Article: machine learning deployment patterns and monitoring.",0
+"Seller: sells 'government tender' email lists and contact info for bidding scams.",1
+"Tutorial: using multi-stage Docker builds for smaller images.",0
+"Channel: offers malicious APKs that claim to be payment apps for testing.",1
+"Guide: setting up SSO with SAML for enterprise applications.",0
+"Vendor: offering 'bank statement templates' to fake KYC documentation.",1
+"Blog: introduction to graph databases and use cases.",0
+"Listing: sells scraped WhatsApp group member lists for marketing/spam.",1
+"Guide: monitoring distributed traces with Jaeger.",0
+"Seller: advertises 'snippets to bypass CAPTCHA' for some Indian websites.",1
+"Article: writing secure SQL queries to avoid injection.",0
+"Market post: sells a tool that automates refund scams on local marketplaces.",1
+"Tutorial: using unit-of-work pattern in database operations.",0
+"Vendor: offers stolen invoices for tax evasion and refund scams.",1
+"Guide: strategies for database sharding and partitioning.",0
+"Ad: sells 'bulk PAN list' with region and DOB for verification bypass.",1
+"Article: migrating legacy authentication to OAuth2 securely.",0
+"Seller: offering a database of registered sellers on a local marketplace.",1
+"Guide: how to implement circuit breakers for resilient services.",0
+"Post: private sale of scraped customer complaint logs with PII.",1
+"Tutorial: building an API gateway with Kong.",0
+"Vendor: lists offering 'bulk phone numbers with operator info' for SMS fraud.",1
+"Article: optimizing images for web performance.",0
+"Seller: offers a pack of emails and hashed passwords from a local forum breach.",1
+"Guide: progressive web apps — offline-first strategies.",0
+"Ad: 'Fresh BIN list for Indian cards' sold in a closed forum.",1
+"Tutorial: deploying serverless functions and cost considerations.",0
+"Listing: sales of internal memos from a regional NGO with donor lists.",1
+"Article: container security best practices for production clusters.",0
+"Vendor: sells toolkits for scraping government tender notices in bulk.",1
+"Guide: implementing role-based access control using best practices.",0
+"Post: thread offering backdoors to low-security IoT devices in Indian homes.",1
+"Blog: tips for onboarding junior developers effectively.",0
+"Seller: distributing forged salary slips used to apply for loans.",1
+"Guide: setting up mTLS for secure service-to-service communication.",0
+"Market post: offers leaked reseller panels and promo code databases.",1
+"Article: how to set up automated backups with retention policies.",0
+"Seller: provides a list of expired domain registrations with recovery tips.",0
+"Vendor: sells 'KYC bypass templates' for loan fraud in India.",1
+"How-to: create Docker volumes and persistent storage for containers.",0
+"Post: 'Paytm wallet takeover' techniques and step-by-step guide.",1
+"Article: introduction to TypeScript for JavaScript developers.",0
+"Listing: 'Aadhaar-styled datasets' for a state offered privately.",1
+"Guide: building observability into microservices from day one.",0
+"Seller: offering email:password combos scraped from local classifieds.",1
+"Tutorial: writing clean Pythonic code with PEP8 examples.",0
+"Ad: 'Fresh CVV dumps—India edition' released in private channel.",1
+"Blog: setting up content delivery networks to speed up assets.",0
+"Post: offers methods to spoof caller ID for fraudulent calls in India.",1
+"Guide: how to set up SSL/TLS certificates and rotate secrets.",0
+"Vendor: sells 'employee contact lists' from multiple Bangalore startups.",1
+"Tutorial: building server-side rendered apps with Next.js.",0
+"Listing: sells scraped user reviews with emails for a local e-commerce.",1
+"Article: strategies for database migrations with zero downtime.",0
+"Market post: sells a toolkit to automate fake merchant registrations.",1
+"Guide: caching strategies and TTL tuning for high-throughput services.",0
+"Seller: offering a pack of scraped student admissions data.",1
+"Tutorial: implementing pagination in REST APIs easily.",0
+"Listing: 'bulk lead lists' for telemarketing including mobile numbers.",1
+"Article: using feature flags to enable gradual rollouts safely.",0
+"Vendor: sells instructions to bypass OTP-based flows on certain Indian telco portals.",1
+"Guide: how to design resilient message queues.",0
+"Seller: offers scripts to mass-register phishing domains with obfuscated WHOIS.",1
+"Blog: techniques for asynchronous task processing with Celery.",0
+"Listing: advertisement for hacked routers providing POP3 credentials.",1
+"Guide: schema design for time-series data and tradeoffs.",0
+"Post: 'Fresh KYC docs' advertised for sale per state with sample images.",1
+"Article: building a secure file upload pipeline with virus scanning.",0
+"Seller: sells merchant login dumps and payment logs for small marketplaces.",1
+"Guide: continuous deployment strategies and rollback mechanisms.",0
+"Market post: offering exploitation-as-a-service for small retailers.",1
+"Tutorial: applying mutation testing to improve unit test coverage.",0
+"Listing: sales of candidate CV/resume databases from recruitment firms.",1
+"Article: implementing authentication throttling and abuse prevention.",0
+"Vendor: sells 'wallet seeds' for local wallet apps with recovery guides.",1
+"Guide: how to instrument apps for business metrics collection.",0
+"Post: offering a collection of scraped supplier contact lists from B2B portals.",1
+"Article: load balancing strategies for large infrastructure.",0
+"Seller: selling lists of property owner contacts scraped from municipal portals.",1
+"Guide: optimizing database connection pools for serverless apps.",0
+"Listing: 'coupon and promo' databases stolen from small eCommerce sites.",1
+"Tutorial: writing effective microservice contracts and API schemas.",0
+"Market ad: sells pre-built phishing pages for major Indian banks.",1
+"Article: how to perform chaos testing on distributed systems safely.",0
+"Seller: offering 'resume databases' from placement cells for recruitment fraud.",1
+"Guide: implementing data retention policies to comply with regulations.",0
+"Post: selling instructions on setting up fake merchant VPA for UPI scams.",1
+"Article: refactoring monoliths to minimize regression risk.",0
+"Listing: offers a pack of college alumni emails for targeted scams.",1
+"Guide: strategies to reduce cold starts in serverless functions.",0
+"Market post: distributing a list of compromised IoT devices for botnets.",1
+"Article: building a performance budget for front-end optimization.",0
+"Seller: sells 'customer care call logs' scraped from service portals.",1
+"Guide: implementing transactional outbox for reliable messaging.",0
+"Listing: offering a dataset of contactable leads for fraudsters.",1
+"Tutorial: scaling GraphQL APIs and caching considerations.",0
+"Post: offers tools and scripts to anonymize money transfers via mixers.",1
+"Guide: creating resilient backups and recovery plans.",0
+"Seller: sells lists of newly registered company directors with emails.",1
+"Article: metadata-driven UI components for consistent design systems.",0
+"Listing: 'employee roster' databases for mid-size firms offered privately.",1
+"Guide: how to perform incremental rollouts without downtime.",0
+"Seller: offering methods to bypass two-factor on certain legacy portals.",1
+"Article: using contract tests to ensure backward compatibility.",0
+"Listing: sale of customer invoices from a local logistic company.",1
+"Guide: strategies for caching API responses and invalidation.",0
+"Market post: sells scripts to brute-force weak FTP credentials.",1
+"Article: basics of RESTful design and hypermedia concepts.",0
+"Seller: distributes contact lists of rental property owners with phone numbers.",1
+"Guide: using CDN edge functions to perform A/B testing efficiently.",0
+"Listing: offers 'mail:pass' combos scraped from smaller forums.",1
+"Tutorial: migrating databases from on-prem to cloud with minimal disruption.",0
+"Offer: sells database of user complaints from a telecom's public portal.",1
+"Guide: implementing observability for serverless architectures.",0
+"Listing: advertises a toolkit to create fake KYC for loan fraud.",1
+"Article: choosing the right persistence layer for your workload.",0
+"Vendor: sells toolkit to automate form-filling for phishing pages.",1
+"Guide: managing secrets with HashiCorp Vault in production.",0
+"Listing: offers scraped merchant payout reports and invoices.",1
+"Article: refactoring tips to reduce technical debt over time.",0
+"Ad: sells scripts to scrape Aadhaar-like public directories (synthetic examples).",1
+"Tutorial: writing accessible web apps meeting WCAG standards.",0
+"Market post: offers methods to obfuscate malicious payloads to evade scanners.",1
+"Guide: building a multiregion database topology for resilience.",0
+"Listing: sells contact lists of taxi drivers and fleet owners.",1
+"Article: architecting for eventual consistency in distributed systems.",0
+"Seller: offers 'student exam results' database scraped from older pages.",1
+"Guide: implementing multi-tenant security isolation patterns.",0
+"Offer: sells merchant reconciliation files and transaction logs.",1
+"Article: building a plugin architecture for extensible systems.",0
+"Listing: advertising 'phonebook' dumps with region-based filtering.",1
+"Guide: debugging memory leaks in long-running processes.",0
+"Post: sells fraudulent company registration documents.",1
+"Article: optimizing concurrency using async/await in Python.",0
+"Listing: offers 'bulk phone number' packs for SMS spam campaigns.",1
+"Guide: how to secure OAuth refresh token handling.",0
+"Seller: provides a dataset of influencer contacts scraped from social platforms.",1
+"Tutorial: building a simple scheduler for batch jobs.",0
+"Offer: sells scripts to scrape and harvest UPI merchant data.",1
+"Article: building maintainable test suites for enterprise codebases.",0
+"Listing: distribution of user support tickets containing PII.",1
+"Guide: migrating from SOAP to REST APIs safely.",0
+"Seller: offers 'vendor database' for procurement fraud",1
+"Article: using observability to find slow database queries.",0
+"Listing: offers 'phone and email leads' for telemarketing fraud.",1
+"Guide: implementing data encryption at rest and in transit.",0
+"Offer: sells templates to craft convincing phishing emails targeting Indian users.",1
+"Article: understanding database isolation levels and anomalies.",0
+"Listing: private sale of scanned government notices containing contact info.",1
+"Guide: building a robust rollout strategy for feature flags.",0
+"Seller: offering compromised VPN credentials for sale.",1
+"Article: building resilient retry logic for network calls.",0
+"Listing: sells scraped vendor POCs and contractual templates.",1
+"Guide: container security scanning and best practices.",0
+"Offer: advertises a marketplace for zero-day exploits with subscriptions.",1
+"Article: automating releases with semantic versioning and changelogs.",0
+"Seller: sells lists of regional traders and supplier contacts.",1
+"Guide: handling GDPR/India-privacy compliance basics for engineers.",0
+"Listing: offers test credentials and sample cards with CVV for fraud testing.",1
+"Article: designing APIs for long-term compatibility and extension.",0
+"Seller: advertises methods to anonymize fraudulent transactions.",1
+"Guide: implementing health checks and liveness probes in Kubernetes.",0
+"Listing: bulk sale of consumer email addresses scraped from local directories.",1
+"Article: the role of idempotency in safe retry logic.",0
+"Seller: provides 'business lead' databases for cold outreach (abused by spammers).",1
+"Guide: using canary deployments to reduce rollout risk.",0
+"Listing: offers database of vendor bank account details for payment fraud.",1
+"Article: strategies for consistent schema migrations.",0
+"Seller: offers 'list of store managers' from retail chains for targeted scams.",1
+"Guide: techniques to reduce latency in mobile-first apps.",0
+"Listing: advertises a file of compromised FTP login credentials.",1
+"Article: security considerations for third-party dependencies.",0
+"Seller: selling a pack of scraped courier tracking logs.",1
+"Guide: building robust analytics pipelines for event-driven data.",0
+"Listing: offers access to a private stash of leaked merchant KPIs.",1
+"Article: ensuring transactional integrity across microservices.",0
+"Seller: offering 'fake identity kits' for loan application fraud.",1
+"Guide: implementing consistent logging across services.",0
+"Listing: sells a dataset of hospital appointment records (anonymized placeholder).",1
+"Article: scaling PostgreSQL for analytics workloads.",0
+"Seller: offers tools to automatically register phishing domains at scale.",1
+"Guide: improving developer productivity with infrastructure as code.",0
+"Listing: shared dump of Wi-Fi router admin passwords (synthetic / placeholder).",1
+"Article: best practises for database connection management.",0
+"Seller: provides lists of dealers and distributors contact info.",1
+"Guide: building a search index with Elasticsearch and tuning queries.",0
+"Listing: offers 'employee contact lists' for HR departments sold illicitly.",1
+"Article: charting product roadmaps and prioritization frameworks.",0
+"Seller: offering private lists of new company incorporations and founder emails.",1
+"Guide: performance testing strategies and load simulation.",0
+"Listing: advertises stolen backup archives from small accounting firms.",1
+"Article: creating accessible forms and UX considerations.",0
+"Seller: sells 'test card' combo packs and guidance to bypass merchant checks.",1
+"Guide: implementing end-to-end tests for payment flows.",0
+"Listing: offers scraped landlord contact databases for rental scams.",1
+"Article: container orchestration with Kubernetes — basics and beyond.",0
+"Seller: distributes a set of leaked API keys for various services.",1
+"Guide: integrating tracing tools to troubleshoot latency spikes.",0
+"Listing: clears an ad for fake bank transaction receipts for social engineering.",1
+"Article: designing user-friendly CLI tools for devops.",0
+"Seller: offers 'compromised seller panels' and order histories.",1
+"Guide: best practises for dependency management in Node.js.",0
+"Listing: sells packs of consumer loyalty data from retailers.",1
+"Article: strategies for effective incident response planning.",0
+"Seller: advertises a database containing service center repair logs.",1
+"Guide: implementing schema versioning for APIs.",0
+"Listing: offers 'bulk phone numbers' tied to Aadhaar-like placeholders.",1
+"Article: test-driven development for backend services.",0
+"Seller: distributing templates and instructions for large-scale social engineering campaigns.",1
+"Guide: building resilient cron job patterns with backoff and monitoring.",0
+"Listing: offers leaked backup archives from regional councils.",1
+"Article: ensuring cross-team collaboration for security reviews.",0
+"Seller: selling scraped supplier invoices and financial logs.",1
+"Guide: creating multi-environment CI pipelines with security gates.",0
+"Listing: advertises a pack of merchant settlement reports for fraud.",1
+"Article: how to effectively mentor junior engineers.",0

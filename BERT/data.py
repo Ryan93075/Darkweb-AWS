@@ -1,117 +1,122 @@
+#!/usr/bin/env python3
 """
-GPU-based contextual augmentation for darkweb_data_stage1.csv
-- Uses high-quality transformer embeddings (e.g. RoBERTa) for substitution
-- Runs on GPU if available
-- Preserves label and optional "type" column
-- Logs summary stats
-"""
+augment_with_nlpaug.py
+Usage:
+  python augment_with_nlpaug.py --input darkweb_data_stage1_augmented.csv --out augmented_stage1.csv --n 3
 
-import logging
+Creates n augmented variants per row using nlpaug.
+"""
+import argparse
+import csv
 import random
-import re
-import pandas as pd
-import torch
 import nlpaug.augmenter.word as naw
+import nlpaug.augmenter.char as nac
+import nlpaug.augmenter.sentence as nas
+import nlpaug.augmenter.audio as naa  # not used, but shows options
+import nlpaug.augmenter.word as naw2
 
-# -------------------------
-# Setup logging
-# -------------------------
-logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s: %(message)s")
+random.seed(42)
 
-# -------------------------
-# CONFIG
-# -------------------------
-AUG_PER_ROW = 3
-INPUT_FILE = "darkweb_data_stage2.csv"
-OUTPUT_FILE = "darkweb_data_stage2_augmented.csv"
-RANDOM_SEED = 42
-BATCH_SIZE = 16  # keep small to fit GPU VRAM
-MODEL_NAME = "roberta-base"  # can be 'roberta-large' if you want max quality
+def load_csv(input_file):
+    rows = []
+    with open(input_file, "r", encoding="utf-8") as f:
+        r = csv.DictReader(f)
+        for row in r:
+            rows.append((row["text"], row["label"]))
+    return rows
 
-random.seed(RANDOM_SEED)
+def save_csv(output_file, rows):
+    with open(output_file, "w", newline='', encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["text","label"])
+        for t,l in rows:
+            w.writerow([t, l])
+    print(f"Wrote {len(rows)} rows to {output_file}")
 
-# -------------------------
-# Check device
-# -------------------------
-DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-logging.info(f"Using device: {DEVICE}")
+def build_augmenters():
+    # contextual (BERT) augmenter: requires transformers model downloads; slower but higher quality
+    # we use small number of augmenters and fall back to synonyms/char-level for speed
+    try:
+        contextual = naw.ContextualWordEmbsAug(model_path='distilbert-base-uncased', action="substitute")
+    except Exception as e:
+        print("Contextual augmenter unavailable (transformer download may fail). Falling back to synonyms.")
+        contextual = None
 
-# -------------------------
-# Load dataframe
-# -------------------------
-df = pd.read_csv(INPUT_FILE)
-if "text" not in df.columns or "label" not in df.columns:
-    raise ValueError("Input CSV must contain at least 'text' and 'label' columns.")
+    synonym_aug = naw.SynonymAug(aug_src='wordnet')  # requires nltk wordnet
+    char_swap = nac.KeyboardAug()
+    random_swap = naw.RandomWordAug(action="swap")
+    # you can add other augmenters like BackTranslationAug (slow), or embedding-based augs
+    return contextual, synonym_aug, char_swap, random_swap
 
-total_input_rows = len(df)
+def augment_text(text, contextual, synonym_aug, char_swap, random_swap):
+    aug_texts = set()
+    # 1) contextual (if available)
+    if contextual:
+        try:
+            t1 = contextual.augment(text)
+            if isinstance(t1, list):
+                t1 = t1[0]
+            aug_texts.add(t1)
+        except Exception:
+            pass
+    # 2) synonyms
+    try:
+        t2 = synonym_aug.augment(text)
+        if isinstance(t2, list):
+            t2 = t2[0]
+        aug_texts.add(t2)
+    except Exception:
+        pass
+    # 3) keyboard char noise
+    try:
+        t3 = char_swap.augment(text)
+        if isinstance(t3, list):
+            t3 = t3[0]
+        aug_texts.add(t3)
+    except Exception:
+        pass
+    # 4) random swap
+    try:
+        t4 = random_swap.augment(text)
+        if isinstance(t4, list):
+            t4 = t4[0]
+        aug_texts.add(t4)
+    except Exception:
+        pass
 
-# -------------------------
-# Create contextual augmenter
-# -------------------------
-logging.info(f"Loading contextual augmenter: {MODEL_NAME}")
-aug = naw.ContextualWordEmbsAug(
-    model_path=MODEL_NAME,
-    action="substitute",
-    device=DEVICE,
-    top_k=50
-)
+    # ensure we return some variants; at least original if nothing succeeded
+    if not aug_texts:
+        return [text]
+    else:
+        return list(aug_texts)
 
-# -------------------------
-# Main augmentation loop
-# -------------------------
-augmented_rows = []
-skipped_count = 0
+def main(input_file, output_file, n_aug=2):
+    rows = load_csv(input_file)
+    contextual, synonym_aug, char_swap, random_swap = build_augmenters()
 
-logging.info(f"Starting augmentation: rows={total_input_rows}, aug_per_row={AUG_PER_ROW}")
-
-for i in range(0, total_input_rows, BATCH_SIZE):
-    batch = df.iloc[i:i + BATCH_SIZE]
-    for _, row in batch.iterrows():
-        text = str(row["text"]).strip()
-        label = row["label"]
-        row_type = row["type"] if "type" in df.columns else None
-
-        if not text or len(text.split()) < 2:
-            continue
-
-        created = 0
+    out_rows = []
+    for text,label in rows:
+        out_rows.append((text,label))
+        # create n_aug augmentations
         tries = 0
-        while created < AUG_PER_ROW and tries < AUG_PER_ROW * 2:
+        generated = 0
+        while generated < n_aug and tries < n_aug * 4:
             tries += 1
-            try:
-                augmented = aug.augment(text, n=1)
-                if isinstance(augmented, list):
-                    augmented = augmented[0]
-                augmented = re.sub(r"\s+", " ", augmented).strip()
-
-                if augmented.lower() != text.lower():
-                    new_row = {"text": augmented, "label": label}
-                    if row_type is not None:
-                        new_row["type"] = row_type
-                    augmented_rows.append(new_row)
-                    created += 1
-            except Exception as e:
-                logging.debug(f"Augmentation failed for row: {e}")
-                skipped_count += 1
+            variants = augment_text(text, contextual, synonym_aug, char_swap, random_swap)
+            if not variants:
                 break
+            # pick one randomly
+            v = random.choice(variants)
+            # simple sanity: avoid duplicates and too-short outputs
+            if v and v != text and len(v.split()) >= max(3, len(text.split())//3):
+                out_rows.append((v, label))
+                generated += 1
+    save_csv(output_file, out_rows)
 
-# -------------------------
-# Combine and deduplicate
-# -------------------------
-df_aug = pd.DataFrame(augmented_rows)
-if not df_aug.empty:
-    df_combined = pd.concat([df, df_aug], ignore_index=True)
-    df_combined.drop_duplicates(subset=["text", "label"], keep="first", inplace=True)
-else:
-    df_combined = df.copy()
-
-# -------------------------
-# Save output
-# -------------------------
-df_combined.to_csv(OUTPUT_FILE, index=False)
-logging.info("Augmentation finished.")
-logging.info(f"Original rows: {total_input_rows}")
-logging.info(f"Augmented rows created: {len(df_combined) - total_input_rows}")
-logging.info(f"Total rows after augmentation: {len(df_combined)}")
-logging.info(f"Skipped augmentation attempts (approx): {skipped_count}")
-logging.info(f"Saved augmented file to: {OUTPUT_FILE}")
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input", required=True, help="Input CSV")
+    parser.add_argument("--out", required=True, help="Output CSV")
+    parser.add_argument("--n", type=int, default=2, help="Augmentations per row")
+    args = parser.parse_args()
+    main(args.input, args.out, args.n)
