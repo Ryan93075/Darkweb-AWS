@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+# dark_search_then_crawl_parallel_fixed_with_s3.py
+# - Requires: requests, bs4, concurrent.futures, boto3
+# - Run Tor (Tor Browser or tor service) and ensure SOCKS5 proxy at 127.0.0.1:9150
+# - Usage: python dark_search_then_crawl_parallel_fixed_with_s3.py
+
 import os
 import requests
 import time
@@ -11,16 +16,16 @@ import threading
 import boto3
 import botocore
 from boto3.s3.transfer import TransferConfig
-import subprocess
 
 # ---------------- CONFIG ----------------
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
 }
 PROXIES = {
-    'http': 'socks5h://127.0.0.1:9050',
-    'https': 'socks5h://127.0.0.1:9050'
+    'http': 'socks5h://127.0.0.1:9150',
+    'https': 'socks5h://127.0.0.1:9150'
 }
+
 S3_BUCKET = os.environ.get('S3_BUCKET', 'scraped-data-01')  # override via env if desired
 S3_REGION = os.environ.get('S3_REGION', 'ap-south-1')
 UPLOAD_TO_S3 = os.environ.get('UPLOAD_TO_S3', '1') not in ('0', 'false', 'False')  # set to 0/false to disable
@@ -125,53 +130,6 @@ def upload_folder_to_s3(local_folder, bucket, s3_prefix=""):
     print(f"✅ Finished uploading {local_folder} -> s3://{bucket}/{s3_prefix}")
 
 
-# ---------- Tor helpers ----------
-def start_tor_process():
-    """
-    Attempt to start a Tor subprocess that listens on 9050 and ControlPort 9051.
-    Returns subprocess.Popen object or None if starting failed.
-    """
-    try:
-        # Use a temporary data dir to avoid clashes with system tor
-        data_dir = "/tmp/tor_data"
-        os.makedirs(data_dir, exist_ok=True)
-        # Start tor; suppress stdout/stderr to avoid clutter (change if you want logs)
-        p = subprocess.Popen([
-            "tor",
-            "--SocksPort", "9050",
-            "--ControlPort", "9051",
-            "--DataDirectory", data_dir
-        ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        print("🟢 Launched tor subprocess (pid=%s)" % (p.pid,))
-        return p
-    except FileNotFoundError:
-        print("⚠️ 'tor' binary not found in PATH. Install tor or run system service instead.")
-        return None
-    except Exception as e:
-        print("⚠️ Failed to start tor subprocess:", e)
-        return None
-
-def wait_for_tor_ready(timeout=60, interval=2):
-    """
-    Wait until check.torproject.org returns a positive result or timeout seconds elapse.
-    Returns True if ready, False otherwise.
-    """
-    start = time.time()
-    while time.time() - start < timeout:
-        try:
-            r = requests.get("https://check.torproject.org/", proxies=PROXIES, timeout=5)
-            if "Congratulations" in r.text:
-                print("✅ Tor is ready")
-                return True
-            # If site responds but not "Congratulations", keep waiting a bit (Tor may be partially started).
-        except Exception:
-            pass
-        print("Waiting for Tor to start...")
-        time.sleep(interval)
-    print("⚠️ Timed out waiting for Tor to become ready.")
-    return False
-
-
 # ---------- downloader/crawler helpers ----------
 def download_content(url, folder_name):
     global assets_downloaded
@@ -180,14 +138,14 @@ def download_content(url, folder_name):
         if response.status_code == 200:
             content_type = response.headers.get('Content-Type', '')
             extensions = {
-                "text/html": "html"
-                '''"application/javascript": "js",
+                "text/html": "html",
+                "application/javascript": "js",
                 "text/javascript": "js",
                 "image/png": "png",
                 "image/jpeg": "jpg",
                 "image/jpg": "jpg",
                 "image/gif": "gif",
-                "text/css": "css"'''
+                "text/css": "css"
             }
             # choose extension by content-type prefix
             ctype = content_type.split(';')[0].strip().lower()
@@ -504,7 +462,7 @@ def status_printer(total_engines, candidate_sites_ref):
         active = len(active_crawls)
     with assets_downloaded_lock:
         assets = assets_downloaded
-    print(f"\n[Finished] Engines done: {done}/{len(candidate_sites_ref)} | Candidates: {len(candidate_sites_ref)} | Visited: {visited} | Active: {active} | Assets: {assets} | Crawled: {crawled}")
+    print(f"\n[Finished] Engines done: {done}/{total_engines} | Candidates: {len(candidate_sites_ref)} | Visited: {visited} | Active: {active} | Assets: {assets} | Crawled: {crawled}")
 
 
 # ---------- orchestrator (parallel search across engines) ----------
@@ -571,44 +529,25 @@ def start_crawl():
 
 
 if __name__ == '__main__':
-    # Start Tor subprocess (best-effort). If tor binary isn't present or system tor is already running, start_tor_process returns None.
-    tor_proc = start_tor_process()
+    # quick Tor check (non-fatal)
     try:
-        # Wait for Tor to become ready (if it starts). If tor_proc is None, still attempt the check (system tor might be running).
-        wait_for_tor_ready(timeout=60)
+        r = requests.get("https://check.torproject.org/", proxies=PROXIES, timeout=10)
+        if "Congratulations" in r.text:
+            print("✅ Tor OK")
+        else:
+            print("⚠️ Tor proxy may not be working (check.torproject.org didn't return success).")
+    except Exception:
+        print("⚠️ Could not contact check.torproject.org via SOCKS5 Tor proxy (this is non-fatal).")
 
-        # quick Tor check (non-fatal)
+    # sanity-check S3 connectivity (best-effort; non-fatal)
+    if UPLOAD_TO_S3:
         try:
-            r = requests.get("https://check.torproject.org/", proxies=PROXIES, timeout=10)
-            if "Congratulations" in r.text:
-                print("✅ Tor OK")
-            else:
-                print("⚠️ Tor proxy may not be working (check.torproject.org didn't return success).")
+            client = get_s3_client()
+            client.head_bucket(Bucket=S3_BUCKET)
+            print(f"✅ S3 bucket '{S3_BUCKET}' reachable in region '{S3_REGION}'.")
+        except botocore.exceptions.ClientError as e:
+            print(f"⚠️ Warning: S3 head_bucket failed for '{S3_BUCKET}': {e}. Continuing, uploads may fail.")
         except Exception:
-            print("⚠️ Could not contact check.torproject.org via SOCKS5 Tor proxy (this is non-fatal).")
+            print(f"⚠️ Could not verify S3 bucket '{S3_BUCKET}'. Continuing, uploads may fail.")
 
-        # sanity-check S3 connectivity (best-effort; non-fatal)
-        if UPLOAD_TO_S3:
-            try:
-                client = get_s3_client()
-                client.head_bucket(Bucket=S3_BUCKET)
-                print(f"✅ S3 bucket '{S3_BUCKET}' reachable in region '{S3_REGION}'.")
-            except botocore.exceptions.ClientError as e:
-                print(f"⚠️ Warning: S3 head_bucket failed for '{S3_BUCKET}': {e}. Continuing, uploads may fail.")
-            except Exception:
-                print(f"⚠️ Could not verify S3 bucket '{S3_BUCKET}'. Continuing, uploads may fail.")
-
-        start_crawl()
-    finally:
-        # Attempt to clean up the tor subprocess if we started one
-        if tor_proc is not None:
-            try:
-                tor_proc.terminate()
-                tor_proc.wait(timeout=5)
-                print("🛑 Tor subprocess terminated.")
-            except Exception:
-                try:
-                    tor_proc.kill()
-                except Exception:
-                    pass
-                print("🛑 Tor subprocess killed.")
+    start_crawl()
