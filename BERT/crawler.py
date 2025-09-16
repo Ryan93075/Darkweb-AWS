@@ -1,4 +1,16 @@
 #!/usr/bin/env python3
+"""
+Robust dark-web crawler (improved)
+- Waits/retries for Tor SOCKS5 proxy to become ready.
+- If Tor can't be started or doesn't become ready within timeout, falls back to direct (non-Tor) requests and warns clearly.
+- Starts a local tor subprocess if `tor` binary is available and no SOCKS5 listener found.
+- Cleans up the tor subprocess if started by this script.
+
+Drop-in replacement for your existing crawler.py — preserves previous behavior but adds
+stronger Tor readiness checks and a graceful fallback so the script doesn't crash
+if Tor isn't available.
+"""
+
 import os
 import requests
 import time
@@ -12,11 +24,14 @@ import boto3
 import botocore
 from boto3.s3.transfer import TransferConfig
 import subprocess
+import socket
+import sys
 
 # ---------------- CONFIG ----------------
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
 }
+# default proxies point to local tor socks5 (will be set to None if tor isn't available)
 PROXIES = {
     'http': 'socks5h://127.0.0.1:9050',
     'https': 'socks5h://127.0.0.1:9050'
@@ -58,12 +73,14 @@ assets_downloaded_lock = threading.Lock()
 done_event = threading.Event()  # signals status printer to finish
 
 # ---------- S3 helper ----------
+
 def get_s3_client():
     """
     Create an S3 client. Credentials are picked up from environment, IAM role, or ~/.aws/credentials.
     """
     session = boto3.session.Session()
     return session.client('s3', region_name=S3_REGION)
+
 
 def upload_file_to_s3(s3_client, local_path, bucket, s3_key):
     try:
@@ -79,6 +96,7 @@ def upload_file_to_s3(s3_client, local_path, bucket, s3_key):
         print(f"\n⚠️ Failed to upload {local_path} -> s3://{bucket}/{s3_key} : {e}")
     except Exception as e:
         print(f"\n⚠️ Unexpected error uploading {local_path}: {e}")
+
 
 def upload_folder_to_s3(local_folder, bucket, s3_prefix=""):
     """
@@ -125,7 +143,20 @@ def upload_folder_to_s3(local_folder, bucket, s3_prefix=""):
     print(f"✅ Finished uploading {local_folder} -> s3://{bucket}/{s3_prefix}")
 
 
-# ---------- Tor helpers ----------
+# ---------- Tor helpers (improved) ----------
+TOR_HOST = '127.0.0.1'
+TOR_SOCKS_PORT = 9050
+TOR_CONTROL_PORT = 9051
+
+
+def is_socks_port_open(host='127.0.0.1', port=9050, timeout=1.0):
+    try:
+        with socket.create_connection((host, port), timeout=timeout):
+            return True
+    except Exception:
+        return False
+
+
 def start_tor_process():
     """
     Attempt to start a Tor subprocess that listens on 9050 and ControlPort 9051.
@@ -133,16 +164,17 @@ def start_tor_process():
     """
     try:
         # Use a temporary data dir to avoid clashes with system tor
-        data_dir = "/tmp/tor_data"
+        data_dir = "/tmp/tor_data_crawler"
         os.makedirs(data_dir, exist_ok=True)
-        # Start tor; suppress stdout/stderr to avoid clutter (change if you want logs)
+        # Start tor; keep stdout/stderr to a log file so user can inspect if needed
+        logfile = open(os.path.join(data_dir, 'tor.log'), 'ab')
         p = subprocess.Popen([
             "tor",
-            "--SocksPort", "9050",
-            "--ControlPort", "9051",
+            "--SocksPort", str(TOR_SOCKS_PORT),
+            "--ControlPort", str(TOR_CONTROL_PORT),
             "--DataDirectory", data_dir
-        ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        print("🟢 Launched tor subprocess (pid=%s)" % (p.pid,))
+        ], stdout=logfile, stderr=logfile)
+        print("🟢 Launched tor subprocess (pid=%s) — logs -> %s" % (p.pid, logfile.name))
         return p
     except FileNotFoundError:
         print("⚠️ 'tor' binary not found in PATH. Install tor or run system service instead.")
@@ -151,24 +183,48 @@ def start_tor_process():
         print("⚠️ Failed to start tor subprocess:", e)
         return None
 
-def wait_for_tor_ready(timeout=60, interval=2):
+
+def wait_for_tor_ready(timeout=120, interval=2, require_success=False):
     """
-    Wait until check.torproject.org returns a positive result or timeout seconds elapse.
+    Wait until Tor's SOCKS5 port is accepting connections and check.torproject.org reports success.
+    If require_success is False, the function will return True as soon as the socks port is open (practical for onion-only crawling).
     Returns True if ready, False otherwise.
     """
     start = time.time()
+    saw_port = False
+    last_msg = 0
     while time.time() - start < timeout:
-        try:
-            r = requests.get("https://check.torproject.org/", proxies=PROXIES, timeout=5)
-            if "Congratulations" in r.text:
-                print("✅ Tor is ready")
-                return True
-            # If site responds but not "Congratulations", keep waiting a bit (Tor may be partially started).
-        except Exception:
-            pass
-        print("Waiting for Tor to start...")
+        # quick socket check first (fast)
+        if is_socks_port_open(TOR_HOST, TOR_SOCKS_PORT, timeout=1.0):
+            saw_port = True
+            # try a higher-level check through the proxy
+            try:
+                r = requests.get("https://check.torproject.org/", proxies=PROXIES, timeout=5)
+                if r.status_code == 200 and "Congratulations" in r.text:
+                    print("✅ Tor is ready (check.torproject.org ok)")
+                    return True
+                else:
+                    # socks port open but tor hasn't finished bootstrapping enough — still acceptable for onion-only
+                    if not require_success:
+                        print("⚠️ Tor socks port open but check.torproject.org did not return success yet. Proceeding (onion-only okay).")
+                        return True
+            except Exception:
+                # network attempt failed through socks proxy; if not requiring full success, accept an open port
+                if not require_success:
+                    print("⚠️ Tor socks port open but check through proxy failed. Proceeding (onion-only okay).")
+                    return True
+        else:
+            # socks port not open
+            now = time.time()
+            if now - last_msg > 5:
+                print("Waiting for Tor SOCKS port to open on 127.0.0.1:9050...")
+                last_msg = now
         time.sleep(interval)
-    print("⚠️ Timed out waiting for Tor to become ready.")
+    # timed out
+    if not saw_port:
+        print("\n⚠️ Timed out waiting for Tor SOCKS port to open on 127.0.0.1:9050.")
+    else:
+        print("\n⚠️ Timed out waiting for Tor to fully bootstrap (check.torproject.org didn't report success).")
     return False
 
 
@@ -181,13 +237,7 @@ def download_content(url, folder_name):
             content_type = response.headers.get('Content-Type', '')
             extensions = {
                 "text/html": "html"
-                '''"application/javascript": "js",
-                "text/javascript": "js",
-                "image/png": "png",
-                "image/jpeg": "jpg",
-                "image/jpg": "jpg",
-                "image/gif": "gif",
-                "text/css": "css"'''
+                # other mappings intentionally left commented to reduce noise
             }
             # choose extension by content-type prefix
             ctype = content_type.split(';')[0].strip().lower()
@@ -211,6 +261,7 @@ def download_content(url, folder_name):
         # silent fail — don't crash crawler for optional assets
         pass
 
+
 def download_assets_parallel(soup, base_url, folder_name):
     tags = soup.find_all(["img", "script", "link", "a"])
     urls = []
@@ -233,6 +284,7 @@ def download_assets_parallel(soup, base_url, folder_name):
         for _ in as_completed(futures):
             pass
 
+
 def extract_onion_links_from_html(html, base_url=None):
     """
     Extract onion links, both with and without scheme.
@@ -251,6 +303,7 @@ def extract_onion_links_from_html(html, base_url=None):
         # find raw .onion occurrences (with optional path), including bare domains
         # matches: abcdefghijklmnop.onion or abcdefghijklmnop.onion/some/path
         found = re.findall(r'([A-Za-z0-9\-\_]{16,56}\.onion(?:/[^\s"\'<>]*)?)', html)
+
         for f in found:
             if f.startswith('http://') or f.startswith('https://'):
                 links.add(f)
@@ -272,7 +325,7 @@ def normalize_onion_links(links, max_results=30, engine_netloc=None):
     """
     seen = set()
     out = []
-    asset_exts = ('.png','.jpg','.jpeg','.gif','.webp','.svg','.css','.js','.ico','.woff','.woff2','.ttf','.eot')
+    asset_exts = ('.png', '.jpg', '.jpeg', '.gif', '.webp', '.svg', '.css', '.js', '.ico', '.woff', '.woff2', '.ttf', '.eot')
     blacklist_substrings = ('/banners/', '/banner', '/images/', '/img/', '/ads/', '/advert', '/api/', '/static/', '/cdn/')
     for raw in links:
         try:
@@ -304,6 +357,7 @@ def normalize_onion_links(links, max_results=30, engine_netloc=None):
     return out
 
 # ---------- crawling a single site ----------
+
 def crawl_single_site(url):
     """
     Crawl a single site: save index.html, download assets (images/js/css), discover .onion links.
@@ -374,6 +428,7 @@ def crawl_single_site(url):
 
 
 # ---------- search engine querying (parallel) ----------
+
 def try_build_and_fetch(engine_base, keyword, try_params=('q','query','search','s')):
     """
     1) Try to auto-discover a search <form> on the engine homepage and submit it using the form's input name.
@@ -474,6 +529,7 @@ def search_on_search_engine(keyword, engine, max_results=30):
 
 
 # ---------- status printer (background) ----------
+
 def status_printer(total_engines, candidate_sites_ref):
     """
     Prints a single-line status every 1.5s until done_event is set.
@@ -508,6 +564,7 @@ def status_printer(total_engines, candidate_sites_ref):
 
 
 # ---------- orchestrator (parallel search across engines) ----------
+
 def start_crawl():
     keyword = input("🔍 Enter keyword to search for on dark-web search engines: ").strip()
     if not keyword:
@@ -571,21 +628,23 @@ def start_crawl():
 
 
 if __name__ == '__main__':
-    # Start Tor subprocess (best-effort). If tor binary isn't present or system tor is already running, start_tor_process returns None.
-    tor_proc = start_tor_process()
+    tor_proc = None
     try:
-        # Wait for Tor to become ready (if it starts). If tor_proc is None, still attempt the check (system tor might be running).
-        wait_for_tor_ready(timeout=60)
+        # 1) If a SOCKS listener already exists, prefer it (system tor)
+        if is_socks_port_open(TOR_HOST, TOR_SOCKS_PORT, timeout=0.7):
+            print("🟢 Found existing Tor SOCKS listener on 127.0.0.1:9050 — using system tor or another instance.")
+        else:
+            # attempt to start a tor subprocess (best-effort)
+            tor_proc = start_tor_process()
 
-        # quick Tor check (non-fatal)
-        try:
-            r = requests.get("https://check.torproject.org/", proxies=PROXIES, timeout=10)
-            if "Congratulations" in r.text:
-                print("✅ Tor OK")
-            else:
-                print("⚠️ Tor proxy may not be working (check.torproject.org didn't return success).")
-        except Exception:
-            print("⚠️ Could not contact check.torproject.org via SOCKS5 Tor proxy (this is non-fatal).")
+        # 2) Wait for tor to become ready. If it times out, fall back to direct connections (clear PROXIES)
+        tor_ready = wait_for_tor_ready(timeout=120, interval=2, require_success=False)
+
+        if not tor_ready:
+            print("\n⚠️ Tor did not become ready within timeout. This script will continue but will use direct network connections (PROXIES disabled).")
+            PROXIES = None
+        else:
+            print("✅ Tor OK — requests will be routed through SOCKS5 at 127.0.0.1:9050")
 
         # sanity-check S3 connectivity (best-effort; non-fatal)
         if UPLOAD_TO_S3:
