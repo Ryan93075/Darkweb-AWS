@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 import os
 import requests
 import time
@@ -13,16 +14,19 @@ import botocore
 from boto3.s3.transfer import TransferConfig
 import socket
 import sys
+import argparse
 
 # ---------------- CONFIG ----------------
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
 }
+
 # default proxies point to local tor socks5 (will be used only if a Tor listener exists)
 PROXIES = {
     'http': 'socks5h://127.0.0.1:9050',
     'https': 'socks5h://127.0.0.1:9050'
 }
+
 S3_BUCKET = os.environ.get('S3_BUCKET', 'scraped-data-01')  # override via env if desired
 S3_REGION = os.environ.get('S3_REGION', 'ap-south-1')
 UPLOAD_TO_S3 = os.environ.get('UPLOAD_TO_S3', '1') not in ('0', 'false', 'False')  # set to 0/false to disable
@@ -149,7 +153,7 @@ def wait_for_tor_ready(timeout=30, interval=1, require_success=False):
     while time.time() - start < timeout:
         if is_socks_port_open(TOR_HOST, TOR_SOCKS_PORT, timeout=1.0):
             saw_port = True
-            # If user requested an extra check, do it (but often check.torproject.org fails from EC2)
+            # If user requested an extra check, do it
             if require_success:
                 try:
                     r = requests.get("https://check.torproject.org/", proxies=PROXIES, timeout=6)
@@ -248,7 +252,7 @@ def extract_onion_links_from_html(html, base_url=None):
 
         # find raw .onion occurrences (with optional path), including bare domains
         # matches: abcdefghijklmnop.onion or abcdefghijklmnop.onion/some/path
-        found = re.findall(r'([A-Za-z0-9_-]{16,56}\.onion(?:/[^\s"\'<>]*)?)', html)
+        found = re.findall(r'([A-Za-z0-9_-]{16,60}\.onion(?:/[^\s"\'<>]*)?)', html)
         for f in found:
             if f.startswith('http://') or f.startswith('https://'):
                 links.add(f)
@@ -370,16 +374,24 @@ def crawl_single_site(url):
             print(f"\n⚠️ Failed to upload folder for {domain}: {e}")
 
 # ---------- search engine querying (parallel) ----------
-def try_build_and_fetch(engine_base, keyword, try_params=('q','query','search','s')):
+def try_build_and_fetch(engine, keyword, try_params=('q','query','search','s')):
     """
-    1) Try to auto-discover a search <form> on the engine homepage and submit it using the form's input name.
-    2) If no usable form found, fall back to trying common GET params.
-    3) Final fallback: try appending the keyword to the path.
+    Query an engine (clearnet or onion). For onion engines, use PROXIES (Tor SOCKS).
+    engine: dict with keys 'name', 'url', 'type' ('onion'|'clearnet')
     Returns HTML text or None.
     """
-    # 1) Fetch homepage, try to discover a form
+    proxies = None
+    if engine.get('type') == 'onion':
+        # ensure proxies exist; if not, skip this engine
+        if PROXIES is None:
+            print(f"⚠️ Skipping onion engine {engine['name']} because PROXIES is not set.")
+            return None
+        proxies = PROXIES
+
+    engine_base = engine['url']
+    # 1) Fetch homepage, try to discover a form and submit using form input names
     try:
-        home = requests.get(engine_base, headers=HEADERS, proxies=PROXIES, timeout=12)
+        home = requests.get(engine_base, headers=HEADERS, proxies=proxies, timeout=12)
         if home.status_code == 200 and home.text:
             soup = BeautifulSoup(home.text, 'html.parser')
             forms = soup.find_all('form')
@@ -387,8 +399,7 @@ def try_build_and_fetch(engine_base, keyword, try_params=('q','query','search','
                 method = (form.get('method') or 'get').lower()
                 action = form.get('action') or engine_base
                 action_url = urljoin(engine_base, action)
-
-                # find candidate input names (text/search inputs or names containing q/search/query/s)
+                # find candidate input names
                 input_candidates = []
                 for inp in form.find_all('input'):
                     name = inp.get('name')
@@ -397,25 +408,21 @@ def try_build_and_fetch(engine_base, keyword, try_params=('q','query','search','
                     itype = (inp.get('type') or 'text').lower()
                     if itype in ('text', 'search') or any(k in name.lower() for k in ('q','query','search','s')):
                         input_candidates.append(name)
-
                 if not input_candidates:
-                    # also consider <textarea>
                     for inp in form.find_all(['textarea']):
                         name = inp.get('name')
                         if name:
                             input_candidates.append(name)
-
                 if input_candidates:
                     params = {input_candidates[0]: keyword}
                     try:
                         if method == 'post':
-                            r = requests.post(action_url, data=params, headers=HEADERS, proxies=PROXIES, timeout=20)
+                            r = requests.post(action_url, data=params, headers=HEADERS, proxies=proxies, timeout=20)
                         else:
-                            r = requests.get(action_url, params=params, headers=HEADERS, proxies=PROXIES, timeout=20)
+                            r = requests.get(action_url, params=params, headers=HEADERS, proxies=proxies, timeout=20)
                         if r.status_code == 200 and r.text and len(r.text) > 50:
                             return r.text
                     except Exception:
-                        # if submitting form fails, continue to other forms or fallback
                         pass
     except Exception:
         pass
@@ -423,7 +430,7 @@ def try_build_and_fetch(engine_base, keyword, try_params=('q','query','search','
     # 2) If form discovery didn't work: try common GET params
     for p in try_params:
         try:
-            r = requests.get(engine_base, params={p: keyword}, headers=HEADERS, proxies=PROXIES, timeout=16)
+            r = requests.get(engine_base, params={p: keyword}, headers=HEADERS, proxies=proxies, timeout=16)
             if r.status_code == 200 and r.text and len(r.text) > 50:
                 return r.text
         except Exception:
@@ -432,7 +439,7 @@ def try_build_and_fetch(engine_base, keyword, try_params=('q','query','search','
     # 3) Final fallback: append keyword to path (some engines use path-based search)
     try:
         fallback_url = urljoin(engine_base, requests.utils.requote_uri(keyword))
-        r = requests.get(fallback_url, headers=HEADERS, proxies=PROXIES, timeout=16)
+        r = requests.get(fallback_url, headers=HEADERS, proxies=proxies, timeout=16)
         if r.status_code == 200 and r.text and len(r.text) > 50:
             return r.text
     except Exception:
@@ -445,7 +452,7 @@ def search_on_search_engine(keyword, engine, max_results=30):
     Query a single engine and extract onion roots.
     """
     global engines_completed
-    html = try_build_and_fetch(engine['url'], keyword)
+    html = try_build_and_fetch(engine, keyword)
     found_links = []
     engine_netloc = None
     try:
@@ -466,6 +473,24 @@ def search_on_search_engine(keyword, engine, max_results=30):
         engines_completed += 1
 
     return found_links
+
+# ---------- Ahmia clearnet fallback ----------
+def ahmia_clearnet_search(keyword, max_results=200):
+    """
+    Query Ahmia (clearnet) and return discovered .onion roots.
+    Ahmia is a stable clearnet index of onion sites; useful as a fallback when onion search engines fail.
+    """
+    url = "https://ahmia.fi/search/"
+    try:
+        r = requests.get(url, params={'q': keyword}, headers=HEADERS, timeout=20)
+        if r.status_code == 200 and r.text:
+            raw = extract_onion_links_from_html(r.text, base_url=url)
+            normalized = normalize_onion_links(raw, max_results=max_results)
+            print(f"\n🔎 Ahmia (clearnet) -> found {len(normalized)} onion root links (sample: {normalized[:3]})")
+            return normalized
+    except Exception as e:
+        print(f"\n⚠️ Ahmia clearnet search failed: {e}")
+    return []
 
 # ---------- status printer (background) ----------
 def status_printer(total_engines, candidate_sites_ref):
@@ -507,11 +532,16 @@ def start_crawl():
         print("No keyword entered, aborting.")
         return
 
-    # full list of search engines you provided (onion endpoints)
+    # Primary search engines: prefer onion-capable engines (via Tor) first
     search_engines = [
-        {'name': 'Torch', 'url': 'http://torchdeedp3i2jigzjdmfpn5ttjhthh5wbmda2rr3jvqjg5p77c54dqd.onion/'},
-        {'name': 'TorLand', 'url': 'http://torlgu6zhhtwe73fdu76uiswgnkfvukqfujofxjfo7vzoht2rndyhxyd.onion/'},
-        {'name': 'Venus', 'url': 'http://venusoseaqnafjvzfmrcpcq6g47rhd7sa6nmzvaa4bj5rp6nm5jl7gad.onion/'},
+        # Torch onion (known onion address — use Tor to reach it)
+        {'name': 'Torch', 'url': 'http://torchdeedp3i2jigzjdmfpn5ttjhthh5wbmda2rr3jvqjg5p77c54dqd.onion/', 'type': 'onion'},
+
+        # (Optional) additional onion engines can be added here (type: 'onion')
+        # {'name': 'TorLand', 'url': 'http://torlgu6zhhtwe73f...onion/', 'type': 'onion'},
+
+        # We'll use Ahmia (clearnet) as a fallback (type: 'clearnet')
+        {'name': 'Ahmia (clearnet)', 'url': 'https://ahmia.fi/search/', 'type': 'clearnet'},
     ]
 
     total_engines = len(search_engines)
@@ -521,9 +551,19 @@ def start_crawl():
     stat_thread = threading.Thread(target=status_printer, args=(total_engines, candidate_sites), daemon=True)
     stat_thread.start()
 
-    # Query all engines in parallel
+    # Query all (onion + clearnet) engines in parallel but keep in mind onion engines require PROXIES to be set
     with ThreadPoolExecutor(max_workers=min(10, total_engines)) as s_exec:
-        future_to_engine = {s_exec.submit(search_on_search_engine, keyword, engine, 25): engine for engine in search_engines}
+        future_to_engine = {}
+        for engine in search_engines:
+            # If engine is onion but PROXIES is None, skip querying it
+            if engine.get('type') == 'onion' and PROXIES is None:
+                print(f"⚠️ Skipping onion engine {engine['name']} because PROXIES is not configured.")
+                with engines_completed_lock:
+                    engines_completed += 1
+                continue
+            future = s_exec.submit(search_on_search_engine, keyword, engine, 50)
+            future_to_engine[future] = engine
+
         for fut in as_completed(future_to_engine):
             engine = future_to_engine[fut]
             try:
@@ -534,14 +574,21 @@ def start_crawl():
             except Exception as e:
                 print(f"Error searching {engine['name']}: {e}")
 
+    # If no candidate sites found from the above (onion) engines, explicitly try Ahmia clearnet as a fallback
     if not candidate_sites:
-        print("❌ No results found on configured search engines.")
-        # signal done and exit status printer
+        print("\n🛈 No results from primary engines — trying Ahmia (clearnet) fallback...")
+        ahmia_links = ahmia_clearnet_search(keyword, max_results=200)
+        for f in ahmia_links:
+            if f not in candidate_sites:
+                candidate_sites.append(f)
+
+    if not candidate_sites:
+        print("\n❌ No results found on configured/available search engines (including Ahmia fallback).")
         done_event.set()
         return
 
-    print(f"\n\n🚀 Starting crawl on {len(candidate_sites)} discovered sites (top {min(10, len(candidate_sites))} shown):")
-    for s in candidate_sites[:10]:
+    print(f"\n\n🚀 Starting crawl on {len(candidate_sites)} discovered sites (top {min(50, len(candidate_sites))} shown):")
+    for s in candidate_sites[:50]:
         print("  -", s)
 
     # crawl each discovered site (bounded parallelism)
@@ -562,11 +609,30 @@ def start_crawl():
         except Exception as e:
             print(f"\n⚠️ Final upload of scan/ failed: {e}")
 
+def parse_args_and_prepare():
+    parser = argparse.ArgumentParser(description="Dark-web crawler (uses local Tor SOCKS5 at 127.0.0.1:9050)")
+    parser.add_argument("--socks", help="SOCKS host:port (default 127.0.0.1:9050)", default=f"{TOR_HOST}:{TOR_SOCKS_PORT}")
+    parser.add_argument("--require-tor-check", action="store_true", help="Require check.torproject.org success before proceeding")
+    args = parser.parse_args()
+
+    # Update PROXIES if non-default socks is provided
+    global PROXIES
+    if args.socks and args.socks != f"{TOR_HOST}:{TOR_SOCKS_PORT}":
+        host, port = args.socks.split(":")
+        PROXIES = {
+            'http': f'socks5h://{host}:{port}',
+            'https': f'socks5h://{host}:{port}'
+        }
+
+    return args
+
 if __name__ == '__main__':
+    args = parse_args_and_prepare()
+
     # This script will NOT attempt to start Tor. It only connects to an existing Tor SOCKS5 listener.
     if is_socks_port_open(TOR_HOST, TOR_SOCKS_PORT, timeout=0.7):
         print(f"🟢 Found existing Tor SOCKS listener on {TOR_HOST}:{TOR_SOCKS_PORT} — using system tor or another instance.")
-        tor_ready = wait_for_tor_ready(timeout=30, interval=1, require_success=False)
+        tor_ready = wait_for_tor_ready(timeout=30, interval=1, require_success=args.require_tor_check)
         if not tor_ready:
             print("\n⚠️ Tor SOCKS port present but failed readiness check. Proceeding anyway for onion-only crawling.")
         else:
