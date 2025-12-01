@@ -15,40 +15,36 @@ from boto3.s3.transfer import TransferConfig
 import socket
 import sys
 import argparse
+import openai
 
-# ---------------- CONFIG ----------------
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
 }
 
-# default proxies point to local tor socks5 (will be used only if a Tor listener exists)
 PROXIES = {
     'http': 'socks5h://127.0.0.1:9050',
     'https': 'socks5h://127.0.0.1:9050'
 }
 
-S3_BUCKET = os.environ.get('S3_BUCKET', 'scraped-data-01')  # override via env if desired
+S3_BUCKET = os.environ.get('S3_BUCKET', 'scraped-data-01')
 S3_REGION = os.environ.get('S3_REGION', 'ap-south-1')
-UPLOAD_TO_S3 = os.environ.get('UPLOAD_TO_S3', '1') not in ('0', 'false', 'False')  # set to 0/false to disable
+UPLOAD_TO_S3 = os.environ.get('UPLOAD_TO_S3', '1') not in ('0', 'false', 'False')
 
-# Transfer config for efficient uploads (adjust as needed)
 TRANSFER_CONFIG = TransferConfig(
-    multipart_threshold=8 * 1024 * 1024,  # 8MB
+    multipart_threshold=8 * 1024 * 1024,
     max_concurrency=4,
     multipart_chunksize=8 * 1024 * 1024,
     use_threads=True
 )
 
-# ---------------- FS setup ----------------
 os.makedirs("scraped_data", exist_ok=True)
 os.makedirs("logs", exist_ok=True)
 os.makedirs("scan", exist_ok=True)
 
-# ---------- shared state & locks ----------
 visited_links = set()
 visited_lock = threading.Lock()
 
-lock = threading.Lock()  # generic lock used in several places
+lock = threading.Lock()
 crawled_count = 0
 crawled_count_lock = threading.Lock()
 
@@ -61,13 +57,92 @@ active_crawls_lock = threading.Lock()
 assets_downloaded = 0
 assets_downloaded_lock = threading.Lock()
 
-done_event = threading.Event()  # signals status printer to finish
+done_event = threading.Event()
 
-# ---------- S3 helper ----------
+TOR_HOST = '127.0.0.1'
+TOR_SOCKS_PORT = 9050
+
+openai.api_key = os.environ.get('OPENAI_API_KEY')
+
+class GeminiLLM:
+    def __init__(self, model=None):
+        self.model = model or os.environ.get('GEMINI_MODEL', 'gpt-4o-mini')
+        self.max_tokens = int(os.environ.get('GEMINI_MAX_TOKENS', '512'))
+        self.temperature = float(os.environ.get('GEMINI_TEMPERATURE', '0.0'))
+
+    def generate(self, prompt, max_tokens=None, temperature=None):
+        try:
+            tok = max_tokens or self.max_tokens
+            temp = temperature if temperature is not None else self.temperature
+            messages = [{"role": "user", "content": prompt}]
+            resp = openai.ChatCompletion.create(model=self.model, messages=messages, max_tokens=tok, temperature=temp)
+            return resp['choices'][0]['message']['content'].strip()
+        except Exception as e:
+            raise
+
+def get_gemini_llm():
+    if not openai.api_key:
+        raise RuntimeError('OPENAI_API_KEY is not set; set it to use the Gemini-compatible LLM wrapper')
+    return GeminiLLM()
+
+def refine_query(llm, user_input):
+    system_prompt = (
+        "You are a Cybercrime Threat Intelligence Expert. Your task is to refine the provided user query that needs to be sent to darkweb search engines."
+        "\nRules:\n1. Analyze the user query and think about how it can be improved to use as search engine query"
+        "\n2. Refine the user query by adding or removing words so that it returns the best result from dark web search engines"
+        "\n3. Don't use any logical operators (AND, OR, etc.)\n4. Output just the user query and nothing else\n\nINPUT:\n"
+    )
+    prompt = system_prompt + user_input
+    out = llm.generate(prompt, max_tokens=128)
+    return out.strip()
+
+def _generate_final_string(results, truncate=False):
+    if truncate:
+        max_title_length = 30
+        max_link_length = 0
+    final_str = []
+    for i, res in enumerate(results):
+        truncated_link = re.sub(r"(?<=\.onion).*", "", res.get('link', ''))
+        title = re.sub(r"[^0-9a-zA-Z\-\.]", " ", res.get('title', ''))
+        if truncated_link == "" and title == "":
+            continue
+        if truncate:
+            title = (title[:max_title_length] + "...") if len(title) > max_title_length else title
+            truncated_link = (truncated_link[:max_link_length] + "...") if len(truncated_link) > max_link_length else truncated_link
+        final_str.append(f"{i+1}. {truncated_link} - {title}")
+    return "\n".join(s for s in final_str)
+
+def filter_results(llm, query, results):
+    if not results:
+        return []
+    system_prompt = (
+        "You are a Cybercrime Threat Intelligence Expert. You are given a dark web search query and a list of search results in the form of index, link and title."
+        "\nYour task is select the Top 20 relevant results that best match the search query for user to investigate more.\nRule:\n1. Output ONLY atmost top 20 indices (comma-separated list) no more than that that best match the input query\n\nSearch Query: "
+    )
+    final_str = _generate_final_string(results)
+    prompt = system_prompt + query + "\nSearch Results:\n" + final_str
+    try:
+        result_indices = llm.generate(prompt, max_tokens=256)
+    except Exception:
+        final_str = _generate_final_string(results, truncate=True)
+        prompt = system_prompt + query + "\nSearch Results:\n" + final_str
+        result_indices = llm.generate(prompt, max_tokens=256)
+    parsed_indices = []
+    for match in re.findall(r"\d+", result_indices):
+        try:
+            idx = int(match)
+            if 1 <= idx <= len(results):
+                parsed_indices.append(idx)
+        except ValueError:
+            continue
+    seen = set()
+    parsed_indices = [i for i in parsed_indices if not (i in seen or seen.add(i))]
+    if not parsed_indices:
+        parsed_indices = list(range(1, min(len(results), 20) + 1))
+    top_results = [results[i - 1] for i in parsed_indices[:20]]
+    return top_results
+
 def get_s3_client():
-    """
-    Create an S3 client. Credentials are picked up from environment, IAM role, or ~/.aws/credentials.
-    """
     session = boto3.session.Session()
     return session.client('s3', region_name=S3_REGION)
 
@@ -77,7 +152,6 @@ def upload_file_to_s3(s3_client, local_path, bucket, s3_key):
         extra_args = {}
         if content_type:
             extra_args['ContentType'] = content_type
-        # Keep uploads private
         extra_args['ACL'] = 'private'
         s3_client.upload_file(local_path, bucket, s3_key, ExtraArgs=extra_args, Config=TRANSFER_CONFIG)
         print(f"\n⬆️ Uploaded {local_path} -> s3://{bucket}/{s3_key}")
@@ -87,52 +161,34 @@ def upload_file_to_s3(s3_client, local_path, bucket, s3_key):
         print(f"\n⚠️ Unexpected error uploading {local_path}: {e}")
 
 def upload_folder_to_s3(local_folder, bucket, s3_prefix=""):
-    """
-    Upload entire folder recursively to S3 under s3_prefix (prefix may be empty or end without slash).
-    Example: upload_folder_to_s3("scan/example", "scraped-data-01", "scan/example/")
-    """
     if not UPLOAD_TO_S3:
         print("\n🛈 S3 uploads disabled by UPLOAD_TO_S3 env var.")
         return
-
     if not os.path.isdir(local_folder):
         print(f"\n⚠️ Local folder does not exist, skipping upload: {local_folder}")
         return
-
     s3_client = get_s3_client()
-
-    # Ensure prefix ends with slash if non-empty
     if s3_prefix and not s3_prefix.endswith('/'):
         s3_prefix = s3_prefix + '/'
-
     files_to_upload = []
     for root, dirs, files in os.walk(local_folder):
         for fname in files:
             local_path = os.path.join(root, fname)
             rel_path = os.path.relpath(local_path, local_folder)
-            # Build S3 key using prefix + rel_path (use forward slashes)
             s3_key = (s3_prefix + rel_path).replace(os.path.sep, '/')
             files_to_upload.append((local_path, s3_key))
-
     if not files_to_upload:
         print(f"\n🛈 Nothing to upload from {local_folder}")
         return
-
     print(f"\n🚚 Uploading {len(files_to_upload)} files from {local_folder} to s3://{bucket}/{s3_prefix} ...")
-    # Upload in parallel to speed up
     with ThreadPoolExecutor(max_workers=4) as exec:
         futures = [exec.submit(upload_file_to_s3, s3_client, lp, bucket, sk) for lp, sk in files_to_upload]
         for fut in as_completed(futures):
-            # just iterate to surface exceptions
             try:
                 fut.result()
             except Exception:
                 pass
     print(f"✅ Finished uploading {local_folder} -> s3://{bucket}/{s3_prefix}")
-
-# ---------- Tor helpers ----------
-TOR_HOST = '127.0.0.1'
-TOR_SOCKS_PORT = 9050
 
 def is_socks_port_open(host='127.0.0.1', port=9050, timeout=1.0):
     try:
@@ -142,18 +198,12 @@ def is_socks_port_open(host='127.0.0.1', port=9050, timeout=1.0):
         return False
 
 def wait_for_tor_ready(timeout=30, interval=1, require_success=False):
-    """
-    Wait until Tor's SOCKS5 port is accepting connections.
-    If require_success were True we'd also try checking check.torproject.org through the proxy,
-    but for onion-only crawling we accept a simple open socket as "ready".
-    """
     start = time.time()
     saw_port = False
     last_msg = 0
     while time.time() - start < timeout:
         if is_socks_port_open(TOR_HOST, TOR_SOCKS_PORT, timeout=1.0):
             saw_port = True
-            # If user requested an extra check, do it
             if require_success:
                 try:
                     r = requests.get("https://check.torproject.org/", proxies=PROXIES, timeout=6)
@@ -181,36 +231,28 @@ def wait_for_tor_ready(timeout=30, interval=1, require_success=False):
         print("\n⚠️ Timed out waiting for Tor to fully bootstrap (check.torproject.org didn't report success).")
     return False
 
-# ---------- downloader/crawler helpers ----------
 def download_content(url, folder_name):
     global assets_downloaded
     try:
         response = requests.get(url, headers=HEADERS, proxies=PROXIES, timeout=12)
         if response.status_code == 200:
             content_type = response.headers.get('Content-Type', '')
-            extensions = {
-                "text/html": "html"
-            }
-            # choose extension by content-type prefix
+            extensions = {"text/html": "html"}
             ctype = content_type.split(';')[0].strip().lower()
             ext = extensions.get(ctype)
             if not ext:
-                # fallback guess from URL path
                 guessed, _ = mimetypes.guess_type(url)
                 if guessed:
                     ext = guessed.split('/')[-1]
             if not ext:
                 return
             filename = os.path.join(folder_name, f"file_{int(time.time() * 1000)}.{ext}")
-            # ensure folder exists
             os.makedirs(folder_name, exist_ok=True)
             with open(filename, 'wb') as f:
                 f.write(response.content)
-            # increment assets counter
             with assets_downloaded_lock:
                 assets_downloaded += 1
     except Exception:
-        # silent fail — don't crash crawler for optional assets
         pass
 
 def download_assets_parallel(soup, base_url, folder_name):
@@ -220,57 +262,38 @@ def download_assets_parallel(soup, base_url, folder_name):
         attr = "href" if tag.name in ["link", "a"] else "src"
         val = tag.get(attr)
         if val:
-            # join relative urls
             try:
                 full = urljoin(base_url, val)
                 urls.append(full)
             except Exception:
                 continue
-
     if not urls:
         return
-
     with ThreadPoolExecutor(max_workers=12) as executor:
         futures = [executor.submit(download_content, u, folder_name) for u in urls]
         for _ in as_completed(futures):
             pass
 
 def extract_onion_links_from_html(html, base_url=None):
-    """
-    Extract onion links, both with and without scheme.
-    Returns normalized URLs (adds http:// if scheme missing).
-    """
     links = set()
     try:
         soup = BeautifulSoup(html, 'html.parser')
         for a in soup.find_all('a', href=True):
             href = a['href']
             if ".onion" in href:
-                # normalize relative links
                 full = urljoin(base_url or "", href)
                 links.add(full)
-
-        # find raw .onion occurrences (with optional path), including bare domains
-        # matches: abcdefghijklmnop.onion or abcdefghijklmnop.onion/some/path
-        found = re.findall(r'([A-Za-z0-9_-]{16,60}\.onion(?:/[^\s"\'<>]*)?)', html)
+        found = re.findall(r'([A-Za-z0-9_-]{16,60}\.onion(?:/[^\s"\'"<>]*)?)', html)
         for f in found:
             if f.startswith('http://') or f.startswith('https://'):
                 links.add(f)
             else:
-                links.add('http://' + f)  # prefer http scheme for onion
+                links.add('http://' + f)
     except Exception:
         pass
     return list(links)
 
 def normalize_onion_links(links, max_results=30, engine_netloc=None):
-    """
-    Normalize the raw links found on a page:
-    - keep only .onion links
-    - drop obvious assets (images, css, js, fonts, etc.)
-    - return domain-level roots (scheme + netloc + '/')
-    - optionally skip links that match the search engine domain (to avoid crawling engine itself)
-    - preserve ordering, limit to max_results
-    """
     seen = set()
     out = []
     asset_exts = ('.png', '.jpg', '.jpeg', '.gif', '.webp', '.svg', '.css', '.js', '.ico', '.woff', '.woff2', '.ttf', '.eot')
@@ -282,17 +305,13 @@ def normalize_onion_links(links, max_results=30, engine_netloc=None):
             netloc = parsed.netloc.lower()
             if '.onion' not in netloc:
                 continue
-            # skip if it's the engine domain itself
             if engine_netloc and engine_netloc.lower().strip() in netloc:
                 continue
-            # drop asset-like URLs by extension in path
             lower_path = parsed.path.lower()
             if any(lower_path.endswith(ext) for ext in asset_exts):
                 continue
-            # drop common blacklisted path pieces
             if any(sub in lower_path for sub in blacklist_substrings):
                 continue
-            # derive root
             scheme = parsed.scheme or 'http'
             root = f"{scheme}://{parsed.netloc.rstrip('/')}/"
             if root not in seen:
@@ -304,23 +323,14 @@ def normalize_onion_links(links, max_results=30, engine_netloc=None):
             continue
     return out
 
-# ---------- crawling a single site ----------
 def crawl_single_site(url):
-    """
-    Crawl a single site: save index.html, download assets (images/js/css), discover .onion links.
-    Upload the site's folder to S3 after crawling.
-    """
     global crawled_count
-    # dedupe & mark as visited
     with visited_lock:
         if url in visited_links:
             return
         visited_links.add(url)
-
-    # mark active crawl
     with active_crawls_lock:
         active_crawls.add(url)
-
     status = 'ok'
     response = None
     try:
@@ -328,11 +338,9 @@ def crawl_single_site(url):
         response.raise_for_status()
     except Exception as e:
         status = f'error:{str(e)[:120]}'
-
     domain = urlparse(url).netloc.replace('.onion', '')
     folder_name = os.path.join("scan", domain)
     os.makedirs(folder_name, exist_ok=True)
-
     if status == 'ok' and response is not None:
         try:
             index_path = os.path.join(folder_name, "index.html")
@@ -342,54 +350,33 @@ def crawl_single_site(url):
             download_assets_parallel(soup, url, folder_name)
         except Exception:
             pass
-
-    # discover additional onion links on the page (bounded)
     if status == 'ok' and response is not None:
         new_links = extract_onion_links_from_html(response.text, base_url=url)
-        # normalize new links to domain roots and add them to visited (but don't crawl them immediately here)
         normalized = normalize_onion_links(new_links, max_results=50)
         with visited_lock:
             for link in normalized:
                 if link not in visited_links:
                     visited_links.add(link)
-
     with crawled_count_lock:
         crawled_count += 1
-
-    # unmark active crawl
     with active_crawls_lock:
         if url in active_crawls:
             active_crawls.remove(url)
-
-    # print short progress message
     print(f"\r✅ Crawled: {crawled_count} | Last: {domain} | Status: {status[:40]}{' ' * 10}", end='', flush=True)
-
-    # Upload this site's folder to S3 (best-effort)
     if UPLOAD_TO_S3:
         try:
-            # prefix under bucket: scan/<domain>/
             s3_prefix = f"scan/{domain}"
             upload_folder_to_s3(folder_name, S3_BUCKET, s3_prefix)
         except Exception as e:
             print(f"\n⚠️ Failed to upload folder for {domain}: {e}")
 
-# ---------- search engine querying (parallel) ----------
 def try_build_and_fetch(engine, keyword, try_params=('q','query','search','s')):
-    """
-    Query an engine (clearnet or onion). For onion engines, use PROXIES (Tor SOCKS).
-    engine: dict with keys 'name', 'url', 'type' ('onion'|'clearnet')
-    Returns HTML text or None.
-    """
     proxies = None
     if engine.get('type') == 'onion':
-        # ensure proxies exist; if not, skip this engine
         if PROXIES is None:
-            print(f"⚠️ Skipping onion engine {engine['name']} because PROXIES is not set.")
             return None
         proxies = PROXIES
-
     engine_base = engine['url']
-    # 1) Fetch homepage, try to discover a form and submit using form input names
     try:
         home = requests.get(engine_base, headers=HEADERS, proxies=proxies, timeout=12)
         if home.status_code == 200 and home.text:
@@ -399,7 +386,6 @@ def try_build_and_fetch(engine, keyword, try_params=('q','query','search','s')):
                 method = (form.get('method') or 'get').lower()
                 action = form.get('action') or engine_base
                 action_url = urljoin(engine_base, action)
-                # find candidate input names
                 input_candidates = []
                 for inp in form.find_all('input'):
                     name = inp.get('name')
@@ -426,8 +412,6 @@ def try_build_and_fetch(engine, keyword, try_params=('q','query','search','s')):
                         pass
     except Exception:
         pass
-
-    # 2) If form discovery didn't work: try common GET params
     for p in try_params:
         try:
             r = requests.get(engine_base, params={p: keyword}, headers=HEADERS, proxies=proxies, timeout=16)
@@ -435,8 +419,6 @@ def try_build_and_fetch(engine, keyword, try_params=('q','query','search','s')):
                 return r.text
         except Exception:
             continue
-
-    # 3) Final fallback: append keyword to path (some engines use path-based search)
     try:
         fallback_url = urljoin(engine_base, requests.utils.requote_uri(keyword))
         r = requests.get(fallback_url, headers=HEADERS, proxies=proxies, timeout=16)
@@ -444,13 +426,9 @@ def try_build_and_fetch(engine, keyword, try_params=('q','query','search','s')):
             return r.text
     except Exception:
         pass
-
     return None
 
 def search_on_search_engine(keyword, engine, max_results=30):
-    """
-    Query a single engine and extract onion roots.
-    """
     global engines_completed
     html = try_build_and_fetch(engine, keyword)
     found_links = []
@@ -459,27 +437,17 @@ def search_on_search_engine(keyword, engine, max_results=30):
         engine_netloc = urlparse(engine['url']).netloc
     except Exception:
         engine_netloc = None
-
     if not html:
         print(f"\n⚠️  {engine['name']} did not return valid results (captcha/offline/different API).")
     else:
-        # extract raw onion occurrences
         raw_links = extract_onion_links_from_html(html, base_url=engine['url'])
-        # normalize to domain roots & filter assets and engine domain itself
         found_links = normalize_onion_links(raw_links, max_results=max_results, engine_netloc=engine_netloc)
         print(f"\n🔎 {engine['name']} -> found {len(found_links)} onion root links (sample: {found_links[:3]})")
-
     with engines_completed_lock:
         engines_completed += 1
-
     return found_links
 
-# ---------- Ahmia clearnet fallback ----------
 def ahmia_clearnet_search(keyword, max_results=200):
-    """
-    Query Ahmia (clearnet) and return discovered .onion roots.
-    Ahmia is a stable clearnet index of onion sites; useful as a fallback when onion search engines fail.
-    """
     url = "https://ahmia.fi/search/"
     try:
         r = requests.get(url, params={'q': keyword}, headers=HEADERS, timeout=20)
@@ -492,11 +460,7 @@ def ahmia_clearnet_search(keyword, max_results=200):
         print(f"\n⚠️ Ahmia clearnet search failed: {e}")
     return []
 
-# ---------- status printer (background) ----------
 def status_printer(total_engines, candidate_sites_ref):
-    """
-    Prints a single-line status every 1.5s until done_event is set.
-    """
     while not done_event.is_set():
         with engines_completed_lock:
             done = engines_completed
@@ -511,8 +475,6 @@ def status_printer(total_engines, candidate_sites_ref):
         cand = len(candidate_sites_ref)
         print(f"\r[Engines done: {done}/{total_engines}] Candidates: {cand} | Visited: {visited} | Active: {active} | Assets: {assets} | Crawled: {crawled}    ", end='', flush=True)
         time.sleep(1.5)
-
-    # final print after completion
     with engines_completed_lock:
         done = engines_completed
     with visited_lock:
@@ -525,45 +487,40 @@ def status_printer(total_engines, candidate_sites_ref):
         assets = assets_downloaded
     print(f"\n[Finished] Engines done: {done}/{len(candidate_sites_ref)} | Candidates: {len(candidate_sites_ref)} | Visited: {visited} | Active: {active} | Assets: {assets} | Crawled: {crawled}")
 
-# ---------- orchestrator (parallel search across engines) ----------
 def start_crawl():
     keyword = input("🔍 Enter keyword to search for on dark-web search engines: ").strip()
     if not keyword:
         print("No keyword entered, aborting.")
         return
-
-    # Primary search engines: prefer onion-capable engines (via Tor) first
+    try:
+        llm = get_gemini_llm()
+        refined = refine_query(llm, keyword)
+        if refined:
+            print(f"Refined query: {refined}")
+            search_keyword = refined
+        else:
+            search_keyword = keyword
+    except Exception as e:
+        print(f"LLM refine step failed: {e} \nProceeding with original keyword")
+        search_keyword = keyword
     search_engines = [
-        # Torch onion (known onion address — use Tor to reach it)
         {'name': 'Torch', 'url': 'http://torchdeedp3i2jigzjdmfpn5ttjhthh5wbmda2rr3jvqjg5p77c54dqd.onion/', 'type': 'onion'},
-
-        # (Optional) additional onion engines can be added here (type: 'onion')
-        # {'name': 'TorLand', 'url': 'http://torlgu6zhhtwe73f...onion/', 'type': 'onion'},
-
-        # We'll use Ahmia (clearnet) as a fallback (type: 'clearnet')
         {'name': 'Ahmia (clearnet)', 'url': 'https://ahmia.fi/search/', 'type': 'clearnet'},
     ]
-
     total_engines = len(search_engines)
     candidate_sites = []
-
-    # start status printer thread
     stat_thread = threading.Thread(target=status_printer, args=(total_engines, candidate_sites), daemon=True)
     stat_thread.start()
-
-    # Query all (onion + clearnet) engines in parallel but keep in mind onion engines require PROXIES to be set
     with ThreadPoolExecutor(max_workers=min(10, total_engines)) as s_exec:
         future_to_engine = {}
         for engine in search_engines:
-            # If engine is onion but PROXIES is None, skip querying it
             if engine.get('type') == 'onion' and PROXIES is None:
                 print(f"⚠️ Skipping onion engine {engine['name']} because PROXIES is not configured.")
                 with engines_completed_lock:
                     engines_completed += 1
                 continue
-            future = s_exec.submit(search_on_search_engine, keyword, engine, 50)
+            future = s_exec.submit(search_on_search_engine, search_keyword, engine, 50)
             future_to_engine[future] = engine
-
         for fut in as_completed(future_to_engine):
             engine = future_to_engine[fut]
             try:
@@ -573,36 +530,34 @@ def start_crawl():
                         candidate_sites.append(f)
             except Exception as e:
                 print(f"Error searching {engine['name']}: {e}")
-
-    # If no candidate sites found from the above (onion) engines, explicitly try Ahmia clearnet as a fallback
     if not candidate_sites:
         print("\n🛈 No results from primary engines — trying Ahmia (clearnet) fallback...")
-        ahmia_links = ahmia_clearnet_search(keyword, max_results=200)
+        ahmia_links = ahmia_clearnet_search(search_keyword, max_results=200)
         for f in ahmia_links:
             if f not in candidate_sites:
                 candidate_sites.append(f)
-
     if not candidate_sites:
         print("\n❌ No results found on configured/available search engines (including Ahmia fallback).")
         done_event.set()
         return
-
+    try:
+        llm = get_gemini_llm()
+        results_for_filter = [{'link': u, 'title': u} for u in candidate_sites]
+        top = filter_results(llm, search_keyword, results_for_filter)
+        if top:
+            candidate_sites = [r['link'] for r in top]
+            print(f"\n🧰 LLM filtered to {len(candidate_sites)} candidate sites")
+    except Exception as e:
+        print(f"LLM filtering step failed: {e} \nProceeding with unfiltered candidate list")
     print(f"\n\n🚀 Starting crawl on {len(candidate_sites)} discovered sites (top {min(50, len(candidate_sites))} shown):")
     for s in candidate_sites[:50]:
         print("  -", s)
-
-    # crawl each discovered site (bounded parallelism)
     with ThreadPoolExecutor(max_workers=5) as executor:
         futures = [executor.submit(crawl_single_site, link) for link in candidate_sites]
         for _ in as_completed(futures):
             pass
-
-    # signal done to status printer and allow it to print final stats
     done_event.set()
-    # short wait to allow final status print
     time.sleep(1.0)
-
-    # Final upload of the entire scan folder (best-effort)
     if UPLOAD_TO_S3:
         try:
             upload_folder_to_s3("scan", S3_BUCKET, "scan")
@@ -614,8 +569,6 @@ def parse_args_and_prepare():
     parser.add_argument("--socks", help="SOCKS host:port (default 127.0.0.1:9050)", default=f"{TOR_HOST}:{TOR_SOCKS_PORT}")
     parser.add_argument("--require-tor-check", action="store_true", help="Require check.torproject.org success before proceeding")
     args = parser.parse_args()
-
-    # Update PROXIES if non-default socks is provided
     global PROXIES
     if args.socks and args.socks != f"{TOR_HOST}:{TOR_SOCKS_PORT}":
         host, port = args.socks.split(":")
@@ -623,13 +576,10 @@ def parse_args_and_prepare():
             'http': f'socks5h://{host}:{port}',
             'https': f'socks5h://{host}:{port}'
         }
-
     return args
 
 if __name__ == '__main__':
     args = parse_args_and_prepare()
-
-    # This script will NOT attempt to start Tor. It only connects to an existing Tor SOCKS5 listener.
     if is_socks_port_open(TOR_HOST, TOR_SOCKS_PORT, timeout=0.7):
         print(f"🟢 Found existing Tor SOCKS listener on {TOR_HOST}:{TOR_SOCKS_PORT} — using system tor or another instance.")
         tor_ready = wait_for_tor_ready(timeout=30, interval=1, require_success=args.require_tor_check)
@@ -637,7 +587,6 @@ if __name__ == '__main__':
             print("\n⚠️ Tor SOCKS port present but failed readiness check. Proceeding anyway for onion-only crawling.")
         else:
             print("✅ Tor OK — requests will be routed through SOCKS5 at 127.0.0.1:9050")
-        # sanity-check S3 connectivity (best-effort; non-fatal)
         if UPLOAD_TO_S3:
             try:
                 client = get_s3_client()
