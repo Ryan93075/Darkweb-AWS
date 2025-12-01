@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import os
 import requests
 import time
@@ -15,7 +14,7 @@ from boto3.s3.transfer import TransferConfig
 import socket
 import sys
 import argparse
-import openai
+from google import genai
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
@@ -62,27 +61,37 @@ done_event = threading.Event()
 TOR_HOST = '127.0.0.1'
 TOR_SOCKS_PORT = 9050
 
-openai.api_key = os.environ.get('OPENAI_API_KEY')
+GEMINI_API_KEY = "AIzaSyCJ0tBXP5zPVwDn4VrbetvCdoFF4iT4lnA"
+_gemini_client = genai.Client(api_key=GEMINI_API_KEY)
 
 class GeminiLLM:
     def __init__(self, model=None):
-        self.model = model or os.environ.get('GEMINI_MODEL', 'gpt-4o-mini')
+        self.model = model or os.environ.get('GEMINI_MODEL', 'gemini-1.5-mini')
         self.max_tokens = int(os.environ.get('GEMINI_MAX_TOKENS', '512'))
         self.temperature = float(os.environ.get('GEMINI_TEMPERATURE', '0.0'))
 
     def generate(self, prompt, max_tokens=None, temperature=None):
+        tok = max_tokens or self.max_tokens
+        temp = temperature if temperature is not None else self.temperature
         try:
-            tok = max_tokens or self.max_tokens
-            temp = temperature if temperature is not None else self.temperature
-            messages = [{"role": "user", "content": prompt}]
-            resp = openai.ChatCompletion.create(model=self.model, messages=messages, max_tokens=tok, temperature=temp)
-            return resp['choices'][0]['message']['content'].strip()
+            resp = _gemini_client.responses.create(model=self.model, input=prompt, max_output_tokens=tok, temperature=temp)
+            if hasattr(resp, "output_text") and resp.output_text:
+                return resp.output_text.strip()
+            # fallback: try to extract from structured output
+            out_items = []
+            if hasattr(resp, "output") and resp.output:
+                for o in resp.output:
+                    if isinstance(o, dict) and "content" in o:
+                        for c in o["content"]:
+                            if isinstance(c, dict) and "text" in c:
+                                out_items.append(c["text"])
+            if out_items:
+                return "\n".join(out_items).strip()
+            return str(resp)
         except Exception as e:
             raise
 
 def get_gemini_llm():
-    if not openai.api_key:
-        raise RuntimeError('OPENAI_API_KEY is not set; set it to use the Gemini-compatible LLM wrapper')
     return GeminiLLM()
 
 def refine_query(llm, user_input):
